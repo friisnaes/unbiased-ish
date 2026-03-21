@@ -1,8 +1,40 @@
 [
   {
+    "timestamp": "2026-03-21T18:10:23.169Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera"
+    ],
+    "articlesIngested": 100,
+    "errors": [
+      "kyivindependent: Fetch failed — Status code 404"
+    ]
+  },
+  {
     "timestamp": "2026-03-20T15:15:00Z",
-    "sourcesAttempted": ["reuters", "ap", "bbc", "aljazeera", "kyivindependent"],
-    "sourcesSucceeded": ["reuters", "ap", "bbc", "aljazeera", "kyivindependent"],
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent"
+    ],
     "articlesIngested": 12,
     "errors": []
   }

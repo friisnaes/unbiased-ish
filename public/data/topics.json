@@ -1,15 +1,93 @@
 [
-  {"slug":"ukraine-russia","label":"Ukraine-Russia","labelDa":"Ukraine-Rusland","articleCount":7,"clusterCount":2},
-  {"slug":"conflict","label":"Conflict","labelDa":"Konflikt","articleCount":5,"clusterCount":1},
-  {"slug":"energy","label":"Energy","labelDa":"Energi","articleCount":4,"clusterCount":2},
-  {"slug":"diplomacy","label":"Diplomacy","labelDa":"Diplomati","articleCount":5,"clusterCount":2},
-  {"slug":"middle-east","label":"Middle East","labelDa":"Mellemøsten","articleCount":3,"clusterCount":1},
-  {"slug":"china","label":"China","labelDa":"Kina","articleCount":3,"clusterCount":1},
-  {"slug":"geopolitics","label":"Geopolitics","labelDa":"Geopolitik","articleCount":2,"clusterCount":1},
-  {"slug":"eu","label":"EU","labelDa":"EU","articleCount":4,"clusterCount":1},
-  {"slug":"sanctions","label":"Sanctions","labelDa":"Sanktioner","articleCount":4,"clusterCount":1},
-  {"slug":"russia","label":"Russia","labelDa":"Rusland","articleCount":4,"clusterCount":1},
-  {"slug":"defense","label":"Defense","labelDa":"Forsvar","articleCount":2,"clusterCount":1},
-  {"slug":"civilian-impact","label":"Civilian Impact","labelDa":"Civilpåvirkning","articleCount":1,"clusterCount":1},
-  {"slug":"global-south","label":"Global South","labelDa":"Det Globale Syd","articleCount":1,"clusterCount":1}
+  {
+    "slug": "conflict",
+    "label": "Conflict",
+    "labelDa": "Konflikt",
+    "articleCount": 90,
+    "clusterCount": 1
+  },
+  {
+    "slug": "middle-east",
+    "label": "Middle East",
+    "labelDa": "Mellemøsten",
+    "articleCount": 47,
+    "clusterCount": 1
+  },
+  {
+    "slug": "geopolitics",
+    "label": "Geopolitics",
+    "labelDa": "Geopolitik",
+    "articleCount": 41,
+    "clusterCount": 1
+  },
+  {
+    "slug": "energy",
+    "label": "Energy",
+    "labelDa": "Energi",
+    "articleCount": 22,
+    "clusterCount": 0
+  },
+  {
+    "slug": "ukraine-russia",
+    "label": "Ukraine-Russia",
+    "labelDa": "Ukraine-Rusland",
+    "articleCount": 13,
+    "clusterCount": 1
+  },
+  {
+    "slug": "sanctions",
+    "label": "Sanctions",
+    "labelDa": "Sanktioner",
+    "articleCount": 11,
+    "clusterCount": 1
+  },
+  {
+    "slug": "eu",
+    "label": "EU",
+    "labelDa": "EU",
+    "articleCount": 7,
+    "clusterCount": 0
+  },
+  {
+    "slug": "defense",
+    "label": "Defense",
+    "labelDa": "Forsvar",
+    "articleCount": 5,
+    "clusterCount": 1
+  },
+  {
+    "slug": "diplomacy",
+    "label": "Diplomacy",
+    "labelDa": "Diplomati",
+    "articleCount": 5,
+    "clusterCount": 0
+  },
+  {
+    "slug": "china",
+    "label": "China",
+    "labelDa": "Kina",
+    "articleCount": 5,
+    "clusterCount": 0
+  },
+  {
+    "slug": "russia",
+    "label": "Russia",
+    "labelDa": "Rusland",
+    "articleCount": 4,
+    "clusterCount": 0
+  },
+  {
+    "slug": "civilian-impact",
+    "label": "Civilian Impact",
+    "labelDa": "Civilpåvirkning",
+    "articleCount": 3,
+    "clusterCount": 0
+  },
+  {
+    "slug": "global-south",
+    "label": "Global South",
+    "labelDa": "Det Globale Syd",
+    "articleCount": 1,
+    "clusterCount": 0
+  }
 ]
