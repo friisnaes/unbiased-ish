@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cluster-001",
+    "slug": "russia-drone-attack-ukraine-march-2026",
+    "title": "Russisk droneangreb på Ukraine — marts 2026",
+    "summary": "Rusland gennemførte det største droneangreb på Ukraine i uger. Kilderne divergerer markant: wire services rapporterer fakta, BBC analyserer diplomatiske konsekvenser, Al Jazeera fokuserer på vestlig selektivitet, og Kyiv Independent leverer frontlinjedata.",
+    "articleIds": ["reuters-001", "ap-001", "bbc-001", "aljazeera-001", "kyiv-001"],
+    "sourceKeys": ["reuters", "ap", "bbc", "aljazeera", "kyivindependent"],
+    "coverageCount": 5,
+    "divergenceScore": 0.78,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant forskel i framing: faktuel rapportering vs. diplomatisk analyse vs. kritik af vestlig selektivitet vs. frontlinjedata.",
+    "topicTags": ["ukraine-russia", "conflict", "energy", "diplomacy"],
+    "updatedAt": "2026-03-20T11:00:00Z"
+  },
+  {
+    "id": "cluster-002",
+    "slug": "china-middle-east-diplomacy-2026",
+    "title": "Kinas diplomatiske fremstød i Mellemøsten",
+    "summary": "Kina signalerer vilje til at mægle i Mellemøsten. Reuters rapporterer faktuelt, BBC kontekstualiserer geopolitisk, og Al Jazeera fremhæver den post-vestlige dimension.",
+    "articleIds": ["reuters-002", "bbc-002", "aljazeera-002"],
+    "sourceKeys": ["reuters", "bbc", "aljazeera"],
+    "coverageCount": 3,
+    "divergenceScore": 0.55,
+    "divergenceLevel": "moderate",
+    "divergenceLabel": "Moderat divergens: alle anerkender Kinas rolle, men framing varierer fra neutral rapportering til analyse af vestlig indflydelsestab.",
+    "topicTags": ["middle-east", "china", "diplomacy", "geopolitics"],
+    "updatedAt": "2026-03-20T15:15:00Z"
+  },
+  {
+    "id": "cluster-003",
+    "slug": "eu-sanctions-russia-energy-march-2026",
+    "title": "EU's nye sanktionspakke mod Ruslands energisektor",
+    "summary": "EU vedtog nye sanktioner rettet mod Ruslands energisektor. Wire services rapporterer faktuelt, Al Jazeera spørger hvem der reelt betaler prisen, og Kyiv Independent fremhæver Zelenskys positive reaktion.",
+    "articleIds": ["reuters-003", "ap-002", "aljazeera-003", "kyiv-002"],
+    "sourceKeys": ["reuters", "ap", "aljazeera", "kyivindependent"],
+    "coverageCount": 4,
+    "divergenceScore": 0.65,
+    "divergenceLevel": "moderate",
+    "divergenceLabel": "Moderat divergens: enighed om fakta, men tydelig forskel i fokus — vestlig effektivitet vs. global konsekvens vs. ukrainsk perspektiv.",
+    "topicTags": ["eu", "sanctions", "russia", "energy"],
+    "updatedAt": "2026-03-19T20:15:00Z"
+  }
+]

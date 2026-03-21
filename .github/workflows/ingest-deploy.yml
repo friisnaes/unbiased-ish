@@ -1,0 +1,92 @@
+name: Ingest & Deploy
+
+on:
+  schedule:
+    # Run every 15 minutes
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ingestion
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      # Run ingestion pipeline
+      - name: Fetch & normalize articles
+        run: npm run ingest
+        env:
+          NODE_ENV: production
+
+      # Run clustering
+      - name: Cluster stories & calculate divergence
+        run: npm run cluster
+
+      # Validate links (lightweight, limited per run)
+      - name: Validate article links
+        run: npm run validate-links
+
+      # Check if data changed
+      - name: Check for changes
+        id: changes
+        run: |
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # Commit updated data
+      - name: Commit data
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Signal over Støj Bot"
+          git config user.email "bot@signal-over-stoej.github.io"
+          git add public/data/
+          git commit -m "data: update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
+
+  build-deploy:
+    needs: ingest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          # Fetch latest including any data commits
+          fetch-depth: 0
+
+      - run: git pull origin ${{ github.ref_name }} || true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - uses: actions/deploy-pages@v4
