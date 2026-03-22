@@ -36,7 +36,7 @@ export default function HomePage() {
             </p>
             <div className="flex gap-3 flex-wrap">
               {featuredCase && (
-                <a href="#case" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors">
+                <button onClick={() => document.getElementById("case")?.scrollIntoView({ behavior: "smooth" })} className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors">
                   Se en aktuel case ↓
                 </a>
               )}
