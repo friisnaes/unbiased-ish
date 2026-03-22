@@ -50,6 +50,16 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <Link
+              to="/search"
+              className="p-2 text-text-tertiary hover:text-text-primary transition-colors"
+              aria-label="Søg"
+            >
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <circle cx="7.5" cy="7.5" r="5.5" />
+                <path d="M11.5 11.5L16 16" />
+              </svg>
+            </Link>
             <span className="hidden lg:inline-flex items-center gap-1.5 text-xs font-mono text-text-tertiary">
               <span className="w-1.5 h-1.5 bg-divergence-low rounded-full animate-pulse" />
               Løbende opdateret

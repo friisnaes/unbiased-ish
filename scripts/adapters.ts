@@ -130,9 +130,9 @@ const sources: SourceConfig[] = [
     key: 'wion',
     name: 'WION',
     feedUrls: [
-      'https://www.wionews.com/feeds/world/rss.xml',
+      // Feed returned 404 — disabled until a working URL is confirmed
     ],
-    enabled: true,
+    enabled: false,
     region: 'south-asia',
     language: 'en',
     topicHints: ['geopolitics', 'south-asia', 'diplomacy'],

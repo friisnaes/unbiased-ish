@@ -101,16 +101,26 @@ function ConflictSection({
 
 export default function BriefingPage() {
   const [briefing, setBriefing] = useState<Briefing | null>(null);
+  const [history, setHistory] = useState<Briefing[]>([]);
   const [loading, setLoading] = useState(true);
 
+  const base = import.meta.env.BASE_URL || '/';
+
   useEffect(() => {
-    const base = import.meta.env.BASE_URL || '/';
-    fetch(`${base}data/briefing.json`)
-      .then((r) => r.json())
-      .then(setBriefing)
-      .catch(() => setBriefing(null))
-      .finally(() => setLoading(false));
+    Promise.all([
+      fetch(`${base}data/briefing.json`).then((r) => r.json()).catch(() => null),
+      fetch(`${base}data/briefing-history.json`).then((r) => r.json()).catch(() => []),
+    ]).then(([current, hist]) => {
+      setBriefing(current);
+      setHistory(Array.isArray(hist) ? hist : []);
+      setLoading(false);
+    });
   }, []);
+
+  function selectDate(date: string) {
+    const found = history.find((b) => b.date === date);
+    if (found) setBriefing(found);
+  }
 
   if (loading) {
     return (
@@ -144,13 +154,33 @@ export default function BriefingPage() {
         subtitle="AI-genereret analyse baseret udelukkende på overskrifter og uddrag fra 7 internationale nyhedskilder. Ikke en erstatning for original journalistik."
       />
 
-      <div className="mb-6 flex items-center gap-4 text-xs font-mono text-text-tertiary">
+      <div className="mb-6 flex items-center gap-4 text-xs font-mono text-text-tertiary flex-wrap">
         <span>Genereret: {formatDate(briefing.generatedAt)}</span>
         <span className="text-surface-600">|</span>
         <span>
           {briefing.ukraineRussia.sourcesUsed.length + briefing.iranMiddleEast.sourcesUsed.length} kilder brugt
         </span>
       </div>
+
+      {/* Date selector for history */}
+      {history.length > 1 && (
+        <div className="mb-8 flex items-center gap-2 flex-wrap">
+          <span className="text-xs font-mono text-text-tertiary mr-1">Tidligere:</span>
+          {history.map((h) => (
+            <button
+              key={h.date}
+              onClick={() => selectDate(h.date)}
+              className={`text-xs font-mono px-2.5 py-1 rounded-sm transition-colors ${
+                h.date === briefing.date
+                  ? 'bg-accent text-text-primary'
+                  : 'bg-surface-700 text-text-tertiary hover:text-text-primary'
+              }`}
+            >
+              {h.date}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* ── Intro quote ── */}
       <div className="border-l-2 border-accent/60 pl-5 mb-10">

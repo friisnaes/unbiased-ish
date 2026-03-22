@@ -10,6 +10,7 @@ import MethodologyPage from '@/pages/MethodologyPage';
 import AboutPage from '@/pages/AboutPage';
 import LegalPage from '@/pages/LegalPage';
 import BriefingPage from '@/pages/BriefingPage';
+import SearchPage from '@/pages/SearchPage';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="methodology" element={<MethodologyPage />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="legal" element={<LegalPage />} />
+          <Route path="search" element={<SearchPage />} />
           <Route
             path="*"
             element={

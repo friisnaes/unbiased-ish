@@ -19,6 +19,7 @@ const DATA_DIR = resolve(process.cwd(), 'public/data');
 const ARTICLES_PATH = resolve(DATA_DIR, 'articles.json');
 const CLUSTERS_PATH = resolve(DATA_DIR, 'clusters.json');
 const BRIEFING_PATH = resolve(DATA_DIR, 'briefing.json');
+const HISTORY_PATH = resolve(DATA_DIR, 'briefing-history.json');
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 
@@ -340,6 +341,24 @@ Fokusér på: energimarkeder, sanktioner, handelsruter, alliancer, og hvordan ko
   };
 
   writeFileSync(BRIEFING_PATH, JSON.stringify(briefing, null, 2));
+
+  // Save to history (keep last 30 days)
+  let history: Briefing[] = [];
+  try {
+    if (existsSync(HISTORY_PATH)) {
+      history = JSON.parse(readFileSync(HISTORY_PATH, 'utf-8'));
+    }
+  } catch {}
+
+  // Replace today's entry if exists, otherwise prepend
+  const existingIdx = history.findIndex((b) => b.date === briefing.date);
+  if (existingIdx >= 0) {
+    history[existingIdx] = briefing;
+  } else {
+    history.unshift(briefing);
+  }
+  history = history.slice(0, 30);
+  writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
 
   console.log('');
   console.log('  Daily briefing generated.');
