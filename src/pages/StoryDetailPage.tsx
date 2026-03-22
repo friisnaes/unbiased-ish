@@ -4,8 +4,10 @@ import { sourceProfiles } from '@/data/sources';
 import { timeAgo, formatDate, truncate } from '@/utils/format';
 import DivergenceBadge from '@/components/DivergenceBadge';
 import SourceBadge from '@/components/SourceBadge';
-import SynthesisBox from '@/components/cases/SynthesisBox';
+import SignalBlock from '@/components/cases/SignalBlock';
 import BiasProfile from '@/components/cases/BiasProfile';
+import ConfidenceIndicator, { deriveConfidence } from '@/components/cases/ConfidenceIndicator';
+import EditorialNote from '@/components/cases/EditorialNote';
 
 export default function StoryDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -52,7 +54,8 @@ export default function StoryDetailPage() {
       </Link>
 
       <header className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
+        <div className="flex items-center gap-3 mb-4 flex-wrap">
+          <ConfidenceIndicator level={deriveConfidence(cluster.coverageCount, cluster.divergenceScore)} compact />
           <DivergenceBadge
             level={cluster.divergenceLevel}
             score={cluster.divergenceScore}
@@ -110,19 +113,16 @@ export default function StoryDetailPage() {
         </div>
       </header>
 
-      {/* ── Synthesis Box ── */}
+      {/* ── Signal Engine™ ── */}
       {cluster.synthesisKnown && cluster.synthesisKnown.length > 0 && (
         <section className="mb-10">
-          <SynthesisBox
-            known={cluster.synthesisKnown}
+          <SignalBlock
+            confirmed={cluster.synthesisKnown}
             disputed={cluster.synthesisDisputed || []}
-            unclear={cluster.synthesisUnclear || []}
+            unknown={cluster.synthesisUnclear || []}
+            sourceCount={cluster.coverageCount}
+            divergenceScore={cluster.divergenceScore}
           />
-          {cluster.editorialNote && (
-            <p className="text-xs text-text-tertiary italic mt-3">
-              Redaktionel note: {cluster.editorialNote}
-            </p>
-          )}
         </section>
       )}
 
@@ -259,14 +259,12 @@ export default function StoryDetailPage() {
         </div>
       </section>
 
-      <div className="mt-12 text-xs text-text-tertiary font-mono border-t border-surface-700 pt-6">
-        <p>
-          Cluster ID: {cluster.id} · Sidst opdateret: {formatDate(cluster.updatedAt)}
-        </p>
-        <p className="mt-1">
-          Alle overskrifter og uddrag tilhører de respektive udgivere. Denne side linker til original journalistik.
-        </p>
-      </div>
+      <EditorialNote
+        note={cluster.editorialNote}
+        sources={cluster.sourceKeys}
+        topics={cluster.topicTags}
+        updatedAt={cluster.updatedAt}
+      />
     </div>
   );
 }

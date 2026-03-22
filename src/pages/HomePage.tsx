@@ -3,7 +3,6 @@ import { useArticles, useClusters, useSiteConfig } from '@/hooks/useData';
 import { enabledSources } from '@/data/sources';
 import CaseBlock from '@/components/cases/CaseBlock';
 import BiasProfile from '@/components/cases/BiasProfile';
-import DivergenceBadge from '@/components/DivergenceBadge';
 import { timeAgo } from '@/utils/format';
 
 export default function HomePage() {
@@ -11,7 +10,6 @@ export default function HomePage() {
   const { clusters } = useClusters();
   const config = useSiteConfig();
 
-  // Sort clusters: highest divergence first, then recency
   const sorted = [...clusters].sort((a, b) => {
     if (b.divergenceScore !== a.divergenceScore) return b.divergenceScore - a.divergenceScore;
     return b.updatedAt.localeCompare(a.updatedAt);
@@ -23,145 +21,122 @@ export default function HomePage() {
 
   return (
     <div>
-      {/* ════════════════ HERO ════════════════ */}
+      {/* ════════ HERO ════════ */}
       <section className="border-b border-surface-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
           <div className="max-w-3xl">
-            <h1 className="font-display font-extrabold text-hero text-text-primary mb-4">
-              Én historie.
+            <h1 className="font-display font-extrabold text-hero text-text-primary mb-4 leading-[1.05]">
+              Stop med at læse
               <br />
-              <span className="text-text-secondary">Flere vinkler.</span>
-              <br />
-              Dine egne konklusioner.
+              <span className="text-accent">én version</span> af verden.
             </h1>
-            <p className="text-lg text-text-secondary leading-relaxed mb-6">
+            <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-xl">
               Sammenlign hvordan forskellige medier dækker den samme begivenhed
-              — og se forskellen på fakta, fortolkning og bias.
+              — og se hvad der er fakta, fortolkning og usikkerhed.
             </p>
             <div className="flex gap-3 flex-wrap">
               {featuredCase && (
-                <a
-                  href="#live-case"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors"
-                >
+                <a href="#case" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors">
                   Se en aktuel case ↓
                 </a>
               )}
-              <Link
-                to="/briefing"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors"
-              >
+              <Link to="/briefing" className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors">
                 Daglig briefing
               </Link>
             </div>
           </div>
-
           {config && (
-            <div className="mt-8 flex gap-6 text-xs font-mono text-text-tertiary">
+            <div className="mt-6 flex gap-5 text-xs font-mono text-text-tertiary">
               <span>{config.totalArticles} artikler</span>
               <span>{config.totalClusters} cases</span>
               <span>{sources.length} kilder</span>
-              {config.lastIngestion && (
-                <span>Opdateret {timeAgo(config.lastIngestion)}</span>
-              )}
+              {config.lastIngestion && <span>Opdateret {timeAgo(config.lastIngestion)}</span>}
             </div>
           )}
         </div>
       </section>
 
-      {/* ════════════════ LIVE CASE ════════════════ */}
+      {/* ════════ LIVE CASE (instant value) ════════ */}
       {featuredCase && (
-        <section id="live-case" className="border-b border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-6">
-              Aktuel case · Højeste divergens
-            </p>
+        <section id="case" className="border-b border-surface-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              <span className="text-xs font-mono text-accent uppercase tracking-[0.15em] font-medium">Aktuel case</span>
+            </div>
             <CaseBlock cluster={featuredCase} articles={articles} featured />
           </div>
         </section>
       )}
 
-      {/* ════════════════ SÅDAN LÆSER DU DENNE SIDE ════════════════ */}
-      <section className="border-b border-surface-700 bg-surface-800/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">
-            Metode
-          </p>
-          <h2 className="font-display font-bold text-headline text-text-primary mb-8">
+      {/* ════════ SIGNAL ENGINE EXPLAINER ════════ */}
+      <section className="border-b border-surface-700 bg-surface-800/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <p className="text-xs font-mono text-accent uppercase tracking-[0.15em] mb-2">Metode</p>
+          <h2 className="font-display font-bold text-xl text-text-primary mb-6">
             Sådan læser du denne side
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#ff8c00' }}>
-              <p className="font-mono text-xs text-text-tertiary mb-1">Reuters / AP</p>
-              <p className="font-display font-semibold text-text-primary text-sm mb-2">Rå fakta</p>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Hvad er sket. Wire services rapporterer hurtigt og bredt. Brug dem som faktuel baseline.
-              </p>
-            </div>
-            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#bb1919' }}>
-              <p className="font-mono text-xs text-text-tertiary mb-1">BBC</p>
-              <p className="font-display font-semibold text-text-primary text-sm mb-2">Kontekst</p>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Hvorfor det betyder noget. BBC kontekstualiserer — men med et vestligt, britisk udsyn.
-              </p>
-            </div>
-            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#d2a44e' }}>
-              <p className="font-mono text-xs text-text-tertiary mb-1">Al Jazeera / SCMP / TASS</p>
-              <p className="font-display font-semibold text-text-primary text-sm mb-2">Modperspektiv</p>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Hvordan det kan ses anderledes. Disse kilder udfordrer det vestlige narrativ — men har egne biases.
-              </p>
-            </div>
-            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#005bbb' }}>
-              <p className="font-mono text-xs text-text-tertiary mb-1">Kyiv Independent</p>
-              <p className="font-display font-semibold text-text-primary text-sm mb-2">Lokal virkelighed</p>
-              <p className="text-xs text-text-secondary leading-relaxed">
-                Frontlinjens perspektiv. Uvurderlig indsigt — men naturligt præget af national position.
-              </p>
-            </div>
+          {/* Source roles */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+            {[
+              { label: 'Reuters / AP', role: 'Rå fakta', desc: 'Hvad er sket', color: '#ff8c00' },
+              { label: 'BBC', role: 'Kontekst', desc: 'Hvorfor det betyder noget', color: '#bb1919' },
+              { label: 'Al Jazeera / SCMP / TASS', role: 'Modperspektiv', desc: 'Hvordan det kan ses anderledes', color: '#d2a44e' },
+              { label: 'Kyiv Independent', role: 'Lokal virkelighed', desc: 'Frontlinjevirkelighed', color: '#005bbb' },
+            ].map((s) => (
+              <div key={s.label} className="border border-surface-600 rounded-sm p-3" style={{ borderTopWidth: 3, borderTopColor: s.color }}>
+                <p className="text-xs font-mono text-text-tertiary mb-0.5">{s.label}</p>
+                <p className="font-display font-semibold text-sm text-text-primary">{s.role}</p>
+                <p className="text-xs text-text-secondary mt-1">{s.desc}</p>
+              </div>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-start gap-3 p-4 border border-divergence-low/20 rounded-sm bg-divergence-low/5">
-              <span className="w-2 h-2 rounded-full bg-divergence-low mt-1 flex-shrink-0" />
+          {/* Signal classification */}
+          <div className="grid grid-cols-3 gap-3">
+            <div className="flex items-start gap-2.5 p-3 border border-divergence-low/20 rounded-sm bg-divergence-low/5">
+              <div className="w-3 h-3 rounded-sm bg-divergence-low flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-[7px] text-surface-900 font-bold">✓</span>
+              </div>
               <div>
-                <p className="text-sm font-medium text-text-primary mb-1">Hvad kilderne er enige om</p>
-                <p className="text-xs text-text-secondary">Bekræftede facts — den fælles faktuelle kerne</p>
+                <p className="text-xs font-mono text-divergence-low font-medium">Bekræftet</p>
+                <p className="text-xs text-text-tertiary mt-0.5">Fakta med flere uafhængige kilder</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 p-4 border border-divergence-moderate/20 rounded-sm bg-divergence-moderate/5">
-              <span className="w-2 h-2 rounded-full bg-divergence-moderate mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-2.5 p-3 border border-divergence-moderate/20 rounded-sm bg-divergence-moderate/5">
+              <div className="w-3 h-3 rounded-sm bg-divergence-moderate flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-[7px] text-surface-900 font-bold">⇔</span>
+              </div>
               <div>
-                <p className="text-sm font-medium text-text-primary mb-1">Hvad de er uenige om</p>
-                <p className="text-xs text-text-secondary">Fortolkning, vinkling, kausalitet — her starter din analyse</p>
+                <p className="text-xs font-mono text-divergence-moderate font-medium">Fortolket</p>
+                <p className="text-xs text-text-tertiary mt-0.5">Hvor kilder er uenige</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 p-4 border border-divergence-high/20 rounded-sm bg-divergence-high/5">
-              <span className="w-2 h-2 rounded-full bg-divergence-high mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-2.5 p-3 border border-divergence-high/20 rounded-sm bg-divergence-high/5">
+              <div className="w-3 h-3 rounded-sm bg-divergence-high flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-[7px] text-surface-900 font-bold">?</span>
+              </div>
               <div>
-                <p className="text-sm font-medium text-text-primary mb-1">Hvad der stadig er uklart</p>
-                <p className="text-xs text-text-secondary">Ubekræftet, modstridende eller manglende information</p>
+                <p className="text-xs font-mono text-divergence-high font-medium">Uklart</p>
+                <p className="text-xs text-text-tertiary mt-0.5">Manglende data eller modstridende info</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ════════════════ BIAS MODEL ════════════════ */}
+      {/* ════════ BIAS INTELLIGENCE SYSTEM ════════ */}
       <section className="border-b border-surface-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">
-            Bias-model
-          </p>
-          <h2 className="font-display font-bold text-headline text-text-primary mb-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <p className="text-xs font-mono text-accent uppercase tracking-[0.15em] mb-2">Bias Intelligence</p>
+          <h2 className="font-display font-bold text-xl text-text-primary mb-2">
             Kend dine kilder
           </h2>
-          <p className="text-text-secondary mb-8 max-w-2xl">
-            Ingen kilde er neutral. Hver har geografisk, politisk og institutionel bias.
-            Vi gør dem synlige — så du kan kalibrere din læsning.
+          <p className="text-sm text-text-secondary mb-6 max-w-xl">
+            Ingen kilde er neutral. Hver har geografisk, politisk og institutionel bias. Vi gør dem synlige.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {sources.map((s) => (
               <BiasProfile key={s.key} sourceKey={s.key} />
             ))}
@@ -169,25 +144,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════ CASE LIST ════════════════ */}
+      {/* ════════ CASE ARCHIVE ════════ */}
       {moreCases.length > 0 && (
         <section className="border-b border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <div className="flex items-end justify-between mb-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="flex items-end justify-between mb-6">
               <div>
-                <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">Cases</p>
-                <h2 className="font-display font-bold text-headline text-text-primary">
-                  Aktuelle cases
-                </h2>
+                <p className="text-xs font-mono text-accent uppercase tracking-[0.15em] mb-2">Arkiv</p>
+                <h2 className="font-display font-bold text-xl text-text-primary">Cases</h2>
               </div>
-              <Link
-                to="/stories"
-                className="text-sm font-mono text-text-secondary hover:text-text-primary transition-colors"
-              >
+              <Link to="/stories" className="text-xs font-mono text-text-tertiary hover:text-text-primary transition-colors">
                 Alle {clusters.length} cases →
               </Link>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {moreCases.map((c) => (
                 <CaseBlock key={c.id} cluster={c} articles={articles} />
               ))}
@@ -196,29 +166,22 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ════════════════ OM / METODE ════════════════ */}
+      {/* ════════ METODE ════════ */}
       <section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="max-w-2xl">
-            <div className="border-l-2 border-accent/60 pl-5 mb-8">
-              <p className="font-display text-xl text-text-primary leading-relaxed">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="max-w-xl">
+            <div className="border-l-2 border-accent/60 pl-4 mb-6">
+              <p className="font-display text-lg text-text-primary">
                 Vi forsøger ikke at være neutrale.
               </p>
-              <p className="text-text-secondary mt-2 leading-relaxed">
-                Vi er strukturerede i vores sammenligning, transparente i vores metode,
-                og tydelige om bias — inklusiv vores egen.
+              <p className="text-sm text-text-secondary mt-1">
+                Vi er strukturerede i sammenligning, transparente i metode, og tydelige om bias.
               </p>
             </div>
-            <div className="flex gap-4">
-              <Link to="/methodology" className="text-sm font-mono text-accent hover:text-accent-light transition-colors">
-                Fuld metode →
-              </Link>
-              <Link to="/about" className="text-sm font-mono text-text-tertiary hover:text-text-secondary transition-colors">
-                Om projektet →
-              </Link>
-              <Link to="/legal" className="text-sm font-mono text-text-tertiary hover:text-text-secondary transition-colors">
-                Juridisk →
-              </Link>
+            <div className="flex gap-4 text-xs font-mono">
+              <Link to="/methodology" className="text-accent hover:text-accent-light transition-colors">Metode →</Link>
+              <Link to="/briefing" className="text-text-tertiary hover:text-text-secondary transition-colors">Daglig briefing →</Link>
+              <Link to="/about" className="text-text-tertiary hover:text-text-secondary transition-colors">Om →</Link>
             </div>
           </div>
         </div>
