@@ -13,10 +13,13 @@ export default function HomePage() {
 
   const highDiv = clusters
     .filter((c) => c.divergenceLevel === 'high')
-    .slice(0, 4);
+    .slice(0, 8);
+  const moderateDiv = clusters
+    .filter((c) => c.divergenceLevel === 'moderate')
+    .slice(0, 6);
   const recent = [...clusters]
     .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
-    .slice(0, 6);
+    .slice(0, 12);
 
   return (
     <div>
@@ -160,8 +163,26 @@ export default function HomePage() {
               title="Her er kilderne mest uenige"
               subtitle="Historier hvor dækningen divergerer mest. Disse fortjener ekstra opmærksomhed."
             />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {highDiv.map((c) => (
+                <StoryClusterCard key={c.id} cluster={c} articles={articles} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Moderate Divergence ── */}
+      {moderateDiv.length > 0 && (
+        <section className="border-t border-surface-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <SectionHeader
+              tag="Moderat divergens"
+              title="Tydelige forskelle i dækning"
+              subtitle="Kilderne er enige om fakta, men vinkler og fokus varierer."
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {moderateDiv.map((c) => (
                 <StoryClusterCard key={c.id} cluster={c} articles={articles} />
               ))}
             </div>

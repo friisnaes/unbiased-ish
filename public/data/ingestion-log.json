@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-03-22T06:38:59.685Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 25,
+    "errors": [
+      "wion: Fetch failed — Status code 404"
+    ]
+  },
+  {
     "timestamp": "2026-03-22T06:25:22.458Z",
     "sourcesAttempted": [
       "reuters",

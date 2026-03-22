@@ -220,6 +220,136 @@ const TOPIC_LABELS: Record<string, { en: string; da: string }> = {
   'south-asia': { en: 'South Asia', da: 'Sydasien' },
 };
 
+// ─── Danish Title Generation ────────────────────────────────
+
+const DANISH_TOPIC_NAMES: Record<string, string> = {
+  'ukraine-russia': 'Ukraine-Rusland',
+  conflict: 'Konflikt',
+  energy: 'Energi',
+  diplomacy: 'Diplomati',
+  'middle-east': 'Mellemøsten',
+  china: 'Kina',
+  india: 'Indien',
+  'north-korea': 'Nordkorea',
+  iran: 'Iran',
+  usa: 'USA',
+  geopolitics: 'Geopolitik',
+  eu: 'EU',
+  sanctions: 'Sanktioner',
+  russia: 'Rusland',
+  defense: 'Forsvar',
+  'civilian-impact': 'Civilpåvirkning',
+  climate: 'Klima',
+  trade: 'Handel',
+  nuclear: 'Atomvåben',
+  africa: 'Afrika',
+  'south-asia': 'Sydasien',
+};
+
+const KEYWORD_DANISH: [RegExp, string][] = [
+  [/\bwar\b/i, 'krig'],
+  [/\battack/i, 'angreb'],
+  [/\bdrone/i, 'drone'],
+  [/\bpeace\b/i, 'fred'],
+  [/\btalk/i, 'forhandling'],
+  [/\bsanction/i, 'sanktion'],
+  [/\bnuclear/i, 'atom'],
+  [/\btrade\b/i, 'handel'],
+  [/\btariff/i, 'told'],
+  [/\belection/i, 'valg'],
+  [/\bcrisis/i, 'krise'],
+  [/\bclimate/i, 'klima'],
+  [/\brefugee/i, 'flygtninge'],
+  [/\bmissile/i, 'missil'],
+  [/\bceasefire/i, 'våbenhvile'],
+  [/\bsummit/i, 'topmøde'],
+  [/\bprotest/i, 'protest'],
+  [/\bcoup\b/i, 'kup'],
+  [/\binvasion/i, 'invasion'],
+  [/\boffensive/i, 'offensiv'],
+];
+
+function generateDanishTitle(articles: Article[], topicTags: string[]): string {
+  // Extract common key entities from titles
+  const allTitles = articles.map((a) => a.title).join(' ').toLowerCase();
+
+  // Find key actors/locations mentioned
+  const actors: string[] = [];
+  const patterns: [RegExp, string][] = [
+    [/\bukraine/i, 'Ukraine'],
+    [/\brussia/i, 'Rusland'],
+    [/\bchina/i, 'Kina'],
+    [/\bindia/i, 'Indien'],
+    [/\biran/i, 'Iran'],
+    [/\bnorth korea/i, 'Nordkorea'],
+    [/\bisrael/i, 'Israel'],
+    [/\bpalestine|gaza/i, 'Palæstina'],
+    [/\bsyria/i, 'Syrien'],
+    [/\beu\b|european union/i, 'EU'],
+    [/\bnato\b/i, 'NATO'],
+    [/\bun\b|united nations/i, 'FN'],
+    [/\bzelensky/i, 'Zelensky'],
+    [/\bputin/i, 'Putin'],
+    [/\bxi jinping/i, 'Xi Jinping'],
+    [/\btrump/i, 'Trump'],
+    [/\bbiden/i, 'Biden'],
+    [/\bmodi/i, 'Modi'],
+    [/\bkim jong/i, 'Kim Jong-un'],
+  ];
+
+  for (const [re, name] of patterns) {
+    if (re.test(allTitles) && !actors.includes(name)) {
+      actors.push(name);
+    }
+  }
+
+  // Find key action
+  let action = '';
+  for (const [re, da] of KEYWORD_DANISH) {
+    if (re.test(allTitles)) {
+      action = da;
+      break;
+    }
+  }
+
+  // Build Danish title
+  const primaryTopic = topicTags[0] ? (DANISH_TOPIC_NAMES[topicTags[0]] || topicTags[0]) : '';
+
+  if (actors.length >= 2 && action) {
+    return `${actors.slice(0, 2).join(' og ')}: ${action}`;
+  }
+  if (actors.length >= 1 && action) {
+    return `${actors[0]}: ${action}`;
+  }
+  if (actors.length >= 2) {
+    return `${actors.slice(0, 3).join(', ')} — ${primaryTopic}`;
+  }
+  if (actors.length === 1 && primaryTopic) {
+    return `${actors[0]}: ${primaryTopic}`;
+  }
+  if (primaryTopic) {
+    return primaryTopic;
+  }
+
+  // Fallback: use lead article title
+  return articles[0]?.title || 'Ukendt historie';
+}
+
+function generateDanishSummary(articles: Article[], sourceKeys: Set<string>, divergenceLabel: string): string {
+  const sourceNames = [...sourceKeys].map((k) => {
+    const names: Record<string, string> = {
+      reuters: 'Reuters', ap: 'AP', bbc: 'BBC', aljazeera: 'Al Jazeera',
+      kyivindependent: 'Kyiv Independent', scmp: 'SCMP', tass: 'TASS', wion: 'WION',
+    };
+    return names[k] || k;
+  });
+
+  const count = sourceKeys.size;
+  const sourceList = sourceNames.join(', ');
+
+  return `${count} kilder dækker denne historie: ${sourceList}. ${divergenceLabel}`;
+}
+
 // ─── Union-Find for Clustering ──────────────────────────────
 
 class UnionFind {
@@ -332,8 +462,8 @@ function main() {
     const cluster: StoryCluster = {
       id: `cluster-${id}`,
       slug: slugify(lead.title),
-      title: lead.title,
-      summary: `Dækket af ${uniqueSources.size} kilder: ${[...uniqueSources].join(', ')}. ${divergence.label}`,
+      title: generateDanishTitle(members, allTags),
+      summary: generateDanishSummary(members, uniqueSources, divergence.label),
       articleIds: memberIds,
       sourceKeys: [...uniqueSources],
       coverageCount: uniqueSources.size,
