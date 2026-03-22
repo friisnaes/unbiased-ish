@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import type { StoryCluster, Article } from '@/types';
 import { timeAgo } from '@/utils/format';
-import DivergenceBadge from '@/components/DivergenceBadge';
 import ConfidenceIndicator, { deriveConfidence } from './ConfidenceIndicator';
+import DisagreementHeat from './DisagreementHeat';
 import SourceCard from './SourceCard';
 import SignalBlock from './SignalBlock';
+import FrictionBlock from './FrictionBlock';
 import EditorialNote from './EditorialNote';
 
 const SOURCE_ROLES: Record<string, string> = {
@@ -31,12 +32,12 @@ export default function CaseBlock({ cluster, articles, featured }: Props) {
   const hasSignal = cluster.synthesisKnown && cluster.synthesisKnown.length > 0;
 
   return (
-    <div className={featured ? '' : 'border border-surface-600 rounded-sm bg-surface-800/15 overflow-hidden'}>
+    <div className={featured ? '' : 'border border-surface-600 rounded-sm bg-surface-800/10 overflow-hidden'}>
       {/* ── Header ── */}
-      <div className={featured ? 'mb-6' : 'p-5 pb-4'}>
-        <div className="flex items-center gap-3 mb-3 flex-wrap">
+      <div className={featured ? 'mb-5' : 'p-5 pb-3'}>
+        <div className="flex items-center gap-2.5 mb-3 flex-wrap">
           <ConfidenceIndicator level={confidence} compact />
-          <DivergenceBadge level={cluster.divergenceLevel} score={cluster.divergenceScore} compact />
+          <DisagreementHeat score={cluster.divergenceScore} compact />
           <span className="text-xs font-mono text-text-tertiary ml-auto">
             {cluster.coverageCount} kilder · {timeAgo(cluster.updatedAt)}
           </span>
@@ -48,9 +49,22 @@ export default function CaseBlock({ cluster, articles, featured }: Props) {
         </Link>
       </div>
 
-      {/* ── Source Triangulation ── */}
-      <div className={`${featured ? '' : 'px-5'}`}>
-        <div className={`grid grid-cols-1 sm:grid-cols-2 ${featured ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-2.5 mb-5`}>
+      <div className={featured ? '' : 'px-5'}>
+        {/* ── Signal Engine™ (visually dominant — FIRST thing) ── */}
+        {hasSignal && (
+          <div className="mb-5">
+            <SignalBlock
+              confirmed={cluster.synthesisKnown!}
+              disputed={cluster.synthesisDisputed || []}
+              unknown={cluster.synthesisUnclear || []}
+              sourceCount={cluster.coverageCount}
+              divergenceScore={cluster.divergenceScore}
+            />
+          </div>
+        )}
+
+        {/* ── Source Triangulation (side-by-side) ── */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${featured ? 'lg:grid-cols-3 xl:grid-cols-3' : 'lg:grid-cols-3'} gap-2.5 mb-5`}>
           {cluster.sourceKeys.map((sk) => (
             <SourceCard
               key={sk}
@@ -60,33 +74,25 @@ export default function CaseBlock({ cluster, articles, featured }: Props) {
             />
           ))}
         </div>
-      </div>
 
-      {/* ── Signal Engine™ ── */}
-      {hasSignal && (
-        <div className={`${featured ? '' : 'px-5'} mb-5`}>
-          <SignalBlock
-            confirmed={cluster.synthesisKnown!}
-            disputed={cluster.synthesisDisputed || []}
-            unknown={cluster.synthesisUnclear || []}
-            sourceCount={cluster.coverageCount}
-            divergenceScore={cluster.divergenceScore}
-          />
-        </div>
-      )}
+        {/* ── Friction Block ── */}
+        {cluster.coverageCount >= 3 && (
+          <div className="mb-5">
+            <FrictionBlock sourceKeys={cluster.sourceKeys} />
+          </div>
+        )}
 
-      {/* ── Analysis fallback ── */}
-      {!hasSignal && cluster.clusterAnalysisDa && (
-        <div className={`${featured ? '' : 'px-5'} mb-5`}>
-          <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30">
+        {/* ── Analysis fallback (if no signal data) ── */}
+        {!hasSignal && cluster.clusterAnalysisDa && (
+          <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30 mb-5">
             <p className="text-xs font-mono text-text-tertiary uppercase tracking-wider mb-2">Analyse</p>
             <p className="text-sm text-text-secondary leading-relaxed">{cluster.clusterAnalysisDa}</p>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       {/* ── Editorial Transparency ── */}
-      <div className={`${featured ? '' : 'px-5 pb-5'}`}>
+      <div className={featured ? '' : 'px-5 pb-5'}>
         <EditorialNote
           note={cluster.editorialNote}
           sources={cluster.sourceKeys}
