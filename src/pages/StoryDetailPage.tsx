@@ -68,6 +68,25 @@ export default function StoryDetailPage() {
           {cluster.summary}
         </p>
 
+        {/* AI Cluster Analysis */}
+        {cluster.clusterAnalysisDa && (
+          <div className="mt-6 border border-surface-600 rounded-sm bg-surface-800/40 p-5">
+            <p className="text-xs font-mono text-accent uppercase tracking-wider mb-3">
+              AI-analyse af dækningen
+            </p>
+            {cluster.clusterAnalysisDa.split('\n').map((para, i) => (
+              para.trim() ? (
+                <p key={i} className="text-sm text-text-secondary leading-relaxed mb-2">
+                  {para}
+                </p>
+              ) : null
+            ))}
+            <p className="text-xs text-text-tertiary italic mt-3">
+              Denne analyse er automatisk genereret baseret på overskrifter og uddrag. Den kan indeholde fejl.
+            </p>
+          </div>
+        )}
+
         {cluster.divergenceLabel && (
           <div className="mt-4 border-l-2 border-accent/40 pl-4">
             <p className="text-sm text-text-tertiary italic">
@@ -131,28 +150,67 @@ export default function StoryDetailPage() {
                   <div className="divide-y divide-surface-700/50">
                     {sourceArticles.map((a) => (
                       <div key={a.id} className="px-5 py-4">
+                        {/* Danish summary */}
                         {a.summaryDa && (
                           <p className="text-sm text-text-primary leading-relaxed mb-2 border-l-2 border-accent/40 pl-3">
                             {a.summaryDa}
                           </p>
                         )}
+
+                        {/* Original title as link */}
                         <a
                           href={a.originalUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="group/art"
                         >
-                          <h3 className={`font-body transition-colors mb-1 group-hover/art:text-accent-light ${a.summaryDa ? 'text-sm text-text-secondary' : 'font-medium text-text-primary'}`}>
+                          <h3 className={`font-body transition-colors mb-2 group-hover/art:text-accent-light ${a.summaryDa ? 'text-sm text-text-secondary' : 'font-medium text-text-primary'}`}>
                             {a.summaryDa && <span className="text-text-tertiary text-xs font-mono mr-1.5">Original:</span>}
                             {a.title}
                             <span className="ml-1.5 text-text-tertiary text-xs">↗</span>
                           </h3>
                         </a>
-                        {!a.summaryDa && a.excerpt && (
+
+                        {/* Full article brief — show expanded in story detail */}
+                        {a.briefDa && (
+                          <div className="mt-2 mb-3 space-y-2 pl-3 border-l border-surface-600">
+                            {(() => {
+                              const indhold = a.briefDa!.match(/INDHOLD:\s*(.+?)(?=BUDSKAB:|KILDENOTE:|$)/s)?.[1]?.trim();
+                              const budskab = a.briefDa!.match(/BUDSKAB:\s*(.+?)(?=KILDENOTE:|$)/s)?.[1]?.trim();
+                              const kildenote = a.briefDa!.match(/KILDENOTE:\s*(.+?)$/s)?.[1]?.trim();
+                              return (
+                                <>
+                                  {indhold && (
+                                    <div>
+                                      <span className="text-xs font-mono text-text-tertiary uppercase tracking-wider">Indhold</span>
+                                      <p className="text-sm text-text-secondary leading-relaxed">{indhold}</p>
+                                    </div>
+                                  )}
+                                  {budskab && (
+                                    <div>
+                                      <span className="text-xs font-mono text-text-tertiary uppercase tracking-wider">Budskab</span>
+                                      <p className="text-sm text-text-secondary leading-relaxed">{budskab}</p>
+                                    </div>
+                                  )}
+                                  {kildenote && (
+                                    <div>
+                                      <span className="text-xs font-mono text-divergence-moderate uppercase tracking-wider">Kildenote</span>
+                                      <p className="text-xs text-text-tertiary leading-relaxed italic">{kildenote}</p>
+                                    </div>
+                                  )}
+                                </>
+                              );
+                            })()}
+                          </div>
+                        )}
+
+                        {/* Fallback excerpt */}
+                        {!a.summaryDa && !a.briefDa && a.excerpt && (
                           <p className="text-sm text-text-secondary leading-relaxed mb-2">
                             {truncate(a.excerpt, 240)}
                           </p>
                         )}
+
                         <div className="flex items-center gap-3 text-xs text-text-tertiary font-mono">
                           <time>{formatDate(a.publishedAt)}</time>
                           {a.linkStatus !== 'valid' && (

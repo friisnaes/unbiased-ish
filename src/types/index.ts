@@ -20,6 +20,7 @@ export interface Article {
   ingestionTimestamp: string; // ISO 8601
   clusterCandidateText: string;
   summaryDa?: string;
+  briefDa?: string;
 }
 
 export interface StoryCluster {
@@ -35,6 +36,7 @@ export interface StoryCluster {
   divergenceLabel: string;
   topicTags: string[];
   updatedAt: string;
+  clusterAnalysisDa?: string;
 }
 
 export interface SourceProfile {
