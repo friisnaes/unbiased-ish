@@ -161,6 +161,102 @@ export const sourceProfiles: Record<string, SourceProfile> = {
     enabled: true,
     color: '#005bbb',
   },
+  scmp: {
+    key: 'scmp',
+    name: 'South China Morning Post',
+    shortName: 'SCMP',
+    country: 'Hongkong / Kina',
+    region: 'east-asia',
+    founded: '1903',
+    type: 'Dagblad (Alibaba-ejet)',
+    language: 'en',
+    lensLabel: 'Kina-perspektiv',
+    lensDescription:
+      'SCMP er den mest tilgængelige engelsksprogede kilde til kinesisk perspektiv på verdenspolitik. Baseret i Hongkong, ejet af Alibaba — hvilket giver indsigt i kinesisk tænkning, men også selvcensur.',
+    strengths: [
+      'Unik adgang til kinesisk perspektiv på engelsk',
+      'Stærk dækning af Asien og Kina-relateret geopolitik',
+      'Nuanceret — ikke ren statspropaganda',
+    ],
+    blindSpots: [
+      'Ejet af Alibaba — selvcensur på sensitive emner',
+      'Hongkong-position kompliceret efter 2020',
+      'Sjældent kritisk over for Beijings kerneinteresser',
+    ],
+    vantagePoint:
+      'Hongkong-baseret engelsksprogrt dagblad. Grundlagt 1903, ejet af Alibaba Group siden 2016. Den vigtigste engelsksprogede kilde til kinesisk perspektiv.',
+    howWeUseIt:
+      'Vi bruger SCMP som Kina-linse — den kilde der bedst viser, hvordan Beijing og den bredere asiatiske region ser på de samme begivenheder.',
+    whatToWatch:
+      'SCMP er ejet af Alibaba og baseret i Hongkong under kinesisk lov. Det giver unik indsigt, men selvcensur er en dokumenteret faktor. Læs for perspektivet, ikke som uafhængig kilde.',
+    feedUrl: 'https://www.scmp.com/rss/91/feed',
+    enabled: true,
+    color: '#ff6b2b',
+  },
+  tass: {
+    key: 'tass',
+    name: 'TASS',
+    shortName: 'TASS',
+    country: 'Rusland',
+    region: 'russia',
+    founded: '1904',
+    type: 'Statsligt nyhedsbureau',
+    language: 'en',
+    lensLabel: 'Russisk statsperspektiv',
+    lensDescription:
+      'TASS er Ruslands statslige nyhedsbureau. Det viser den officielle russiske framing — ikke uafhængig journalistik, men netop derfor uvurderlig som modperspektiv.',
+    strengths: [
+      'Direkte indsigt i russisk statsnarrativ',
+      'Tidlig rapportering af russiske positioner',
+      'Uundværlig for at forstå Moskvas framing',
+    ],
+    blindSpots: [
+      'Statsligt kontrolleret — ikke uafhængig journalistik',
+      'Propagandaelement er altid til stede',
+      'Systematisk udeladelse af information der skader Kreml',
+    ],
+    vantagePoint:
+      'Russisk statsligt nyhedsbureau. Grundlagt 1904, nu kontrolleret af den russiske stat. Leverer den officielle russiske version af begivenheder.',
+    howWeUseIt:
+      'Vi bruger TASS som russisk modperspektiv — ikke som faktuel kilde, men for at vise hvordan Moskva framer de samme begivenheder. Afgørende for at forstå divergens.',
+    whatToWatch:
+      'TASS er statsligt russisk medie. Alt der publiceres er filtreret gennem Kremls interesser. Brug det udelukkende til at forstå russisk framing — aldrig som faktuel baseline.',
+    feedUrl: 'https://tass.com/rss/v2.xml',
+    enabled: true,
+    color: '#1a47a5',
+  },
+  wion: {
+    key: 'wion',
+    name: 'WION',
+    shortName: 'WION',
+    country: 'Indien',
+    region: 'south-asia',
+    founded: '2016',
+    type: 'International nyhedskanal',
+    language: 'en',
+    lensLabel: 'Indisk / Global South-perspektiv',
+    lensDescription:
+      'WION (World Is One News) giver et indisk perspektiv på international politik. Vigtig som BRICS-vinkel og stemme fra det globale syd — men med indisk nationalistisk undertone.',
+    strengths: [
+      'Indisk og Global South-perspektiv på engelsk',
+      'Stærk dækning af BRICS og multipolær geopolitik',
+      'Dækker historier vestlige medier overser',
+    ],
+    blindSpots: [
+      'Indisk nationalistisk undertone',
+      'Kan være ukritisk over for indisk udenrigspolitik',
+      'Relativt nyt medie — stadig under modning',
+    ],
+    vantagePoint:
+      'Indisk engelsksprogrt nyhedskanal. Del af Zee Media Corporation. Positionerer sig som "Indiens perspektiv på verden" med fokus på multipolær verdensorden.',
+    howWeUseIt:
+      'Vi bruger WION som Global South-linse — den kilde der bedst repræsenterer indisk og BRICS-perspektiv på geopolitiske begivenheder.',
+    whatToWatch:
+      'WION er ejet af Zee Media og har en tydelig indisk vinkel. De er særligt interessante på BRICS, Kina-Indien dynamik og vestlig dobbeltmoral — men læs med bevidsthed om indisk position.',
+    feedUrl: 'https://www.wionews.com/feeds/world/rss.xml',
+    enabled: true,
+    color: '#e5a820',
+  },
 };
 
 export const getSourceProfile = (key: string): SourceProfile | undefined =>

@@ -202,6 +202,10 @@ const TOPIC_LABELS: Record<string, { en: string; da: string }> = {
   diplomacy: { en: 'Diplomacy', da: 'Diplomati' },
   'middle-east': { en: 'Middle East', da: 'Mellemøsten' },
   china: { en: 'China', da: 'Kina' },
+  india: { en: 'India', da: 'Indien' },
+  'north-korea': { en: 'North Korea', da: 'Nordkorea' },
+  iran: { en: 'Iran', da: 'Iran' },
+  usa: { en: 'USA', da: 'USA' },
   geopolitics: { en: 'Geopolitics', da: 'Geopolitik' },
   eu: { en: 'EU', da: 'EU' },
   sanctions: { en: 'Sanctions', da: 'Sanktioner' },
@@ -210,6 +214,10 @@ const TOPIC_LABELS: Record<string, { en: string; da: string }> = {
   'civilian-impact': { en: 'Civilian Impact', da: 'Civilpåvirkning' },
   'global-south': { en: 'Global South', da: 'Det Globale Syd' },
   climate: { en: 'Climate', da: 'Klima' },
+  trade: { en: 'Trade', da: 'Handel' },
+  nuclear: { en: 'Nuclear', da: 'Atomvåben & Nonproliferation' },
+  africa: { en: 'Africa', da: 'Afrika' },
+  'south-asia': { en: 'South Asia', da: 'Sydasien' },
 };
 
 // ─── Union-Find for Clustering ──────────────────────────────

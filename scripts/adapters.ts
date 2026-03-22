@@ -10,7 +10,7 @@ import Parser from 'rss-parser';
 
 // ─── Types ──────────────────────────────────────────────────
 
-export type SourceKey = 'reuters' | 'ap' | 'bbc' | 'aljazeera' | 'kyivindependent';
+export type SourceKey = 'reuters' | 'ap' | 'bbc' | 'aljazeera' | 'kyivindependent' | 'scmp' | 'tass' | 'wion';
 
 export interface RawArticle {
   sourceKey: SourceKey;
@@ -87,11 +87,38 @@ const sources: SourceConfig[] = [
   {
     key: 'kyivindependent',
     name: 'Kyiv Independent',
-    feedUrl: 'https://kyivindependent.com/feed/',
+    feedUrl: 'https://news.google.com/rss/search?q=site:kyivindependent.com&hl=en',
     enabled: true,
     region: 'eastern-europe',
     language: 'en',
     topicHints: ['ukraine-russia', 'conflict'],
+  },
+  {
+    key: 'scmp',
+    name: 'South China Morning Post',
+    feedUrl: 'https://www.scmp.com/rss/91/feed',
+    enabled: true,
+    region: 'east-asia',
+    language: 'en',
+    topicHints: ['china', 'geopolitics', 'east-asia'],
+  },
+  {
+    key: 'tass',
+    name: 'TASS',
+    feedUrl: 'https://tass.com/rss/v2.xml',
+    enabled: true,
+    region: 'russia',
+    language: 'en',
+    topicHints: ['russia', 'geopolitics', 'conflict'],
+  },
+  {
+    key: 'wion',
+    name: 'WION',
+    feedUrl: 'https://www.wionews.com/feeds/world/rss.xml',
+    enabled: true,
+    region: 'south-asia',
+    language: 'en',
+    topicHints: ['geopolitics', 'south-asia', 'diplomacy'],
   },
 ];
 
@@ -104,12 +131,20 @@ const TAG_KEYWORDS: Record<string, string[]> = {
   'energy': ['energy', 'oil', 'gas', 'lng', 'pipeline', 'nuclear', 'power', 'electricity'],
   'sanctions': ['sanction', 'restrict', 'embargo', 'ban', 'penalty'],
   'middle-east': ['middle east', 'gaza', 'israel', 'palestine', 'iran', 'syria', 'lebanon', 'hamas', 'hezbollah'],
-  'china': ['china', 'beijing', 'xi jinping', 'chinese'],
+  'china': ['china', 'beijing', 'xi jinping', 'chinese', 'taiwan', 'south china sea'],
+  'india': ['india', 'modi', 'new delhi', 'indian', 'mumbai'],
+  'north-korea': ['north korea', 'pyongyang', 'kim jong'],
+  'iran': ['iran', 'tehran', 'iranian', 'ayatollah', 'khamenei'],
   'eu': ['european union', ' eu ', 'brussels', 'europe'],
-  'geopolitics': ['geopolit', 'superpower', 'alliance', 'nato', 'brics'],
-  'defense': ['defense', 'defence', 'air defense', 'intercept', 'military'],
+  'usa': ['united states', 'washington', 'white house', 'pentagon', 'congress', 'biden', 'trump', 'american'],
+  'geopolitics': ['geopolit', 'superpower', 'alliance', 'nato', 'brics', 'multipolar', 'g7', 'g20'],
+  'defense': ['defense', 'defence', 'air defense', 'intercept', 'military', 'weapon', 'arms'],
   'civilian-impact': ['civilian', 'humanitarian', 'refugee', 'displacement', 'casualt'],
   'climate': ['climate', 'emission', 'carbon', 'warming', 'cop'],
+  'trade': ['trade', 'tariff', 'export', 'import', 'economic', 'commerce'],
+  'nuclear': ['nuclear', 'atomic', 'enrichment', 'nonproliferat', 'warhead'],
+  'africa': ['africa', 'african union', 'sahel', 'niger', 'sudan', 'ethiopia', 'kenya', 'nigeria'],
+  'south-asia': ['pakistan', 'bangladesh', 'sri lanka', 'afghanistan'],
 };
 
 function extractTags(text: string, feedCategories?: string[]): string[] {

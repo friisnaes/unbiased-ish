@@ -5,7 +5,7 @@ interface Props {
   clusters: StoryCluster[];
 }
 
-const sourceOrder = ['reuters', 'ap', 'bbc', 'aljazeera', 'kyivindependent'] as const;
+const sourceOrder = ['reuters', 'ap', 'bbc', 'aljazeera', 'kyivindependent', 'scmp', 'tass', 'wion'] as const;
 
 export default function CoverageMatrix({ clusters }: Props) {
   const top = clusters.slice(0, 8);

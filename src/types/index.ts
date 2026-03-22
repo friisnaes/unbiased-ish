@@ -2,7 +2,7 @@
 
 export type LinkStatus = 'valid' | 'uncertain' | 'broken' | 'unchecked';
 export type DivergenceLevel = 'low' | 'moderate' | 'high';
-export type SourceKey = 'reuters' | 'ap' | 'bbc' | 'aljazeera' | 'kyivindependent';
+export type SourceKey = 'reuters' | 'ap' | 'bbc' | 'aljazeera' | 'kyivindependent' | 'scmp' | 'tass' | 'wion';
 
 export interface Article {
   id: string;
