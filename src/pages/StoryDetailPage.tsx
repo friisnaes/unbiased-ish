@@ -4,6 +4,8 @@ import { sourceProfiles } from '@/data/sources';
 import { timeAgo, formatDate, truncate } from '@/utils/format';
 import DivergenceBadge from '@/components/DivergenceBadge';
 import SourceBadge from '@/components/SourceBadge';
+import SynthesisBox from '@/components/cases/SynthesisBox';
+import BiasProfile from '@/components/cases/BiasProfile';
 
 export default function StoryDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -107,6 +109,34 @@ export default function StoryDetailPage() {
           ))}
         </div>
       </header>
+
+      {/* ── Synthesis Box ── */}
+      {cluster.synthesisKnown && cluster.synthesisKnown.length > 0 && (
+        <section className="mb-10">
+          <SynthesisBox
+            known={cluster.synthesisKnown}
+            disputed={cluster.synthesisDisputed || []}
+            unclear={cluster.synthesisUnclear || []}
+          />
+          {cluster.editorialNote && (
+            <p className="text-xs text-text-tertiary italic mt-3">
+              Redaktionel note: {cluster.editorialNote}
+            </p>
+          )}
+        </section>
+      )}
+
+      {/* ── Bias profiles for sources in this cluster ── */}
+      <section className="mb-10">
+        <h2 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-4">
+          Kilder i denne case — bias-profiler
+        </h2>
+        <div className="space-y-2 border border-surface-600 rounded-sm p-4 bg-surface-800/20">
+          {cluster.sourceKeys.map((sk) => (
+            <BiasProfile key={sk} sourceKey={sk} compact />
+          ))}
+        </div>
+      </section>
 
       {/* ── Side-by-side comparison ── */}
       <section>

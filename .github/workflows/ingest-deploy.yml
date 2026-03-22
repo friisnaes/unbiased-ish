@@ -50,6 +50,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # Generate case synthesis (known/disputed/unclear)
+      - name: Generate case synthesis
+        run: npm run synthesize
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       # Validate links (lightweight, limited per run)
       - name: Validate article links
         run: npm run validate-links

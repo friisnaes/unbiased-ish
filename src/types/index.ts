@@ -37,6 +37,10 @@ export interface StoryCluster {
   topicTags: string[];
   updatedAt: string;
   clusterAnalysisDa?: string;
+  synthesisKnown?: string[];
+  synthesisDisputed?: string[];
+  synthesisUnclear?: string[];
+  editorialNote?: string;
 }
 
 export interface SourceProfile {

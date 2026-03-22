@@ -1,262 +1,225 @@
 import { Link } from 'react-router-dom';
 import { useArticles, useClusters, useSiteConfig } from '@/hooks/useData';
-import { sourceProfiles, enabledSources } from '@/data/sources';
-import StoryClusterCard from '@/components/StoryClusterCard';
-import CoverageMatrix from '@/components/CoverageMatrix';
-import SectionHeader from '@/components/SectionHeader';
+import { enabledSources } from '@/data/sources';
+import CaseBlock from '@/components/cases/CaseBlock';
+import BiasProfile from '@/components/cases/BiasProfile';
 import DivergenceBadge from '@/components/DivergenceBadge';
+import { timeAgo } from '@/utils/format';
 
 export default function HomePage() {
   const { articles } = useArticles();
   const { clusters } = useClusters();
   const config = useSiteConfig();
 
-  const highDiv = clusters
-    .filter((c) => c.divergenceLevel === 'high')
-    .slice(0, 8);
-  const moderateDiv = clusters
-    .filter((c) => c.divergenceLevel === 'moderate')
-    .slice(0, 6);
-  const recent = [...clusters]
-    .sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
-    .slice(0, 12);
+  // Sort clusters: highest divergence first, then recency
+  const sorted = [...clusters].sort((a, b) => {
+    if (b.divergenceScore !== a.divergenceScore) return b.divergenceScore - a.divergenceScore;
+    return b.updatedAt.localeCompare(a.updatedAt);
+  });
+
+  const featuredCase = sorted[0];
+  const moreCases = sorted.slice(1, 7);
+  const sources = enabledSources();
 
   return (
     <div>
-      {/* ── Hero ── */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative">
+      {/* ════════════════ HERO ════════════════ */}
+      <section className="border-b border-surface-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
           <div className="max-w-3xl">
-            <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-6 animate-fade-in">
-              Perspektiver på geopolitik
-            </p>
-            <h1 className="font-display font-extrabold text-hero text-text-primary mb-6 animate-slide-up">
-              Signal
-              <span className="text-text-tertiary font-light"> over </span>
-              Støj
+            <h1 className="font-display font-extrabold text-hero text-text-primary mb-4">
+              Én historie.
+              <br />
+              <span className="text-text-secondary">Flere vinkler.</span>
+              <br />
+              Dine egne konklusioner.
             </h1>
-            <p className="text-xl text-text-secondary leading-relaxed mb-8 animate-slide-up stagger-1 opacity-0">
-              Denne side samler ikke sandheden. Den samler perspektiver.
+            <p className="text-lg text-text-secondary leading-relaxed mb-6">
+              Sammenlign hvordan forskellige medier dækker den samme begivenhed
+              — og se forskellen på fakta, fortolkning og bias.
             </p>
-            <div className="animate-slide-up stagger-2 opacity-0">
-              <p className="text-text-secondary leading-relaxed mb-4">
-                Når fem nyhedskilder dækker den samme historie, fortæller de sjældent den
-                samme historie. Signal over Støj gør de forskelle synlige — så du kan
-                træffe bedre beslutninger om hvad du læser, og hvad du overser.
-              </p>
-              <div className="border-l-2 border-accent/60 pl-4 my-6">
-                <p className="text-text-secondary italic">
-                  Denne side prøver ikke at være neutral.
-                  <br />
-                  Den prøver at gøre vinkler synlige.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 animate-slide-up stagger-3 opacity-0">
+            <div className="flex gap-3 flex-wrap">
+              {featuredCase && (
+                <a
+                  href="#live-case"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors"
+                >
+                  Se en aktuel case ↓
+                </a>
+              )}
               <Link
                 to="/briefing"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors"
               >
                 Daglig briefing
-                <span className="text-xs">→</span>
-              </Link>
-              <Link
-                to="/stories"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors"
-              >
-                Alle historier
-              </Link>
-              <Link
-                to="/methodology"
-                className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors"
-              >
-                Sådan læser du siden
               </Link>
             </div>
           </div>
 
           {config && (
-            <div className="mt-12 flex gap-8 text-xs font-mono text-text-tertiary animate-fade-in stagger-4 opacity-0">
-              <span>{config.totalArticles} artikler indekseret</span>
-              <span>{config.totalClusters} historier sporet</span>
-              <span>{enabledSources().length} kilder aktive</span>
+            <div className="mt-8 flex gap-6 text-xs font-mono text-text-tertiary">
+              <span>{config.totalArticles} artikler</span>
+              <span>{config.totalClusters} cases</span>
+              <span>{sources.length} kilder</span>
+              {config.lastIngestion && (
+                <span>Opdateret {timeAgo(config.lastIngestion)}</span>
+              )}
             </div>
           )}
         </div>
       </section>
 
-      {/* ── How to read ── */}
-      <section className="border-t border-surface-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <SectionHeader
-            tag="Læseguide"
-            title="Sådan bruger du Signal over Støj"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                num: '01',
-                title: 'Ét datapunkt er støj',
-                body: 'En enkelt overskrift fra én kilde er ikke nok til at forstå en historie. Det er bare et udgangspunkt.',
-              },
-              {
-                num: '02',
-                title: 'Tre datapunkter er mønster',
-                body: 'Når tre kilder dækker det samme forskelligt, begynder du at se mønstre — og vinkler.',
-              },
-              {
-                num: '03',
-                title: 'Fem datapunkter er beslutningsgrundlag',
-                body: 'Med fem perspektiver kan du begynde at danne dig et kvalificeret billede. Ikke sandheden — men et fundament.',
-              },
-            ].map((item) => (
-              <div
-                key={item.num}
-                className="border border-surface-600 rounded-sm p-6 bg-surface-800/30"
-              >
-                <span className="text-xs font-mono text-accent">{item.num}</span>
-                <h3 className="font-display font-semibold text-text-primary mt-2 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-text-secondary leading-relaxed">
-                  {item.body}
-                </p>
+      {/* ════════════════ LIVE CASE ════════════════ */}
+      {featuredCase && (
+        <section id="live-case" className="border-b border-surface-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-6">
+              Aktuel case · Højeste divergens
+            </p>
+            <CaseBlock cluster={featuredCase} articles={articles} featured />
+          </div>
+        </section>
+      )}
+
+      {/* ════════════════ SÅDAN LÆSER DU DENNE SIDE ════════════════ */}
+      <section className="border-b border-surface-700 bg-surface-800/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">
+            Metode
+          </p>
+          <h2 className="font-display font-bold text-headline text-text-primary mb-8">
+            Sådan læser du denne side
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#ff8c00' }}>
+              <p className="font-mono text-xs text-text-tertiary mb-1">Reuters / AP</p>
+              <p className="font-display font-semibold text-text-primary text-sm mb-2">Rå fakta</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Hvad er sket. Wire services rapporterer hurtigt og bredt. Brug dem som faktuel baseline.
+              </p>
+            </div>
+            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#bb1919' }}>
+              <p className="font-mono text-xs text-text-tertiary mb-1">BBC</p>
+              <p className="font-display font-semibold text-text-primary text-sm mb-2">Kontekst</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Hvorfor det betyder noget. BBC kontekstualiserer — men med et vestligt, britisk udsyn.
+              </p>
+            </div>
+            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#d2a44e' }}>
+              <p className="font-mono text-xs text-text-tertiary mb-1">Al Jazeera / SCMP / TASS</p>
+              <p className="font-display font-semibold text-text-primary text-sm mb-2">Modperspektiv</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Hvordan det kan ses anderledes. Disse kilder udfordrer det vestlige narrativ — men har egne biases.
+              </p>
+            </div>
+            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30" style={{ borderTopWidth: 3, borderTopColor: '#005bbb' }}>
+              <p className="font-mono text-xs text-text-tertiary mb-1">Kyiv Independent</p>
+              <p className="font-display font-semibold text-text-primary text-sm mb-2">Lokal virkelighed</p>
+              <p className="text-xs text-text-secondary leading-relaxed">
+                Frontlinjens perspektiv. Uvurderlig indsigt — men naturligt præget af national position.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex items-start gap-3 p-4 border border-divergence-low/20 rounded-sm bg-divergence-low/5">
+              <span className="w-2 h-2 rounded-full bg-divergence-low mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-text-primary mb-1">Hvad kilderne er enige om</p>
+                <p className="text-xs text-text-secondary">Bekræftede facts — den fælles faktuelle kerne</p>
               </div>
+            </div>
+            <div className="flex items-start gap-3 p-4 border border-divergence-moderate/20 rounded-sm bg-divergence-moderate/5">
+              <span className="w-2 h-2 rounded-full bg-divergence-moderate mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-text-primary mb-1">Hvad de er uenige om</p>
+                <p className="text-xs text-text-secondary">Fortolkning, vinkling, kausalitet — her starter din analyse</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 p-4 border border-divergence-high/20 rounded-sm bg-divergence-high/5">
+              <span className="w-2 h-2 rounded-full bg-divergence-high mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-text-primary mb-1">Hvad der stadig er uklart</p>
+                <p className="text-xs text-text-secondary">Ubekræftet, modstridende eller manglende information</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════ BIAS MODEL ════════════════ */}
+      <section className="border-b border-surface-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">
+            Bias-model
+          </p>
+          <h2 className="font-display font-bold text-headline text-text-primary mb-3">
+            Kend dine kilder
+          </h2>
+          <p className="text-text-secondary mb-8 max-w-2xl">
+            Ingen kilde er neutral. Hver har geografisk, politisk og institutionel bias.
+            Vi gør dem synlige — så du kan kalibrere din læsning.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {sources.map((s) => (
+              <BiasProfile key={s.key} sourceKey={s.key} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Source Lenses ── */}
-      <section className="border-t border-surface-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <SectionHeader
-            tag="Kildelinser"
-            title="Hvad hver kilde typisk bringer"
-            subtitle="Disse er redaktionelle tendenser, ikke absolutte sandheder. Læs mere på de individuelle kildeprofiler."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {enabledSources().map((s) => (
-              <Link
-                key={s.key}
-                to={`/sources/${s.key}`}
-                className="group border border-surface-600 rounded-sm p-4 hover:border-surface-500 transition-colors bg-surface-800/20"
-              >
-                <div
-                  className="w-8 h-0.5 mb-3 rounded-full"
-                  style={{ backgroundColor: s.color }}
-                />
-                <p className="font-mono text-xs text-text-tertiary mb-1">{s.shortName}</p>
-                <p className="font-display font-semibold text-sm text-text-primary mb-2">
-                  {s.lensLabel}
-                </p>
-                <p className="text-xs text-text-secondary leading-relaxed line-clamp-3">
-                  {s.lensDescription}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── High Divergence ── */}
-      {highDiv.length > 0 && (
-        <section className="border-t border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <SectionHeader
-              tag="Høj divergens"
-              title="Her er kilderne mest uenige"
-              subtitle="Historier hvor dækningen divergerer mest. Disse fortjener ekstra opmærksomhed."
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {highDiv.map((c) => (
-                <StoryClusterCard key={c.id} cluster={c} articles={articles} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Moderate Divergence ── */}
-      {moderateDiv.length > 0 && (
-        <section className="border-t border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <SectionHeader
-              tag="Moderat divergens"
-              title="Tydelige forskelle i dækning"
-              subtitle="Kilderne er enige om fakta, men vinkler og fokus varierer."
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {moderateDiv.map((c) => (
-                <StoryClusterCard key={c.id} cluster={c} articles={articles} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Coverage Matrix ── */}
-      {clusters.length > 0 && (
-        <section className="border-t border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <SectionHeader
-              tag="Dækningsmatrix"
-              title="Hvem dækker hvad"
-              subtitle="En hurtig oversigt over hvilke kilder der dækker de samme historier."
-            />
-            <div className="border border-surface-600 rounded-sm p-4 bg-surface-800/30">
-              <CoverageMatrix clusters={clusters} />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── Recent Stories ── */}
-      {recent.length > 0 && (
-        <section className="border-t border-surface-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* ════════════════ CASE LIST ════════════════ */}
+      {moreCases.length > 0 && (
+        <section className="border-b border-surface-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="flex items-end justify-between mb-8">
-              <SectionHeader tag="Seneste" title="Nyeste historier" />
+              <div>
+                <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-2">Cases</p>
+                <h2 className="font-display font-bold text-headline text-text-primary">
+                  Aktuelle cases
+                </h2>
+              </div>
               <Link
                 to="/stories"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors font-mono"
+                className="text-sm font-mono text-text-secondary hover:text-text-primary transition-colors"
               >
-                Alle historier →
+                Alle {clusters.length} cases →
               </Link>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recent.map((c) => (
-                <StoryClusterCard key={c.id} cluster={c} articles={articles} />
+            <div className="space-y-6">
+              {moreCases.map((c) => (
+                <CaseBlock key={c.id} cluster={c} articles={articles} />
               ))}
             </div>
           </div>
         </section>
       )}
 
-      {/* ── Methodology Teaser ── */}
-      <section className="border-t border-surface-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* ════════════════ OM / METODE ════════════════ */}
+      <section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-2xl">
-            <p className="text-xs font-mono text-accent uppercase tracking-widest mb-4">
-              Transparens
-            </p>
-            <p className="font-display text-xl text-text-primary leading-relaxed mb-4">
-              Formålet er ikke at skjule bias.
-              <br />
-              Formålet er at gøre bias synlig.
-            </p>
-            <p className="text-sm text-text-secondary leading-relaxed mb-6">
-              Signal over Støj er bygget på åbne feeds og offentlige API'er. Hver
-              kilde er beskrevet med styrker, blinde vinkler og redaktionel position.
-              Ingen kilde præsenteres som neutral — heller ikke denne side.
-            </p>
-            <Link
-              to="/methodology"
-              className="text-sm font-mono text-accent hover:text-accent-light transition-colors"
-            >
-              Læs metode & transparens →
-            </Link>
+            <div className="border-l-2 border-accent/60 pl-5 mb-8">
+              <p className="font-display text-xl text-text-primary leading-relaxed">
+                Vi forsøger ikke at være neutrale.
+              </p>
+              <p className="text-text-secondary mt-2 leading-relaxed">
+                Vi er strukturerede i vores sammenligning, transparente i vores metode,
+                og tydelige om bias — inklusiv vores egen.
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <Link to="/methodology" className="text-sm font-mono text-accent hover:text-accent-light transition-colors">
+                Fuld metode →
+              </Link>
+              <Link to="/about" className="text-sm font-mono text-text-tertiary hover:text-text-secondary transition-colors">
+                Om projektet →
+              </Link>
+              <Link to="/legal" className="text-sm font-mono text-text-tertiary hover:text-text-secondary transition-colors">
+                Juridisk →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
