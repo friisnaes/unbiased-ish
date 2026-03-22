@@ -41,6 +41,9 @@ export interface StoryCluster {
   synthesisDisputed?: string[];
   synthesisUnclear?: string[];
   editorialNote?: string;
+  confidenceExplanation?: string;
+  soWhatConclude?: string[];
+  soWhatCareful?: string[];
 }
 
 export interface SourceProfile {

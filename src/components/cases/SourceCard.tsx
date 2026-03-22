@@ -1,15 +1,15 @@
 import { sourceProfiles } from '@/data/sources';
 import type { Article } from '@/types';
 
-const SOURCE_BIAS_INLINE: Record<string, { strength: string; weakness: string }> = {
-  reuters: { strength: 'faktuel disciplin', weakness: 'mangler dybde' },
-  ap: { strength: 'bekræftede facts', weakness: 'mangler kontekst' },
-  bbc: { strength: 'stærk kontekst', weakness: 'vestlig institutionel framing' },
-  aljazeera: { strength: 'modperspektiv', weakness: 'regional politisk bias' },
-  kyivindependent: { strength: 'frontlinjeindsigt', weakness: 'national vinkel' },
-  scmp: { strength: 'Kina-perspektiv', weakness: 'Alibaba-ejerskab, selvcensur' },
-  tass: { strength: 'russisk officiel position', weakness: 'statskontrolleret propaganda' },
-  wion: { strength: 'Global South-vinkel', weakness: 'indisk nationalistisk bias' },
+const BIAS_PRECISE: Record<string, { strength: string; bias: string }> = {
+  reuters: { strength: 'faktuel disciplin', bias: 'begrænset fortolkning' },
+  ap: { strength: 'verificerede facts', bias: 'mangler kontekst og dybde' },
+  bbc: { strength: 'stærk kontekst', bias: 'institutionel stabilitetsbias' },
+  aljazeera: { strength: 'modperspektiv', bias: 'regional interesseframing' },
+  kyivindependent: { strength: 'frontlinjeindsigt', bias: 'national overlevelsesbias' },
+  scmp: { strength: 'Kina-perspektiv', bias: 'kommerciel selvcensur' },
+  tass: { strength: 'russisk officiel position', bias: 'statskontrolleret narrativ' },
+  wion: { strength: 'Global South-vinkel', bias: 'nationalistisk framing' },
 };
 
 interface Props {
@@ -23,36 +23,32 @@ export default function SourceCard({ sourceKey, role, articles }: Props) {
   if (!profile || articles.length === 0) return null;
 
   const lead = articles[0];
-  const bias = SOURCE_BIAS_INLINE[sourceKey];
+  const bias = BIAS_PRECISE[sourceKey];
 
   return (
     <div
       className="border border-surface-600 rounded-sm bg-surface-800/30 overflow-hidden flex flex-col"
       style={{ borderTopWidth: 3, borderTopColor: profile.color }}
     >
-      {/* Header */}
-      <div className="px-3.5 py-2.5 border-b border-surface-700/50">
-        <div className="flex items-center justify-between mb-1">
+      <div className="px-3.5 py-2 border-b border-surface-700/50">
+        <div className="flex items-center justify-between mb-0.5">
           <span className="font-mono text-xs font-medium text-text-primary">{profile.shortName}</span>
           <span className="text-[10px] text-text-tertiary font-mono uppercase tracking-wider">{role}</span>
         </div>
-        {/* Inline bias — always visible */}
         {bias && (
-          <div className="flex gap-2 text-[10px] leading-tight">
+          <p className="text-[10px] leading-tight">
             <span className="text-divergence-low">+ {bias.strength}</span>
-            <span className="text-divergence-moderate">− {bias.weakness}</span>
-          </div>
+            <span className="text-text-tertiary mx-1">–</span>
+            <span className="text-divergence-moderate">{bias.bias}</span>
+          </p>
         )}
       </div>
 
-      {/* Content */}
-      <div className="p-3.5 flex-1 flex flex-col gap-2.5">
-        {/* Summary */}
+      <div className="p-3.5 flex-1 flex flex-col gap-2">
         {lead.summaryDa && (
           <p className="text-sm text-text-primary leading-relaxed">{lead.summaryDa}</p>
         )}
 
-        {/* Budskab extract */}
         {lead.briefDa && (() => {
           const match = lead.briefDa!.match(/BUDSKAB:\s*(.+?)(?=KILDENOTE:|$)/s);
           return match?.[1]?.trim() ? (
@@ -63,7 +59,6 @@ export default function SourceCard({ sourceKey, role, articles }: Props) {
           ) : null;
         })()}
 
-        {/* Link */}
         <a
           href={lead.originalUrl}
           target="_blank"

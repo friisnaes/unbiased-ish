@@ -1,20 +1,28 @@
 import { useParams, Link } from 'react-router-dom';
 import { useArticles, useClusters } from '@/hooks/useData';
 import { sourceProfiles } from '@/data/sources';
+import { SIGNATURE_CASE, SIGNATURE_ARTICLES } from '@/data/signatureCase';
 import { timeAgo, formatDate, truncate } from '@/utils/format';
 import DivergenceBadge from '@/components/DivergenceBadge';
 import SourceBadge from '@/components/SourceBadge';
 import SignalBlock from '@/components/cases/SignalBlock';
+import SoWhatBlock from '@/components/cases/SoWhatBlock';
 import BiasProfile from '@/components/cases/BiasProfile';
-import ConfidenceIndicator, { deriveConfidence } from '@/components/cases/ConfidenceIndicator';
+import ConfidenceIndicator, { deriveConfidence, deriveConfidenceExplanation } from '@/components/cases/ConfidenceIndicator';
 import EditorialNote from '@/components/cases/EditorialNote';
+import FrictionBlock from '@/components/cases/FrictionBlock';
+import DisagreementHeat from '@/components/cases/DisagreementHeat';
 
 export default function StoryDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { articles } = useArticles();
-  const { clusters, loading } = useClusters();
+  const { articles: liveArticles } = useArticles();
+  const { clusters: liveClusters, loading } = useClusters();
 
-  const cluster = clusters.find((c) => c.slug === slug);
+  // Merge signature case
+  const allArticles = [...SIGNATURE_ARTICLES, ...liveArticles];
+  const cluster = slug === SIGNATURE_CASE.slug
+    ? SIGNATURE_CASE
+    : liveClusters.find((c) => c.slug === slug);
 
   if (loading) {
     return (
@@ -35,7 +43,7 @@ export default function StoryDetailPage() {
     );
   }
 
-  const clusterArticles = articles
+  const clusterArticles = allArticles
     .filter((a) => cluster.articleIds.includes(a.id))
     .sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
 
@@ -115,7 +123,7 @@ export default function StoryDetailPage() {
 
       {/* ── Signal Engine™ ── */}
       {cluster.synthesisKnown && cluster.synthesisKnown.length > 0 && (
-        <section className="mb-10">
+        <section className="mb-8">
           <SignalBlock
             confirmed={cluster.synthesisKnown}
             disputed={cluster.synthesisDisputed || []}
@@ -126,7 +134,35 @@ export default function StoryDetailPage() {
         </section>
       )}
 
-      {/* ── Bias profiles for sources in this cluster ── */}
+      {/* ── Confidence med forklaring ── */}
+      <section className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <ConfidenceIndicator
+          level={deriveConfidence(cluster.coverageCount, cluster.divergenceScore)}
+          explanation={cluster.confidenceExplanation || deriveConfidenceExplanation(cluster.coverageCount, cluster.divergenceScore)}
+        />
+        <div className="border border-surface-600 rounded-sm p-3 bg-surface-800/30">
+          <DisagreementHeat score={cluster.divergenceScore} />
+        </div>
+      </section>
+
+      {/* ── So What ── */}
+      {cluster.soWhatConclude && cluster.soWhatConclude.length > 0 && (
+        <section className="mb-8">
+          <SoWhatBlock
+            canConclude={cluster.soWhatConclude}
+            beCareful={cluster.soWhatCareful || []}
+          />
+        </section>
+      )}
+
+      {/* ── Friction ── */}
+      {cluster.coverageCount >= 3 && (
+        <section className="mb-8">
+          <FrictionBlock sourceKeys={cluster.sourceKeys} />
+        </section>
+      )}
+
+      {/* ── Bias profiles ── */}
       <section className="mb-10">
         <h2 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-4">
           Kilder i denne case — bias-profiler
