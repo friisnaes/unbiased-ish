@@ -1,5 +1,57 @@
 [
   {
+    "timestamp": "2026-03-22T15:20:21.996Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 0,
+    "errors": [
+      "wion: Fetch failed on https://www.wionews.com/feeds/world/rss.xml — Status code 404"
+    ]
+  },
+  {
+    "timestamp": "2026-03-22T15:19:21.531Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 67,
+    "errors": [
+      "wion: Fetch failed on https://www.wionews.com/feeds/world/rss.xml — Status code 404"
+    ]
+  },
+  {
     "timestamp": "2026-03-22T07:41:43.742Z",
     "sourcesAttempted": [
       "reuters",
