@@ -36,7 +36,7 @@ export interface AdapterResult {
 interface SourceConfig {
   key: SourceKey;
   name: string;
-  feedUrl: string | null;
+  feedUrls: string[];
   enabled: boolean;
   region: string;
   language: string;
@@ -47,9 +47,11 @@ const sources: SourceConfig[] = [
   {
     key: 'reuters',
     name: 'Reuters',
-    // NOTE: Reuters does not provide a public RSS feed.
-    // Using Google News RSS as a proxy — replace with a confirmed legal endpoint.
-    feedUrl: 'https://news.google.com/rss/search?q=site:reuters.com+world&hl=en',
+    feedUrls: [
+      'https://news.google.com/rss/search?q=site:reuters.com+ukraine+OR+russia+OR+war&hl=en',
+      'https://news.google.com/rss/search?q=site:reuters.com+iran+OR+sanctions+OR+nuclear&hl=en',
+      'https://news.google.com/rss/search?q=site:reuters.com+geopolitics+OR+conflict+global&hl=en',
+    ],
     enabled: true,
     region: 'global',
     language: 'en',
@@ -58,9 +60,10 @@ const sources: SourceConfig[] = [
   {
     key: 'ap',
     name: 'Associated Press',
-    // NOTE: AP does not provide a freely available public RSS.
-    // Using Google News RSS as a proxy — replace with a confirmed legal endpoint.
-    feedUrl: 'https://news.google.com/rss/search?q=site:apnews.com+world&hl=en',
+    feedUrls: [
+      'https://news.google.com/rss/search?q=site:apnews.com+ukraine+OR+russia&hl=en',
+      'https://news.google.com/rss/search?q=site:apnews.com+iran+OR+middle+east+conflict&hl=en',
+    ],
     enabled: true,
     region: 'global',
     language: 'en',
@@ -69,7 +72,11 @@ const sources: SourceConfig[] = [
   {
     key: 'bbc',
     name: 'BBC News',
-    feedUrl: 'https://feeds.bbci.co.uk/news/world/rss.xml',
+    feedUrls: [
+      'https://feeds.bbci.co.uk/news/world/europe/rss.xml',
+      'https://feeds.bbci.co.uk/news/world/middle_east/rss.xml',
+      'https://feeds.bbci.co.uk/news/world/rss.xml',
+    ],
     enabled: true,
     region: 'europe',
     language: 'en',
@@ -78,7 +85,9 @@ const sources: SourceConfig[] = [
   {
     key: 'aljazeera',
     name: 'Al Jazeera',
-    feedUrl: 'https://www.aljazeera.com/xml/rss/all.xml',
+    feedUrls: [
+      'https://www.aljazeera.com/xml/rss/all.xml',
+    ],
     enabled: true,
     region: 'middle-east',
     language: 'en',
@@ -87,7 +96,9 @@ const sources: SourceConfig[] = [
   {
     key: 'kyivindependent',
     name: 'Kyiv Independent',
-    feedUrl: 'https://news.google.com/rss/search?q=site:kyivindependent.com&hl=en',
+    feedUrls: [
+      'https://news.google.com/rss/search?q=site:kyivindependent.com&hl=en',
+    ],
     enabled: true,
     region: 'eastern-europe',
     language: 'en',
@@ -96,7 +107,9 @@ const sources: SourceConfig[] = [
   {
     key: 'scmp',
     name: 'South China Morning Post',
-    feedUrl: 'https://www.scmp.com/rss/91/feed',
+    feedUrls: [
+      'https://www.scmp.com/rss/91/feed',
+    ],
     enabled: true,
     region: 'east-asia',
     language: 'en',
@@ -105,7 +118,9 @@ const sources: SourceConfig[] = [
   {
     key: 'tass',
     name: 'TASS',
-    feedUrl: 'https://tass.com/rss/v2.xml',
+    feedUrls: [
+      'https://tass.com/rss/v2.xml',
+    ],
     enabled: true,
     region: 'russia',
     language: 'en',
@@ -114,7 +129,9 @@ const sources: SourceConfig[] = [
   {
     key: 'wion',
     name: 'WION',
-    feedUrl: 'https://www.wionews.com/feeds/world/rss.xml',
+    feedUrls: [
+      'https://www.wionews.com/feeds/world/rss.xml',
+    ],
     enabled: true,
     region: 'south-asia',
     language: 'en',
@@ -182,6 +199,31 @@ function isValidUrl(url: string): boolean {
   }
 }
 
+// ─── Topic Relevance Filter ─────────────────────────────────
+// Focus on Ukraine, Iran, and global impact of these conflicts
+
+const FOCUS_KEYWORDS = [
+  // Ukraine / Russia
+  'ukraine', 'russia', 'kyiv', 'moscow', 'kremlin', 'zelensky', 'putin',
+  'drone', 'frontline', 'donbas', 'crimea', 'kharkiv', 'odesa', 'zaporizhzhia',
+  // Iran
+  'iran', 'tehran', 'iranian', 'ayatollah', 'khamenei', 'irgc', 'persian gulf',
+  'strait of hormuz', 'enrichment', 'nuclear deal', 'jcpoa',
+  // Global impact
+  'sanctions', 'energy crisis', 'oil price', 'gas price', 'food security',
+  'grain', 'wheat', 'refugee', 'nato', 'arms', 'weapon', 'missile',
+  'ceasefire', 'peace talk', 'negotiat', 'escalat', 'geopolit',
+  'nuclear', 'proliferat', 'proxy', 'alliance', 'coalition',
+  // Adjacent conflicts / actors affected
+  'israel', 'gaza', 'hezbollah', 'houthi', 'red sea', 'syria',
+  'china', 'india', 'turkey', 'brics', 'global south',
+];
+
+function isRelevantArticle(title: string, excerpt: string): boolean {
+  const text = `${title} ${excerpt}`.toLowerCase();
+  return FOCUS_KEYWORDS.some((kw) => text.includes(kw));
+}
+
 // ─── RSS Adapter ────────────────────────────────────────────
 
 const parser = new Parser({
@@ -193,71 +235,74 @@ const parser = new Parser({
 
 async function fetchRSS(config: SourceConfig): Promise<AdapterResult> {
   const result: AdapterResult = { articles: [], warnings: [], errors: [] };
+  const seenUrls = new Set<string>();
 
   if (!config.enabled) {
     result.warnings.push(`${config.key}: Source is disabled, skipping.`);
     return result;
   }
 
-  if (!config.feedUrl) {
-    result.warnings.push(`${config.key}: No feed URL configured. Skipping — configure a legal feed/API endpoint.`);
+  if (config.feedUrls.length === 0) {
+    result.warnings.push(`${config.key}: No feed URLs configured. Skipping.`);
     return result;
   }
 
-  try {
-    console.log(`  Fetching ${config.key} from ${config.feedUrl}...`);
-    const feed = await parser.parseURL(config.feedUrl);
+  for (const feedUrl of config.feedUrls) {
+    try {
+      console.log(`  Fetching ${config.key} from ${feedUrl.slice(0, 80)}...`);
+      const feed = await parser.parseURL(feedUrl);
 
-    if (!feed.items || feed.items.length === 0) {
-      result.warnings.push(`${config.key}: Feed returned 0 items.`);
-      return result;
-    }
-
-    for (const item of feed.items.slice(0, 25)) {
-      const title = (item.title || '').trim();
-      const link = (item.link || '').trim();
-
-      if (!title || !link) continue;
-      if (!isValidUrl(link)) {
-        result.warnings.push(`${config.key}: Invalid URL skipped: ${link}`);
+      if (!feed.items || feed.items.length === 0) {
+        result.warnings.push(`${config.key}: Feed returned 0 items from ${feedUrl.slice(0, 60)}`);
         continue;
       }
 
-      const pubDate = item.pubDate || item.isoDate || new Date().toISOString();
-      const excerpt = (item.contentSnippet || item.content || '').slice(0, 300).trim();
-      const categories = (item.categories || []) as string[];
+      for (const item of feed.items.slice(0, 25)) {
+        const title = (item.title || '').trim();
+        const link = (item.link || '').trim();
 
-      const searchText = `${title} ${excerpt}`;
-      const topicTags = extractTags(searchText, categories);
+        if (!title || !link) continue;
+        if (!isValidUrl(link)) continue;
+        if (seenUrls.has(link)) continue;
+        seenUrls.add(link);
 
-      // Add source-level topic hints if no tags found
-      if (topicTags.length === 0) {
-        topicTags.push(...config.topicHints.slice(0, 2));
+        const pubDate = item.pubDate || item.isoDate || new Date().toISOString();
+        const excerpt = (item.contentSnippet || item.content || '').slice(0, 300).trim();
+
+        // Filter for topic relevance
+        if (!isRelevantArticle(title, excerpt)) continue;
+
+        const categories = (item.categories || []) as string[];
+        const searchText = `${title} ${excerpt}`;
+        const topicTags = extractTags(searchText, categories);
+
+        if (topicTags.length === 0) {
+          topicTags.push(...config.topicHints.slice(0, 2));
+        }
+
+        const imageUrl = item.enclosure?.url || null;
+
+        result.articles.push({
+          sourceKey: config.key,
+          sourceName: config.name,
+          title,
+          originalUrl: link,
+          publishedAt: new Date(pubDate).toISOString(),
+          excerpt,
+          topicTags,
+          language: config.language,
+          region: config.region,
+          imageUrl: typeof imageUrl === 'string' ? imageUrl : null,
+        });
       }
-
-      const imageUrl = item.enclosure?.url || null;
-
-      result.articles.push({
-        sourceKey: config.key,
-        sourceName: config.name,
-        title,
-        originalUrl: link,
-        publishedAt: new Date(pubDate).toISOString(),
-        excerpt,
-        topicTags,
-        language: config.language,
-        region: config.region,
-        imageUrl: typeof imageUrl === 'string' ? imageUrl : null,
-      });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      result.errors.push(`${config.key}: Fetch failed on ${feedUrl.slice(0, 60)} — ${msg}`);
+      console.error(`  ${config.key}: ERROR — ${msg}`);
     }
-
-    console.log(`  ${config.key}: ${result.articles.length} articles fetched.`);
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    result.errors.push(`${config.key}: Fetch failed — ${msg}`);
-    console.error(`  ${config.key}: ERROR — ${msg}`);
   }
 
+  console.log(`  ${config.key}: ${result.articles.length} relevant articles fetched.`);
   return result;
 }
 

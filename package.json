@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "ingest": "tsx scripts/ingest.ts",
     "cluster": "tsx scripts/cluster.ts",
-    "pipeline": "tsx scripts/ingest.ts && tsx scripts/cluster.ts",
+    "summarize": "tsx scripts/summarize.ts",
+    "pipeline": "tsx scripts/ingest.ts && tsx scripts/cluster.ts && tsx scripts/summarize.ts",
     "validate-links": "tsx scripts/validate-links.ts"
   },
   "dependencies": {

@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-03-22T07:41:43.742Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 94,
+    "errors": [
+      "wion: Fetch failed on https://www.wionews.com/feeds/world/rss.xml — Status code 404"
+    ]
+  },
+  {
     "timestamp": "2026-03-22T06:38:59.685Z",
     "sourcesAttempted": [
       "reuters",

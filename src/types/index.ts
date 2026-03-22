@@ -19,6 +19,7 @@ export interface Article {
   linkStatus: LinkStatus;
   ingestionTimestamp: string; // ISO 8601
   clusterCandidateText: string;
+  summaryDa?: string;
 }
 
 export interface StoryCluster {

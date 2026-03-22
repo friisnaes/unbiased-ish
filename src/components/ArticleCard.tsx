@@ -19,19 +19,27 @@ export default function ArticleCard({ article }: Props) {
         )}
       </div>
 
+      {/* Danish summary — prominent if available */}
+      {article.summaryDa && (
+        <p className="text-sm text-text-primary leading-relaxed mb-2 border-l-2 border-accent/40 pl-3">
+          {article.summaryDa}
+        </p>
+      )}
+
       <a
         href={article.originalUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="block group/link"
       >
-        <h3 className="font-display font-semibold text-text-primary leading-snug mb-2 group-hover/link:text-accent-light transition-colors">
+        <h3 className="font-body text-text-secondary text-sm leading-snug mb-2 group-hover/link:text-accent-light transition-colors">
+          <span className="text-text-tertiary text-xs font-mono mr-1.5">Original:</span>
           {article.title}
           <span className="ml-1.5 text-text-tertiary text-sm link-arrow">↗</span>
         </h3>
       </a>
 
-      {article.excerpt && (
+      {!article.summaryDa && article.excerpt && (
         <p className="text-sm text-text-secondary leading-relaxed mb-3">
           {truncate(article.excerpt, 180)}
         </p>

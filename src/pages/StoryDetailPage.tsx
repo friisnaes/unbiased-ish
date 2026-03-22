@@ -131,18 +131,24 @@ export default function StoryDetailPage() {
                   <div className="divide-y divide-surface-700/50">
                     {sourceArticles.map((a) => (
                       <div key={a.id} className="px-5 py-4">
+                        {a.summaryDa && (
+                          <p className="text-sm text-text-primary leading-relaxed mb-2 border-l-2 border-accent/40 pl-3">
+                            {a.summaryDa}
+                          </p>
+                        )}
                         <a
                           href={a.originalUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="group/art"
                         >
-                          <h3 className="font-body font-medium text-text-primary group-hover/art:text-accent-light transition-colors mb-1">
+                          <h3 className={`font-body transition-colors mb-1 group-hover/art:text-accent-light ${a.summaryDa ? 'text-sm text-text-secondary' : 'font-medium text-text-primary'}`}>
+                            {a.summaryDa && <span className="text-text-tertiary text-xs font-mono mr-1.5">Original:</span>}
                             {a.title}
                             <span className="ml-1.5 text-text-tertiary text-xs">↗</span>
                           </h3>
                         </a>
-                        {a.excerpt && (
+                        {!a.summaryDa && a.excerpt && (
                           <p className="text-sm text-text-secondary leading-relaxed mb-2">
                             {truncate(a.excerpt, 240)}
                           </p>

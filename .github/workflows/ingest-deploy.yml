@@ -38,6 +38,12 @@ jobs:
       - name: Cluster stories & calculate divergence
         run: npm run cluster
 
+      # Generate Danish summaries (requires ANTHROPIC_API_KEY secret)
+      - name: Generate Danish summaries
+        run: npm run summarize
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       # Validate links (lightweight, limited per run)
       - name: Validate article links
         run: npm run validate-links
