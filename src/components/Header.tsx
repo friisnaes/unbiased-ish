@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { to: '/', label: 'Overblik' },
+  { to: '/briefing', label: 'Daglig Briefing' },
   { to: '/stories', label: 'Historier' },
   { to: '/sources', label: 'Kilder' },
   { to: '/methodology', label: 'Metode' },

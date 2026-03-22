@@ -9,6 +9,7 @@ import TopicPage from '@/pages/TopicPage';
 import MethodologyPage from '@/pages/MethodologyPage';
 import AboutPage from '@/pages/AboutPage';
 import LegalPage from '@/pages/LegalPage';
+import BriefingPage from '@/pages/BriefingPage';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
+          <Route path="briefing" element={<BriefingPage />} />
           <Route path="stories" element={<StoriesPage />} />
           <Route path="stories/:slug" element={<StoryDetailPage />} />
           <Route path="sources" element={<SourcesPage />} />

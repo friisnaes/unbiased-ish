@@ -44,6 +44,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # Generate daily briefing
+      - name: Generate daily briefing
+        run: npm run briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       # Validate links (lightweight, limited per run)
       - name: Validate article links
         run: npm run validate-links

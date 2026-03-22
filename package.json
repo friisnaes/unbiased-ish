@@ -10,7 +10,8 @@
     "ingest": "tsx scripts/ingest.ts",
     "cluster": "tsx scripts/cluster.ts",
     "summarize": "tsx scripts/summarize.ts",
-    "pipeline": "tsx scripts/ingest.ts && tsx scripts/cluster.ts && tsx scripts/summarize.ts",
+    "briefing": "tsx scripts/briefing.ts",
+    "pipeline": "tsx scripts/ingest.ts && tsx scripts/cluster.ts && tsx scripts/summarize.ts && tsx scripts/briefing.ts",
     "validate-links": "tsx scripts/validate-links.ts"
   },
   "dependencies": {

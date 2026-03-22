@@ -55,11 +55,17 @@ export default function HomePage() {
             </div>
             <div className="flex gap-4 animate-slide-up stagger-3 opacity-0">
               <Link
-                to="/stories"
+                to="/briefing"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent hover:bg-accent-light text-text-primary text-sm font-medium rounded-sm transition-colors"
               >
-                Se historier
+                Daglig briefing
                 <span className="text-xs">→</span>
+              </Link>
+              <Link
+                to="/stories"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-surface-600 hover:border-surface-500 text-text-secondary text-sm rounded-sm transition-colors"
+              >
+                Alle historier
               </Link>
               <Link
                 to="/methodology"
