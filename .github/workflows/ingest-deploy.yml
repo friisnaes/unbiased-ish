@@ -1,9 +1,9 @@
-name: Ingest & Deploy
+name: Daglig opdatering
 
 on:
   schedule:
-    # Run every 15 minutes
-    - cron: '*/15 * * * *'
+    # 06:00 dansk sommertid (04:00 UTC) / 05:00 dansk vintertid
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  ingest:
+  pipeline:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,39 +28,52 @@ jobs:
 
       - run: npm ci
 
-      # Run ingestion pipeline
-      - name: Fetch & normalize articles
+      # 1. Hent artikler fra alle kilder
+      - name: Ingest articles
         run: npm run ingest
-        env:
-          NODE_ENV: production
 
-      # Run clustering
-      - name: Cluster stories & calculate divergence
+      # 2. Gruppér i cases
+      - name: Cluster stories
         run: npm run cluster
 
-      # Generate Danish summaries (requires ANTHROPIC_API_KEY secret)
-      - name: Generate Danish summaries
+      # 3. Generér danske artikelbriefs (30 per kørsel × 4 = 120)
+      - name: Generate article briefs (batch 1)
         run: npm run summarize
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      # Generate daily briefing
-      - name: Generate daily briefing
-        run: npm run briefing
+      - name: Generate article briefs (batch 2)
+        run: npm run summarize
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      # Generate case synthesis (known/disputed/unclear)
+      - name: Generate article briefs (batch 3)
+        run: npm run summarize
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Generate article briefs (batch 4)
+        run: npm run summarize
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # 4. Generér case synthesis (known/disputed/unclear)
       - name: Generate case synthesis
         run: npm run synthesize
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      # Validate links (lightweight, limited per run)
-      - name: Validate article links
+      # 5. Generér daglig briefing (Ukraine + Iran + Global)
+      - name: Generate daily briefing
+        run: npm run briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # 6. Validér links
+      - name: Validate links
         run: npm run validate-links
 
-      # Check if data changed
+      # 7. Commit hvis ændringer
       - name: Check for changes
         id: changes
         run: |
@@ -71,27 +84,29 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
-      # Commit updated data
       - name: Commit data
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "Signal over Støj Bot"
           git config user.email "bot@signal-over-stoej.github.io"
           git add public/data/
-          git commit -m "data: update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git commit -m "data: daglig opdatering $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
 
-  build-deploy:
-    needs: ingest
+  # 8. Byg og deploy
+  deploy:
+    needs: pipeline
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
-          # Fetch latest including any data commits
+          ref: main
           fetch-depth: 0
 
-      - run: git pull origin ${{ github.ref_name }} || true
+      - run: git pull origin main || true
 
       - uses: actions/setup-node@v4
         with:
@@ -107,4 +122,5 @@ jobs:
         with:
           path: dist
 
-      - uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v4
