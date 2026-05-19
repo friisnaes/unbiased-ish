@@ -1,5 +1,30 @@
 [
   {
+    "timestamp": "2026-05-19T07:47:14.474Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 129,
+    "errors": [
+      "aljazeera: Fetch failed on https://www.aljazeera.com/xml/rss/all.xml — "
+    ]
+  },
+  {
     "timestamp": "2026-05-16T06:22:13.010Z",
     "sourcesAttempted": [
       "reuters",
