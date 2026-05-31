@@ -1,5 +1,29 @@
 [
   {
+    "timestamp": "2026-05-31T07:46:48.274Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 78,
+    "errors": []
+  },
+  {
     "timestamp": "2026-05-30T06:46:25.830Z",
     "sourcesAttempted": [
       "reuters",
@@ -1184,26 +1208,6 @@
     "articlesIngested": 113,
     "errors": [
       "wion: Fetch failed — Status code 404"
-    ]
-  },
-  {
-    "timestamp": "2026-03-21T18:10:23.169Z",
-    "sourcesAttempted": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent"
-    ],
-    "sourcesSucceeded": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera"
-    ],
-    "articlesIngested": 100,
-    "errors": [
-      "kyivindependent: Fetch failed — Status code 404"
     ]
   }
 ]
