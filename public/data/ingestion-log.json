@@ -1,5 +1,30 @@
 [
   {
+    "timestamp": "2026-08-19T04:36:50.739Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp"
+    ],
+    "articlesIngested": 93,
+    "errors": [
+      "tass: Fetch failed on https://tass.com/rss/v2.xml — Request timed out after 15000ms"
+    ]
+  },
+  {
     "timestamp": "2026-08-18T04:35:25.220Z",
     "sourcesAttempted": [
       "reuters",
@@ -1173,30 +1198,6 @@
       "tass"
     ],
     "articlesIngested": 98,
-    "errors": []
-  },
-  {
-    "timestamp": "2026-06-10T08:08:38.495Z",
-    "sourcesAttempted": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass",
-      "wion"
-    ],
-    "sourcesSucceeded": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass"
-    ],
-    "articlesIngested": 104,
     "errors": []
   }
 ]
