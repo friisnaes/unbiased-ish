@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-08-20",
+    "generatedAt": "2026-08-20T04:45:14.591Z",
+    "ukraineRussia": {
+      "headline": "Ukraine-Rusland: Ingen tilstrækkelig data",
+      "narrative": "Ikke nok kildedata til at generere briefing.",
+      "keyDivergences": "",
+      "sourcesUsed": [],
+      "clusterIds": []
+    },
+    "iranMiddleEast": {
+      "headline": "Iran/Mellemøsten: Ingen tilstrækkelig data",
+      "narrative": "Ikke nok kildedata til at generere briefing.",
+      "keyDivergences": "",
+      "sourcesUsed": [],
+      "clusterIds": []
+    },
+    "globalImpact": {
+      "headline": "Global påvirkning",
+      "narrative": "Ikke nok data til analyse.",
+      "sourcesUsed": [
+        "tass",
+        "bbc",
+        "aljazeera",
+        "reuters",
+        "scmp",
+        "kyivindependent",
+        "ap"
+      ]
+    },
+    "methodology": "Denne briefing er automatisk genereret baseret udelukkende på overskrifter og uddrag fra offentlige RSS-feeds. Ingen fuld artikeltekst er brugt. Kildehenvisninger er indsat for transparens. AI-analysen kan indeholde fejl — brug altid original journalistik som primær kilde."
+  },
+  {
     "date": "2026-08-19",
     "generatedAt": "2026-08-19T04:45:16.463Z",
     "ukraineRussia": {
@@ -922,38 +954,6 @@
         "reuters",
         "ap",
         "bbc",
-        "kyivindependent"
-      ]
-    },
-    "methodology": "Denne briefing er automatisk genereret baseret udelukkende på overskrifter og uddrag fra offentlige RSS-feeds. Ingen fuld artikeltekst er brugt. Kildehenvisninger er indsat for transparens. AI-analysen kan indeholde fejl — brug altid original journalistik som primær kilde."
-  },
-  {
-    "date": "2026-07-08",
-    "generatedAt": "2026-07-08T06:37:09.103Z",
-    "ukraineRussia": {
-      "headline": "Ukraine-Rusland: Ingen tilstrækkelig data",
-      "narrative": "Ikke nok kildedata til at generere briefing.",
-      "keyDivergences": "",
-      "sourcesUsed": [],
-      "clusterIds": []
-    },
-    "iranMiddleEast": {
-      "headline": "Iran/Mellemøsten: Ingen tilstrækkelig data",
-      "narrative": "Ikke nok kildedata til at generere briefing.",
-      "keyDivergences": "",
-      "sourcesUsed": [],
-      "clusterIds": []
-    },
-    "globalImpact": {
-      "headline": "Global påvirkning",
-      "narrative": "Ikke nok data til analyse.",
-      "sourcesUsed": [
-        "bbc",
-        "ap",
-        "scmp",
-        "tass",
-        "aljazeera",
-        "reuters",
         "kyivindependent"
       ]
     },
