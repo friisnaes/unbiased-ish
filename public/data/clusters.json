@@ -1,104 +1,724 @@
 [
   {
-    "id": "cluster-11e2b0d817b7842f",
-    "slug": "can-iran-shift-trade-north-to-caspian-sea-as-war-impairs-str",
-    "title": "Ukraine og Iran: krig",
-    "summary": "6 kilder dækker denne historie: Al Jazeera, AP, BBC, SCMP, TASS, Reuters. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-8c3a0a67407c0601",
+    "slug": "sweden-s-magdalena-andersson-ends-government-formation-talks",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "5 kilder dækker denne historie: SCMP, TASS, AP, Al Jazeera, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "aljazeera-2229ce376adf",
-      "ap-5c57e533118d",
-      "bbc-cb7921681dd9",
-      "scmp-84f8a7a5803f",
-      "tass-7ba13dfceb4b",
-      "reuters-002a9f3c6055"
+      "scmp-b569268d1bfe",
+      "tass-907c83396c84",
+      "ap-488a8b4a1924",
+      "aljazeera-b0bb498f20cb",
+      "reuters-df3f1d6caca7"
     ],
     "sourceKeys": [
-      "aljazeera",
+      "scmp",
+      "tass",
       "ap",
-      "bbc",
-      "scmp",
-      "tass",
-      "reuters"
-    ],
-    "coverageCount": 6,
-    "divergenceScore": 0.93,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "energy",
-      "middle-east",
-      "iran",
-      "trade",
-      "geopolitics"
-    ],
-    "updatedAt": "2026-09-27T08:49:32.000Z"
-  },
-  {
-    "id": "cluster-9f3ade52001491b4",
-    "slug": "china-sends-two-pandas-to-zoo-in-american-atlanta-tv",
-    "title": "Kina og Indien: valg",
-    "summary": "5 kilder dækker denne historie: TASS, SCMP, Al Jazeera, BBC, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-71f37f2050e6",
-      "scmp-b25be6f50986",
-      "aljazeera-926efffb4e85",
-      "bbc-9bea66b25fb9",
-      "reuters-f831a14db161"
-    ],
-    "sourceKeys": [
-      "tass",
-      "scmp",
       "aljazeera",
-      "bbc",
       "reuters"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "china",
-      "usa",
-      "india",
-      "africa",
-      "middle-east",
-      "iran"
-    ],
-    "updatedAt": "2026-09-27T08:21:26.000Z"
-  },
-  {
-    "id": "cluster-6c5d4572b9ddc4a5",
-    "slug": "why-southeast-asia-feels-relief-and-caution-after-the-xi-tru",
-    "title": "Rusland og Kina: forhandlinger",
-    "summary": "5 kilder dækker denne historie: SCMP, Al Jazeera, AP, TASS, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-822995f36978",
-      "aljazeera-17a6948b67dd",
-      "ap-7c7037d60901",
-      "tass-de4a572a55a7",
-      "reuters-ae15b237eb1a"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "aljazeera",
-      "ap",
-      "tass",
-      "reuters"
-    ],
-    "coverageCount": 5,
-    "divergenceScore": 0.9,
+    "divergenceScore": 0.85,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "diplomacy",
-      "china",
-      "usa",
       "ukraine-russia",
+      "eu",
       "conflict",
+      "sanctions"
+    ],
+    "updatedAt": "2026-09-28T10:27:57.000Z"
+  },
+  {
+    "id": "cluster-e92ffb9b4accb60f",
+    "slug": "arms-control-agreement-with-us-requires-lengthy-preparation-",
+    "title": "Ukraine og Iran: krig",
+    "summary": "4 kilder dækker denne historie: TASS, SCMP, BBC, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-8afaa9f73203",
+      "scmp-866314bd0f79",
+      "bbc-c73d04cb3b95",
+      "aljazeera-52a5b651929c"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp",
+      "bbc",
+      "aljazeera"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.9,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy",
+      "defense",
+      "conflict",
+      "north-korea",
+      "middle-east"
+    ],
+    "updatedAt": "2026-09-28T10:25:23.000Z"
+  },
+  {
+    "id": "cluster-aae1c9bd52372b67",
+    "slug": "uk-counter-terror-police-question-five-men-held-at-airbase-u",
+    "title": "Rusland og Iran: krig",
+    "summary": "4 kilder dækker denne historie: Reuters, AP, Al Jazeera, TASS. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-5672eea4602b",
+      "ap-62f5941ae946",
+      "aljazeera-71a678254d1a",
+      "tass-39ee8880c91d"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "ap",
+      "aljazeera",
+      "tass"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.85,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "middle-east",
+      "iran",
+      "ukraine-russia",
+      "civilian-impact",
       "defense"
     ],
-    "updatedAt": "2026-09-27T08:06:48.000Z"
+    "updatedAt": "2026-09-28T10:20:20.000Z"
+  },
+  {
+    "id": "cluster-b373e955982ee796",
+    "slug": "palestinians-denounce-israeli-minister-ben-gvir-s-threats-ag",
+    "title": "Rusland, Israel, Putin",
+    "summary": "4 kilder dækker denne historie: Al Jazeera, SCMP, TASS, Reuters. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "aljazeera-daa0e9cb5115",
+      "scmp-981512a0c865",
+      "tass-c936a048f572",
+      "reuters-30b06cc439c9"
+    ],
+    "sourceKeys": [
+      "aljazeera",
+      "scmp",
+      "tass",
+      "reuters"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.77,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "middle-east",
+      "ukraine-russia",
+      "energy"
+    ],
+    "updatedAt": "2026-09-28T10:11:28.000Z"
+  },
+  {
+    "id": "cluster-e1f526b109e9679f",
+    "slug": "ukraine-plans-to-spend-175-bln-on-military-needs-in-2027-fin",
+    "title": "Ukraine og Rusland: droneangreb",
+    "summary": "5 kilder dækker denne historie: TASS, Reuters, Al Jazeera, SCMP, Kyiv Independent. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-cf6439b155e1",
+      "reuters-f2ce6d538b16",
+      "aljazeera-57fa022d2175",
+      "scmp-9af3989b1e2c",
+      "kyivindependent-0a6a8d2d9dff"
+    ],
+    "sourceKeys": [
+      "tass",
+      "reuters",
+      "aljazeera",
+      "scmp",
+      "kyivindependent"
+    ],
+    "coverageCount": 5,
+    "divergenceScore": 0.86,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "defense",
+      "north-korea",
+      "china"
+    ],
+    "updatedAt": "2026-09-28T10:11:11.000Z"
+  },
+  {
+    "id": "cluster-607e627928c9fd3b",
+    "slug": "china-professor-sparks-debate-by-claiming-one-third-of-youth",
+    "title": "Rusland og Kina: handel",
+    "summary": "4 kilder dækker denne historie: SCMP, Al Jazeera, TASS, BBC. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "scmp-3e55ee49baa1",
+      "aljazeera-f0814ac0e154",
+      "tass-f614b183249b",
+      "bbc-cea4a7ee171b"
+    ],
+    "sourceKeys": [
+      "scmp",
+      "aljazeera",
+      "tass",
+      "bbc"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.86,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "china",
+      "diplomacy",
+      "usa",
+      "trade",
+      "ukraine-russia",
+      "india"
+    ],
+    "updatedAt": "2026-09-28T10:00:26.000Z"
+  },
+  {
+    "id": "cluster-b681bc78b0d744d0",
+    "slug": "papal-envoy-to-discuss-ukraine-crisis-humanitarian-issues-in",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "5 kilder dækker denne historie: TASS, Reuters, AP, Al Jazeera, SCMP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-1c7c123016a5",
+      "reuters-5fe6911465c2",
+      "ap-1ac95d4c1423",
+      "aljazeera-55e6f438d2fd",
+      "scmp-8c14cf1914e6"
+    ],
+    "sourceKeys": [
+      "tass",
+      "reuters",
+      "ap",
+      "aljazeera",
+      "scmp"
+    ],
+    "coverageCount": 5,
+    "divergenceScore": 0.96,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy",
+      "civilian-impact",
+      "conflict",
+      "sanctions",
+      "middle-east"
+    ],
+    "updatedAt": "2026-09-28T09:50:59.000Z"
+  },
+  {
+    "id": "cluster-483cdae80d61319e",
+    "slug": "russia-s-wheat-exports-to-uzbekistan-soar-16-fold-in-january",
+    "title": "Rusland og Iran: krig",
+    "summary": "3 kilder dækker denne historie: TASS, SCMP, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-22ba532e2d9d",
+      "scmp-fe5ccc5d325d",
+      "aljazeera-66441d0ab555"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp",
+      "aljazeera"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.89,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "trade",
+      "conflict",
+      "energy",
+      "middle-east",
+      "iran"
+    ],
+    "updatedAt": "2026-09-28T09:46:01.000Z"
+  },
+  {
+    "id": "cluster-576dccc2abe4243c",
+    "slug": "german-secret-services-step-up-spying-on-russian-embassy-in-",
+    "title": "Rusland, Kina, Indien",
+    "summary": "3 kilder dækker denne historie: TASS, SCMP, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-aef8bcef49e0",
+      "scmp-f23dec17bcd9",
+      "aljazeera-5d550173f3c0"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp",
+      "aljazeera"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.76,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "china",
+      "india"
+    ],
+    "updatedAt": "2026-09-28T09:38:34.000Z"
+  },
+  {
+    "id": "cluster-30fcb23205c0321e",
+    "slug": "india-s-supreme-court-urges-accountability-over-rapes",
+    "title": "Indien og Iran: krig",
+    "summary": "4 kilder dækker denne historie: SCMP, TASS, AP, Reuters. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "scmp-dcc1f6f4ceba",
+      "tass-0c284c8daa87",
+      "ap-44f141917142",
+      "reuters-72804cd7bcb3"
+    ],
+    "sourceKeys": [
+      "scmp",
+      "tass",
+      "ap",
+      "reuters"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.9,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "india",
+      "conflict",
+      "middle-east",
+      "iran",
+      "trade",
+      "diplomacy"
+    ],
+    "updatedAt": "2026-09-28T09:36:18.000Z"
+  },
+  {
+    "id": "cluster-6041b93f73294753",
+    "slug": "russian-strikes-hit-ukrainian-data-processing-centers-energy",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, SCMP, AP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-fc31e90717fa",
+      "kyivindependent-c411f0603a16",
+      "reuters-dc808e640b30",
+      "scmp-bef9412d2b2b",
+      "ap-7c7037d60901"
+    ],
+    "sourceKeys": [
+      "tass",
+      "kyivindependent",
+      "reuters",
+      "scmp",
+      "ap"
+    ],
+    "coverageCount": 5,
+    "divergenceScore": 0.89,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "energy",
+      "defense",
+      "diplomacy",
+      "china"
+    ],
+    "updatedAt": "2026-09-28T09:04:23.000Z"
+  },
+  {
+    "id": "cluster-7d3572728a77160d",
+    "slug": "eu-works-on-security-protocol-similar-to-article-4-of-nato-t",
+    "title": "Kina og EU: angreb",
+    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-c6645f9e8de2",
+      "scmp-248082659968"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "diplomacy",
+      "eu",
+      "geopolitics",
+      "china",
+      "india"
+    ],
+    "updatedAt": "2026-09-28T08:31:43.000Z"
+  },
+  {
+    "id": "cluster-748aed1c1d30b016",
+    "slug": "fsb-calls-russians-abroad-willing-to-side-with-kiev-vlasovit",
+    "title": "Rusland og Nordkorea: krig",
+    "summary": "2 kilder dækker denne historie: TASS, AP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-e5a2db4e2fcd",
+      "ap-ed27b7399a0b"
+    ],
+    "sourceKeys": [
+      "tass",
+      "ap"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.77,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "north-korea"
+    ],
+    "updatedAt": "2026-09-28T08:14:39.000Z"
+  },
+  {
+    "id": "cluster-30841ef90632306b",
+    "slug": "london-seeks-to-create-illusion-of-alternative-force-among-r",
+    "title": "Rusland, Kina",
+    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-cda21db948f0",
+      "scmp-82591b94731d"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.78,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "energy",
+      "china"
+    ],
+    "updatedAt": "2026-09-28T07:45:11.000Z"
+  },
+  {
+    "id": "cluster-a7f57ca902e317f2",
+    "slug": "russia-s-prozorova-soars-57-places-up-in-newly-released-wta-",
+    "title": "Rusland, Kina",
+    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-f073a93bc04d",
+      "scmp-830a87bdb8d8"
+    ],
+    "sourceKeys": [
+      "tass",
+      "scmp"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.77,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "energy",
+      "china"
+    ],
+    "updatedAt": "2026-09-28T07:17:51.000Z"
+  },
+  {
+    "id": "cluster-30cf44b13166d123",
+    "slug": "commentary-cash-rich-oil-majors-face-post-iran-strategy-reth",
+    "title": "Iran: krig",
+    "summary": "2 kilder dækker denne historie: Reuters, AP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-227e9d587221",
+      "ap-6028dff7ef81"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "ap"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "energy",
+      "middle-east",
+      "iran",
+      "conflict"
+    ],
+    "updatedAt": "2026-09-28T06:00:00.000Z"
+  },
+  {
+    "id": "cluster-82e509921bb06354",
+    "slug": "ireland-beats-israel-3-0-wearing-black-armbands-to-support-g",
+    "title": "Israel, Gaza",
+    "summary": "2 kilder dækker denne historie: Al Jazeera, BBC. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "aljazeera-4bb62898f367",
+      "bbc-7426e24e28c0"
+    ],
+    "sourceKeys": [
+      "aljazeera",
+      "bbc"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.69,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "sanctions",
+      "middle-east",
+      "conflict"
+    ],
+    "updatedAt": "2026-09-28T01:39:02.000Z"
+  },
+  {
+    "id": "cluster-7d30d07dd16292ac",
+    "slug": "ben-gvir-releases-video-threatening-to-kill-senior-hamas-fig",
+    "title": "Rusland og Israel: droneangreb",
+    "summary": "2 kilder dækker denne historie: Al Jazeera, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "aljazeera-2f2ff6836342",
+      "reuters-065c7dbcdec7"
+    ],
+    "sourceKeys": [
+      "aljazeera",
+      "reuters"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.71,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "middle-east",
+      "ukraine-russia"
+    ],
+    "updatedAt": "2026-09-28T01:33:52.000Z"
+  },
+  {
+    "id": "cluster-2bd64296749a7cba",
+    "slug": "refugees-in-south-africa-fear-new-attacks-as-september-30-de",
+    "title": "Ukraine og Nordkorea: angreb",
+    "summary": "2 kilder dækker denne historie: Al Jazeera, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "aljazeera-21a86d6f00a5",
+      "reuters-3b1471ea31f3"
+    ],
+    "sourceKeys": [
+      "aljazeera",
+      "reuters"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.82,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "sanctions",
+      "civilian-impact",
+      "africa",
+      "ukraine-russia",
+      "north-korea"
+    ],
+    "updatedAt": "2026-09-28T00:29:25.000Z"
+  },
+  {
+    "id": "cluster-3c5c5d52f9ff933c",
+    "slug": "watch-bbc-reports-from-the-front-line-of-an-escalating-war-i",
+    "title": "Ukraine og Nordkorea: krig",
+    "summary": "4 kilder dækker denne historie: BBC, Kyiv Independent, Al Jazeera, Reuters. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "bbc-c68bfc5457af",
+      "kyivindependent-30774876bcae",
+      "aljazeera-e51bcceddd23",
+      "reuters-2063ed5caaa0"
+    ],
+    "sourceKeys": [
+      "bbc",
+      "kyivindependent",
+      "aljazeera",
+      "reuters"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.8,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "ukraine-russia",
+      "civilian-impact",
+      "north-korea"
+    ],
+    "updatedAt": "2026-09-27T21:00:06.000Z"
+  },
+  {
+    "id": "cluster-195f27d5ade6db9f",
+    "slug": "switzerland-rejects-stricter-interpretation-of-its-neutralit",
+    "title": "Rusland og NATO: sanktioner",
+    "summary": "4 kilder dækker denne historie: BBC, AP, Reuters, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "bbc-0584f789da0e",
+      "ap-7fc2a856af58",
+      "reuters-ae15b237eb1a",
+      "kyivindependent-e8c093167318"
+    ],
+    "sourceKeys": [
+      "bbc",
+      "ap",
+      "reuters",
+      "kyivindependent"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.87,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "sanctions",
+      "ukraine-russia",
+      "conflict",
+      "diplomacy",
+      "geopolitics",
+      "defense"
+    ],
+    "updatedAt": "2026-09-27T16:02:17.000Z"
+  },
+  {
+    "id": "cluster-88187beec6a5e7aa",
+    "slug": "podcast-iran-us-diplomacy-raf-fairford-and-brazil-elections-",
+    "title": "Kina og Iran: krig",
+    "summary": "4 kilder dækker denne historie: Reuters, Al Jazeera, SCMP, AP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-db4c223ab6ce",
+      "aljazeera-f64639fb25bd",
+      "scmp-822995f36978",
+      "ap-5886020cbfce"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "aljazeera",
+      "scmp",
+      "ap"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.86,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "middle-east",
+      "iran",
+      "conflict",
+      "diplomacy",
+      "china",
+      "usa"
+    ],
+    "updatedAt": "2026-09-27T16:01:24.000Z"
+  },
+  {
+    "id": "cluster-8413b435be1202db",
+    "slug": "russia-says-it-struck-military-infrastructure-vessels-in-ukr",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "5 kilder dækker denne historie: Reuters, AP, TASS, Kyiv Independent, BBC. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-76fcb4fa3e6e",
+      "ap-57f2498c1184",
+      "tass-858c46171767",
+      "kyivindependent-7aa86063cd14",
+      "bbc-cb7921681dd9"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "ap",
+      "tass",
+      "kyivindependent",
+      "bbc"
+    ],
+    "coverageCount": 5,
+    "divergenceScore": 0.95,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "defense",
+      "china",
+      "usa",
+      "diplomacy"
+    ],
+    "updatedAt": "2026-09-27T15:15:44.000Z"
+  },
+  {
+    "id": "cluster-e1e982a2473dc566",
+    "slug": "iran-s-army-voices-readiness-for-potential-renewed-us-attack",
+    "title": "Kina og Iran: krig",
+    "summary": "4 kilder dækker denne historie: Reuters, Al Jazeera, SCMP, TASS. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-a7e9073f4f21",
+      "aljazeera-2229ce376adf",
+      "scmp-9b8066dcc833",
+      "tass-71f37f2050e6"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "aljazeera",
+      "scmp",
+      "tass"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.93,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "middle-east",
+      "iran",
+      "energy",
+      "trade",
+      "sanctions"
+    ],
+    "updatedAt": "2026-09-27T09:40:11.000Z"
+  },
+  {
+    "id": "cluster-fbdb27a45eadeb2f",
+    "slug": "israel-s-netanyahu-criticises-opposition-uniting-against-him",
+    "title": "Rusland og Kina: valg",
+    "summary": "4 kilder dækker denne historie: Al Jazeera, SCMP, TASS, Reuters. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "aljazeera-926efffb4e85",
+      "scmp-e4e63431df7e",
+      "tass-de4a572a55a7",
+      "reuters-f831a14db161"
+    ],
+    "sourceKeys": [
+      "aljazeera",
+      "scmp",
+      "tass",
+      "reuters"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.9,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "middle-east",
+      "energy",
+      "ukraine-russia",
+      "conflict",
+      "defense",
+      "china"
+    ],
+    "updatedAt": "2026-09-27T08:10:22.000Z"
   },
   {
     "id": "cluster-b5f75d2b4d666009",
@@ -126,35 +746,63 @@
     "updatedAt": "2026-09-27T08:00:16.000Z"
   },
   {
-    "id": "cluster-dba17ec62d1ab2c4",
-    "slug": "ukraine-s-public-debt-reaches-roughly-223-bln-by-late-septem",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "4 kilder dækker denne historie: TASS, SCMP, AP, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-f5269a77f7faa50b",
+    "slug": "strait-of-hormuz-ap-news",
+    "title": "Iran",
+    "summary": "2 kilder dækker denne historie: AP, BBC. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "tass-679a3436245a",
-      "scmp-a2b4d24d4fd5",
-      "ap-7fc2a856af58",
-      "aljazeera-f64639fb25bd"
+      "ap-5c57e533118d",
+      "bbc-6096d6a184eb"
     ],
     "sourceKeys": [
-      "tass",
-      "scmp",
       "ap",
-      "aljazeera"
+      "bbc"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.87,
+    "coverageCount": 2,
+    "divergenceScore": 0.81,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia",
-      "china",
+      "geopolitics",
       "conflict",
       "diplomacy",
       "middle-east",
       "iran"
     ],
-    "updatedAt": "2026-09-27T03:58:00.000Z"
+    "updatedAt": "2026-09-27T07:45:03.000Z"
+  },
+  {
+    "id": "cluster-b8cdb08962f06558",
+    "slug": "how-kenya-s-sacred-mrima-hill-became-new-front-in-us-china-m",
+    "title": "Ukraine og Kina: forhandlinger",
+    "summary": "5 kilder dækker denne historie: SCMP, BBC, Reuters, TASS, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "scmp-b25be6f50986",
+      "bbc-9bea66b25fb9",
+      "reuters-d0ca495433c3",
+      "tass-679a3436245a",
+      "aljazeera-17a6948b67dd"
+    ],
+    "sourceKeys": [
+      "scmp",
+      "bbc",
+      "reuters",
+      "tass",
+      "aljazeera"
+    ],
+    "coverageCount": 5,
+    "divergenceScore": 0.89,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "china",
+      "india",
+      "africa",
+      "trade",
+      "ukraine-russia",
+      "diplomacy"
+    ],
+    "updatedAt": "2026-09-27T04:00:21.000Z"
   },
   {
     "id": "cluster-9a778cd2050e27bf",
@@ -188,89 +836,54 @@
     "updatedAt": "2026-09-27T03:36:19.000Z"
   },
   {
-    "id": "cluster-72b8ba690232b999",
+    "id": "cluster-f1320b62c364ea78",
     "slug": "chinese-rubbish-station-worker-scouted-for-striking-looks-re",
-    "title": "Rusland, Kina, Israel",
-    "summary": "3 kilder dækker denne historie: SCMP, BBC, TASS. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Kina: angreb",
+    "summary": "2 kilder dækker denne historie: SCMP, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "scmp-e42f0d90a31e",
-      "bbc-7426e24e28c0",
-      "tass-79055506f1f9"
+      "tass-7ba13dfceb4b"
     ],
     "sourceKeys": [
       "scmp",
-      "bbc",
       "tass"
     ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "china",
-      "conflict",
-      "sanctions",
-      "middle-east",
       "ukraine-russia",
-      "diplomacy"
+      "conflict",
+      "energy"
     ],
     "updatedAt": "2026-09-27T02:14:32.000Z"
   },
   {
-    "id": "cluster-f3a79d903f049e5d",
-    "slug": "indonesia-eyes-china-for-massive-2-772km-railway-project-wit",
-    "title": "Rusland og Kina: forhandlinger",
-    "summary": "3 kilder dækker denne historie: SCMP, TASS, Reuters. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-96c98bcf547d9f32",
+    "slug": "to-understand-where-hong-kong-is-going-start-with-tung-chee-",
+    "title": "Rusland, Kina, EU",
+    "summary": "2 kilder dækker denne historie: SCMP, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "scmp-9b8066dcc833",
-      "tass-8c9a01d235e6",
-      "reuters-d0ca495433c3"
+      "scmp-a2b4d24d4fd5",
+      "tass-e7c8b0ae45e4"
     ],
     "sourceKeys": [
       "scmp",
-      "tass",
-      "reuters"
+      "tass"
     ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "sanctions",
       "china",
       "ukraine-russia",
-      "diplomacy",
-      "middle-east",
-      "north-korea"
+      "eu",
+      "geopolitics"
     ],
-    "updatedAt": "2026-09-27T02:00:07.000Z"
-  },
-  {
-    "id": "cluster-ebf58aaa7b5a5c87",
-    "slug": "hamas-leader-says-israel-to-use-blood-of-palestinians-as-fue",
-    "title": "Israel og Gaza: angreb",
-    "summary": "3 kilder dækker denne historie: SCMP, TASS, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-e4e63431df7e",
-      "tass-c0a3107e5309",
-      "aljazeera-1c40bacd2ec6"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "tass",
-      "aljazeera"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.79,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "energy",
-      "middle-east",
-      "conflict",
-      "civilian-impact"
-    ],
-    "updatedAt": "2026-09-27T01:31:33.000Z"
+    "updatedAt": "2026-09-27T01:30:07.000Z"
   },
   {
     "id": "cluster-f466c4482f51a94e",
@@ -302,13 +915,44 @@
     "updatedAt": "2026-09-27T00:55:00.000Z"
   },
   {
-    "id": "cluster-c7685cd505070b78",
+    "id": "cluster-dfe5452d6756c78b",
+    "slug": "after-eu-philippines-trade-breakthrough-is-asean-wide-deal-n",
+    "title": "Rusland og Iran: angreb",
+    "summary": "4 kilder dækker denne historie: SCMP, Reuters, Kyiv Independent, TASS. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "scmp-84f8a7a5803f",
+      "reuters-002a9f3c6055",
+      "kyivindependent-34a1ca22cc89",
+      "tass-c0a3107e5309"
+    ],
+    "sourceKeys": [
+      "scmp",
+      "reuters",
+      "kyivindependent",
+      "tass"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.94,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "diplomacy",
+      "eu",
+      "trade",
+      "middle-east",
+      "iran",
+      "usa"
+    ],
+    "updatedAt": "2026-09-27T00:00:09.000Z"
+  },
+  {
+    "id": "cluster-c3f14c25da8d07ff",
     "slug": "israeli-aircraft-launch-series-of-strikes-on-mountainous-are",
-    "title": "Rusland og Israel: angreb",
+    "title": "Rusland og Israel: droneangreb",
     "summary": "2 kilder dækker denne historie: TASS, Kyiv Independent. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-3ab5bddbce56",
-      "kyivindependent-c411f0603a16"
+      "kyivindependent-5303ee067738"
     ],
     "sourceKeys": [
       "tass",
@@ -350,37 +994,27 @@
     "updatedAt": "2026-09-26T20:45:00.000Z"
   },
   {
-    "id": "cluster-75aba1e16326159b",
-    "slug": "putin-s-envoy-says-russia-germany-could-reopen-nord-stream-j",
+    "id": "cluster-7431041327bc1d33",
+    "slug": "russia-may-agree-to-move-s-400s-from-turkey-to-friendly-juri",
     "title": "Ukraine og Rusland: angreb",
-    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, AP, BBC. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "2 kilder dækker denne historie: TASS, Kyiv Independent. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "tass-858c46171767",
-      "kyivindependent-5a1c1b3bc61f",
-      "reuters-606156ee17a7",
-      "ap-57f2498c1184",
-      "bbc-cef9fc91331b"
+      "tass-887a7309563f",
+      "kyivindependent-5a1c1b3bc61f"
     ],
     "sourceKeys": [
       "tass",
-      "kyivindependent",
-      "reuters",
-      "ap",
-      "bbc"
+      "kyivindependent"
     ],
-    "coverageCount": 5,
-    "divergenceScore": 0.86,
+    "coverageCount": 2,
+    "divergenceScore": 0.69,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
-      "diplomacy",
-      "energy",
-      "conflict",
-      "china",
-      "usa"
+      "conflict"
     ],
-    "updatedAt": "2026-09-26T20:24:36.000Z"
+    "updatedAt": "2026-09-26T19:49:03.000Z"
   },
   {
     "id": "cluster-b8a5c170ef274c57",
@@ -438,26 +1072,78 @@
     "updatedAt": "2026-09-26T19:43:47.000Z"
   },
   {
-    "id": "cluster-84fe96dd530f50c9",
+    "id": "cluster-5d2d76ede2eeb4a5",
+    "slug": "meeting-with-germany-s-top-diplomat-shows-russia-ready-for-d",
+    "title": "Ukraine, Rusland",
+    "summary": "2 kilder dækker denne historie: TASS, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-79055506f1f9",
+      "reuters-76c95e9f3372"
+    ],
+    "sourceKeys": [
+      "tass",
+      "reuters"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.68,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy"
+    ],
+    "updatedAt": "2026-09-26T19:43:15.000Z"
+  },
+  {
+    "id": "cluster-556564561593c986",
+    "slug": "nothing-left-to-eat-sybiha-urges-partners-to-act-on-oleshky-",
+    "title": "Iran og Houthi: krig",
+    "summary": "3 kilder dækker denne historie: Kyiv Independent, Al Jazeera, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "kyivindependent-81fde124605d",
+      "aljazeera-31742aab4931",
+      "scmp-6f227779a573"
+    ],
+    "sourceKeys": [
+      "kyivindependent",
+      "aljazeera",
+      "scmp"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.88,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "civilian-impact",
+      "geopolitics",
+      "conflict",
+      "sanctions",
+      "middle-east"
+    ],
+    "updatedAt": "2026-09-26T12:09:35.000Z"
+  },
+  {
+    "id": "cluster-7c9cdd4fcce60dea",
     "slug": "how-peng-liyuan-and-melania-trump-opened-a-parallel-track-in",
-    "title": "Kina og Iran: fredsforhandlinger",
-    "summary": "5 kilder dækker denne historie: SCMP, Al Jazeera, AP, TASS, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland og Kina: fredsforhandlinger",
+    "summary": "5 kilder dækker denne historie: SCMP, TASS, Kyiv Independent, Al Jazeera, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "scmp-35cd968cb76a",
+      "tass-8c9a01d235e6",
+      "kyivindependent-1f463c7677d7",
       "aljazeera-9d3a156d9dce",
-      "ap-5886020cbfce",
-      "tass-298bb27a045c",
       "reuters-5a5174f8e579"
     ],
     "sourceKeys": [
       "scmp",
-      "aljazeera",
-      "ap",
       "tass",
+      "kyivindependent",
+      "aljazeera",
       "reuters"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.9,
+    "divergenceScore": 0.97,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
@@ -465,69 +1151,69 @@
       "energy",
       "china",
       "usa",
-      "middle-east",
-      "iran"
+      "ukraine-russia",
+      "middle-east"
     ],
     "updatedAt": "2026-09-26T08:59:30.000Z"
   },
   {
-    "id": "cluster-cd315ae19bc14d61",
+    "id": "cluster-bbb95124ef26cbd8",
     "slug": "euractiv-columnist-questions-need-for-extra-funding-for-ukra",
     "title": "Ukraine og Kina: droneangreb",
-    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Al Jazeera, SCMP, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "5 kilder dækker denne historie: TASS, Al Jazeera, Kyiv Independent, SCMP, Reuters. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-8922ef623447",
+      "aljazeera-1c40bacd2ec6",
       "kyivindependent-5beea9cfb185",
-      "aljazeera-0ed92c12a847",
       "scmp-291c1b503b50",
       "reuters-1023c8b782ca"
     ],
     "sourceKeys": [
       "tass",
-      "kyivindependent",
       "aljazeera",
+      "kyivindependent",
       "scmp",
       "reuters"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.88,
+    "divergenceScore": 0.91,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
+      "middle-east",
       "conflict",
       "defense",
-      "usa",
       "diplomacy",
       "china"
     ],
     "updatedAt": "2026-09-26T08:18:55.000Z"
   },
   {
-    "id": "cluster-9a7ad83aa80ed2e8",
+    "id": "cluster-c1b5edceb35b0adf",
     "slug": "iran-war-squeezes-iraq-s-economy-as-oil-revenues-fall-and-pr",
     "title": "Ukraine og Rusland: krig",
-    "summary": "7 kilder dækker denne historie: Al Jazeera, AP, Reuters, TASS, SCMP, BBC, Kyiv Independent. Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
+    "summary": "7 kilder dækker denne historie: Al Jazeera, AP, Reuters, TASS, BBC, Kyiv Independent, SCMP. Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "aljazeera-303102850d18",
       "ap-a755c78656d2",
       "reuters-5c3232f66a2c",
       "tass-5f158cff5c3c",
-      "scmp-6f227779a573",
-      "bbc-6096d6a184eb",
-      "kyivindependent-d9012f2d63c0"
+      "bbc-81211daaa3d8",
+      "kyivindependent-d9012f2d63c0",
+      "scmp-4efca5291349"
     ],
     "sourceKeys": [
       "aljazeera",
       "ap",
       "reuters",
       "tass",
-      "scmp",
       "bbc",
-      "kyivindependent"
+      "kyivindependent",
+      "scmp"
     ],
     "coverageCount": 7,
-    "divergenceScore": 0.91,
+    "divergenceScore": 0.89,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
@@ -536,18 +1222,18 @@
       "middle-east",
       "iran",
       "trade",
-      "sanctions"
+      "africa"
     ],
     "updatedAt": "2026-09-26T08:13:06.000Z"
   },
   {
-    "id": "cluster-d4debebcca0e2c95",
+    "id": "cluster-834bb93ce96f2ddd",
     "slug": "air-defense-forces-shot-down-nine-uavs-flying-toward-moscow",
-    "title": "Kina, Iran, Houthi",
+    "title": "Kina og Trump: eskalering",
     "summary": "3 kilder dækker denne historie: TASS, Al Jazeera, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-14e92710aa65",
-      "aljazeera-78ff2015c662",
+      "aljazeera-0ed92c12a847",
       "scmp-a94eed33da73"
     ],
     "sourceKeys": [
@@ -563,61 +1249,61 @@
       "ukraine-russia",
       "conflict",
       "defense",
-      "middle-east",
-      "iran",
-      "china"
+      "usa",
+      "china",
+      "trade"
     ],
     "updatedAt": "2026-09-26T07:08:02.000Z"
   },
   {
-    "id": "cluster-bfd602df55481f6b",
+    "id": "cluster-0ee6140fce29fec9",
     "slug": "air-defenses-down-645-drones-over-russian-regions-black-sea-",
-    "title": "Rusland og Trump: droneangreb",
-    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, Al Jazeera, SCMP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland og Iran: krig",
+    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, SCMP, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-2fb2a3a07e7f",
       "kyivindependent-ad57f9517344",
       "reuters-46b297d16107",
-      "aljazeera-31742aab4931",
-      "scmp-cfc6db35bcf7"
+      "scmp-cfc6db35bcf7",
+      "aljazeera-b17e1bba8cd2"
     ],
     "sourceKeys": [
       "tass",
       "kyivindependent",
       "reuters",
-      "aljazeera",
-      "scmp"
+      "scmp",
+      "aljazeera"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.92,
+    "divergenceScore": 0.97,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "defense",
       "conflict",
-      "geopolitics",
       "diplomacy",
-      "china"
+      "china",
+      "usa"
     ],
     "updatedAt": "2026-09-26T06:13:00.000Z"
   },
   {
-    "id": "cluster-e6b9c115dd401892",
+    "id": "cluster-8c35ff2b651ab689",
     "slug": "russian-forces-strike-novaya-pochta-logistics-center-in-odes",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "4 kilder dækker denne historie: TASS, Kyiv Independent, SCMP, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "4 kilder dækker denne historie: TASS, Al Jazeera, Kyiv Independent, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-fae20d2ecd8e",
+      "aljazeera-78ff2015c662",
       "kyivindependent-95568b4c7aa3",
-      "scmp-359fcc97a9c2",
-      "aljazeera-b17e1bba8cd2"
+      "scmp-359fcc97a9c2"
     ],
     "sourceKeys": [
       "tass",
+      "aljazeera",
       "kyivindependent",
-      "scmp",
-      "aljazeera"
+      "scmp"
     ],
     "coverageCount": 4,
     "divergenceScore": 0.87,
@@ -627,38 +1313,38 @@
       "ukraine-russia",
       "conflict",
       "defense",
-      "china",
       "middle-east",
-      "iran"
+      "iran",
+      "china"
     ],
     "updatedAt": "2026-09-26T05:57:23.000Z"
   },
   {
-    "id": "cluster-972821dedcd0372a",
+    "id": "cluster-88fad7d6249546ae",
     "slug": "russian-armed-forces-hit-cosmonova-data-center-in-kiev",
-    "title": "Rusland og Kina: krig",
-    "summary": "3 kilder dækker denne historie: TASS, BBC, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "3 kilder dækker denne historie: TASS, SCMP, BBC. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-9683796b3b11",
-      "bbc-81211daaa3d8",
-      "scmp-c5b6f9540fb7"
+      "scmp-c5b6f9540fb7",
+      "bbc-cef9fc91331b"
     ],
     "sourceKeys": [
       "tass",
-      "bbc",
-      "scmp"
+      "scmp",
+      "bbc"
     ],
     "coverageCount": 3,
-    "divergenceScore": 0.88,
+    "divergenceScore": 0.89,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "defense",
       "conflict",
-      "africa",
       "diplomacy",
-      "energy"
+      "energy",
+      "china"
     ],
     "updatedAt": "2026-09-26T05:42:21.000Z"
   },
@@ -727,20 +1413,20 @@
     "updatedAt": "2026-09-26T04:48:41.000Z"
   },
   {
-    "id": "cluster-6ebd1046a2d30910",
+    "id": "cluster-6a5b2d32e048057c",
     "slug": "four-italian-troops-injured-during-nato-drills-in-latvia-ita",
-    "title": "Ukraine og EU: angreb",
-    "summary": "4 kilder dækker denne historie: TASS, SCMP, BBC, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Kina: angreb",
+    "summary": "4 kilder dækker denne historie: TASS, BBC, SCMP, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-3b1a6f5815bc",
-      "scmp-4efca5291349",
       "bbc-acbb0a103fd2",
+      "scmp-1f925a7d0293",
       "kyivindependent-8a7e129468a4"
     ],
     "sourceKeys": [
       "tass",
-      "scmp",
       "bbc",
+      "scmp",
       "kyivindependent"
     ],
     "coverageCount": 4,
@@ -751,66 +1437,62 @@
       "conflict",
       "geopolitics",
       "defense",
-      "china",
       "ukraine-russia",
+      "china",
       "eu"
     ],
     "updatedAt": "2026-09-26T03:15:01.000Z"
   },
   {
-    "id": "cluster-fa3096d500c3aadc",
+    "id": "cluster-c2b9941401cf6403",
     "slug": "eu-s-reaction-to-corruption-in-ukraine-shows-europeans-invol",
     "title": "Ukraine og Rusland: krig",
-    "summary": "5 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, SCMP, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "4 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-f7490bd9c6d5",
       "kyivindependent-eabd16a0f991",
-      "reuters-f8c3a51e7092",
-      "scmp-1f925a7d0293",
+      "reuters-606156ee17a7",
       "aljazeera-79052dc59ae2"
     ],
     "sourceKeys": [
       "tass",
       "kyivindependent",
       "reuters",
-      "scmp",
       "aljazeera"
     ],
-    "coverageCount": 5,
-    "divergenceScore": 0.94,
+    "coverageCount": 4,
+    "divergenceScore": 0.91,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "eu",
       "sanctions",
+      "diplomacy",
       "conflict",
-      "middle-east",
-      "china"
+      "middle-east"
     ],
     "updatedAt": "2026-09-26T02:22:56.000Z"
   },
   {
-    "id": "cluster-729fb13ae93f3788",
+    "id": "cluster-99f47aac5b314088",
     "slug": "europe-to-gain-from-resuming-dialogue-with-russia-before-spe",
-    "title": "Ukraine og Rusland: flygtningekrise",
-    "summary": "4 kilder dækker denne historie: TASS, Reuters, AP, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland: flygtningekrise",
+    "summary": "3 kilder dækker denne historie: TASS, AP, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-d748e037cbf3",
-      "reuters-76c95e9f3372",
       "ap-933a1de2afa2",
       "kyivindependent-a60ff5a91c94"
     ],
     "sourceKeys": [
       "tass",
-      "reuters",
       "ap",
       "kyivindependent"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.84,
+    "coverageCount": 3,
+    "divergenceScore": 0.85,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "conflict",
@@ -819,6 +1501,37 @@
       "civilian-impact"
     ],
     "updatedAt": "2026-09-26T02:00:01.000Z"
+  },
+  {
+    "id": "cluster-59779d1586208fba",
+    "slug": "trump-tells-aides-strikes-against-iran-may-resume-after-nove",
+    "title": "Iran og Trump: topmøde",
+    "summary": "4 kilder dækker denne historie: TASS, AP, Reuters, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-298bb27a045c",
+      "ap-7307e15743d8",
+      "reuters-f8c3a51e7092",
+      "scmp-de405b8a3fad"
+    ],
+    "sourceKeys": [
+      "tass",
+      "ap",
+      "reuters",
+      "scmp"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.89,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "conflict",
+      "middle-east",
+      "iran",
+      "usa",
+      "geopolitics",
+      "china"
+    ],
+    "updatedAt": "2026-09-26T01:30:00.000Z"
   },
   {
     "id": "cluster-ed82578d6db2102a",
@@ -853,31 +1566,28 @@
     "updatedAt": "2026-09-26T00:50:01.000Z"
   },
   {
-    "id": "cluster-a9c7a448be0e27e8",
+    "id": "cluster-659f99d6c3c6e23e",
     "slug": "ukraine-cannot-make-up-for-losses-in-druzhkovka-because-of-r",
     "title": "Ukraine og Rusland: angreb",
-    "summary": "4 kilder dækker denne historie: TASS, Reuters, AP, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "summary": "3 kilder dækker denne historie: TASS, Reuters, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-16d98aa7792b",
       "reuters-e7430e9db322",
-      "ap-7307e15743d8",
       "kyivindependent-792ce7d0e453"
     ],
     "sourceKeys": [
       "tass",
       "reuters",
-      "ap",
       "kyivindependent"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.84,
+    "coverageCount": 3,
+    "divergenceScore": 0.79,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "conflict",
       "defense",
-      "geopolitics",
       "eu"
     ],
     "updatedAt": "2026-09-26T00:30:00.000Z"
@@ -1024,15 +1734,16 @@
     "updatedAt": "2026-09-25T12:01:04.000Z"
   },
   {
-    "id": "cluster-8d094cb6dae877a7",
+    "id": "cluster-d059e24a097746a0",
     "slug": "pact-with-saudi-and-pakistan-could-expand-to-muslim-world-ir",
     "title": "Ukraine og Rusland: angreb",
-    "summary": "5 kilder dækker denne historie: Reuters, Al Jazeera, SCMP, TASS, Kyiv Independent. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "6 kilder dækker denne historie: Reuters, Al Jazeera, SCMP, TASS, BBC, Kyiv Independent. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "reuters-7861e382e195",
       "aljazeera-3306bc54cafa",
       "scmp-acd58a317643",
       "tass-54ed3ee1f12e",
+      "bbc-43d144a5ca88",
       "kyivindependent-a91dd38f4a62"
     ],
     "sourceKeys": [
@@ -1040,12 +1751,13 @@
       "aljazeera",
       "scmp",
       "tass",
+      "bbc",
       "kyivindependent"
     ],
-    "coverageCount": 5,
-    "divergenceScore": 0.95,
+    "coverageCount": 6,
+    "divergenceScore": 0.94,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "middle-east",
       "iran",
@@ -1055,43 +1767,6 @@
       "defense"
     ],
     "updatedAt": "2026-09-25T10:01:36.000Z"
-  },
-  {
-    "id": "cluster-febbbaba4c275da0",
-    "slug": "why-is-the-national-archives-the-last-stop-on-xi-and-trump-s",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "7 kilder dækker denne historie: SCMP, Al Jazeera, Kyiv Independent, BBC, TASS, AP, Reuters. Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-de405b8a3fad",
-      "aljazeera-42277d09f01f",
-      "kyivindependent-c4cfe69de0c3",
-      "bbc-35cea508cfba",
-      "tass-16c61e43761c",
-      "ap-d3ee8b125d22",
-      "reuters-858dfe199c5d"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "aljazeera",
-      "kyivindependent",
-      "bbc",
-      "tass",
-      "ap",
-      "reuters"
-    ],
-    "coverageCount": 7,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "diplomacy",
-      "china",
-      "usa",
-      "conflict",
-      "middle-east",
-      "ukraine-russia"
-    ],
-    "updatedAt": "2026-09-25T09:00:06.000Z"
   },
   {
     "id": "cluster-74e77da637268a2c",
@@ -1153,12 +1828,13 @@
     "updatedAt": "2026-09-25T08:48:01.000Z"
   },
   {
-    "id": "cluster-c97de54dee364077",
+    "id": "cluster-1cfa537199f28ad3",
     "slug": "stubb-asks-musk-to-allow-to-use-starlink-to-launch-strikes-d",
     "title": "Ukraine og Rusland: angreb",
-    "summary": "5 kilder dækker denne historie: TASS, Al Jazeera, BBC, SCMP, Kyiv Independent. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "6 kilder dækker denne historie: TASS, Reuters, Al Jazeera, BBC, SCMP, Kyiv Independent. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-5448e3cfa917",
+      "reuters-858dfe199c5d",
       "aljazeera-f5c783e2a4d3",
       "bbc-923ffca2a455",
       "scmp-f462a1340e02",
@@ -1166,21 +1842,22 @@
     ],
     "sourceKeys": [
       "tass",
+      "reuters",
       "aljazeera",
       "bbc",
       "scmp",
       "kyivindependent"
     ],
-    "coverageCount": 5,
-    "divergenceScore": 0.9,
+    "coverageCount": 6,
+    "divergenceScore": 0.88,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "conflict",
       "defense",
-      "diplomacy",
       "energy",
+      "diplomacy",
       "south-asia"
     ],
     "updatedAt": "2026-09-25T08:40:33.000Z"
@@ -1241,6 +1918,43 @@
     "updatedAt": "2026-09-25T08:31:49.000Z"
   },
   {
+    "id": "cluster-999b02a96d06c60b",
+    "slug": "a-month-after-nepal-china-floods-ukrainian-families-still-de",
+    "title": "Ukraine og Rusland: droneangreb",
+    "summary": "7 kilder dækker denne historie: AP, SCMP, Al Jazeera, TASS, Kyiv Independent, BBC, Reuters. Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "ap-d3ee8b125d22",
+      "scmp-a1c08083b7c4",
+      "aljazeera-bcaa67beb01c",
+      "tass-fbd04065c118",
+      "kyivindependent-220453c20666",
+      "bbc-35cea508cfba",
+      "reuters-594ca446d84d"
+    ],
+    "sourceKeys": [
+      "ap",
+      "scmp",
+      "aljazeera",
+      "tass",
+      "kyivindependent",
+      "bbc",
+      "reuters"
+    ],
+    "coverageCount": 7,
+    "divergenceScore": 0.91,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "china",
+      "trade",
+      "middle-east",
+      "ukraine-russia",
+      "conflict",
+      "defense"
+    ],
+    "updatedAt": "2026-09-25T08:31:00.000Z"
+  },
+  {
     "id": "cluster-dc7fd30c2d761323",
     "slug": "russian-forces-hit-ukrainian-drone-deployment-command-posts-",
     "title": "Ukraine og Rusland: angreb",
@@ -1267,34 +1981,6 @@
       "south-asia"
     ],
     "updatedAt": "2026-09-25T08:04:48.000Z"
-  },
-  {
-    "id": "cluster-669e70716e9d727b",
-    "slug": "bank-of-russia-buys-23-56-mln-worth-of-yuan-on-september-24",
-    "title": "Rusland, Kina, Gaza",
-    "summary": "3 kilder dækker denne historie: TASS, Al Jazeera, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-015ead49d0c5",
-      "aljazeera-bcaa67beb01c",
-      "scmp-a1c08083b7c4"
-    ],
-    "sourceKeys": [
-      "tass",
-      "aljazeera",
-      "scmp"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.85,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "sanctions",
-      "middle-east",
-      "china",
-      "trade"
-    ],
-    "updatedAt": "2026-09-25T08:03:39.000Z"
   },
   {
     "id": "cluster-ad08fc07991f7f01",
@@ -1326,13 +2012,13 @@
     "updatedAt": "2026-09-25T07:50:20.000Z"
   },
   {
-    "id": "cluster-8090c9e874d05f3a",
+    "id": "cluster-d634dfb4efca0995",
     "slug": "russian-stock-market-declines-at-start-of-trading-session",
-    "title": "Rusland og Israel: protester",
+    "title": "Rusland, Israel, Gaza",
     "summary": "2 kilder dækker denne historie: TASS, Al Jazeera. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-37854dc07de6",
-      "aljazeera-dfe0da965e18"
+      "aljazeera-42277d09f01f"
     ],
     "sourceKeys": [
       "tass",
@@ -1348,35 +2034,6 @@
       "middle-east"
     ],
     "updatedAt": "2026-09-25T07:35:02.000Z"
-  },
-  {
-    "id": "cluster-5d1982737b11f5d4",
-    "slug": "russian-uav-operators-downing-ukrainian-drones-at-krasny-osk",
-    "title": "Rusland og Kina: droneangreb",
-    "summary": "3 kilder dækker denne historie: TASS, Kyiv Independent, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-fbd04065c118",
-      "kyivindependent-d455348aaf81",
-      "scmp-a58e95834656"
-    ],
-    "sourceKeys": [
-      "tass",
-      "kyivindependent",
-      "scmp"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
-      "defense",
-      "diplomacy",
-      "sanctions",
-      "china"
-    ],
-    "updatedAt": "2026-09-25T07:30:00.000Z"
   },
   {
     "id": "cluster-1ff3e3449865a6dd",
@@ -1406,52 +2063,87 @@
     "updatedAt": "2026-09-25T05:09:54.000Z"
   },
   {
-    "id": "cluster-3943a70060f5e457",
+    "id": "cluster-9692b4191480eb2a",
     "slug": "top-russian-diplomat-demands-detailed-investigation-of-event",
-    "title": "Rusland, NATO",
-    "summary": "2 kilder dækker denne historie: TASS, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland og Kina: forhandlinger",
+    "summary": "3 kilder dækker denne historie: TASS, Reuters, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-3cebef378288",
-      "reuters-634276668ef6"
+      "reuters-634276668ef6",
+      "scmp-a58e95834656"
+    ],
+    "sourceKeys": [
+      "tass",
+      "reuters",
+      "scmp"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.89,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy",
+      "geopolitics",
+      "sanctions",
+      "china",
+      "usa"
+    ],
+    "updatedAt": "2026-09-25T05:04:57.000Z"
+  },
+  {
+    "id": "cluster-327dfed2ac658657",
+    "slug": "russia-s-election-authority-to-certify-final-tally-of-legisl",
+    "title": "Rusland og Kina: valg",
+    "summary": "3 kilder dækker denne historie: TASS, Al Jazeera, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-5d4a3b924beb",
+      "aljazeera-dfe0da965e18",
+      "scmp-1c85a3a98d91"
+    ],
+    "sourceKeys": [
+      "tass",
+      "aljazeera",
+      "scmp"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.85,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "middle-east",
+      "china",
+      "usa"
+    ],
+    "updatedAt": "2026-09-25T04:41:52.000Z"
+  },
+  {
+    "id": "cluster-325cfff815c5720b",
+    "slug": "china-us-relations-enter-new-historical-stage-xi-jinping",
+    "title": "Kina og Iran: sanktioner",
+    "summary": "2 kilder dækker denne historie: TASS, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-16c61e43761c",
+      "reuters-0908ffe8dccf"
     ],
     "sourceKeys": [
       "tass",
       "reuters"
     ],
     "coverageCount": 2,
-    "divergenceScore": 0.75,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia",
-      "diplomacy",
-      "geopolitics"
-    ],
-    "updatedAt": "2026-09-25T05:04:57.000Z"
-  },
-  {
-    "id": "cluster-5fb8386f116f5ae7",
-    "slug": "russia-s-election-authority-to-certify-final-tally-of-legisl",
-    "title": "Rusland og Kina: valg",
-    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-5d4a3b924beb",
-      "scmp-1c85a3a98d91"
-    ],
-    "sourceKeys": [
-      "tass",
-      "scmp"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.78,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
+      "energy",
       "china",
-      "usa"
+      "sanctions",
+      "middle-east",
+      "iran"
     ],
-    "updatedAt": "2026-09-25T04:41:52.000Z"
+    "updatedAt": "2026-09-25T04:06:45.000Z"
   },
   {
     "id": "cluster-ce9ec06058dcb63b",
@@ -1509,6 +2201,34 @@
     "updatedAt": "2026-09-25T01:11:00.000Z"
   },
   {
+    "id": "cluster-7f5ecd7005eef5f4",
+    "slug": "ukraine-taiwan-on-agenda-at-trump-xi-summit-in-washington-ky",
+    "title": "Ukraine og Gaza: fredsforhandlinger",
+    "summary": "3 kilder dækker denne historie: Kyiv Independent, Reuters, BBC. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "kyivindependent-c4cfe69de0c3",
+      "reuters-48fb11ad7811",
+      "bbc-4264506216ba"
+    ],
+    "sourceKeys": [
+      "kyivindependent",
+      "reuters",
+      "bbc"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.84,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy",
+      "china",
+      "usa",
+      "middle-east"
+    ],
+    "updatedAt": "2026-09-24T23:49:25.000Z"
+  },
+  {
     "id": "cluster-4da17aec58bb3b14",
     "slug": "iran-s-president-says-it-is-up-to-us-to-choose-if-it-wants-t",
     "title": "Ukraine og Iran: krig",
@@ -1560,57 +2280,6 @@
     "updatedAt": "2026-09-24T23:41:10.000Z"
   },
   {
-    "id": "cluster-0a6aef9cabe57388",
-    "slug": "us-senate-rejects-democratic-led-resolution-to-curb-trump-s-",
-    "title": "Iran og Gaza: krig",
-    "summary": "2 kilder dækker denne historie: Reuters, BBC. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-b2c43c49f2b7",
-      "bbc-4264506216ba"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "bbc"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.83,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "energy",
-      "middle-east",
-      "iran",
-      "usa",
-      "diplomacy"
-    ],
-    "updatedAt": "2026-09-24T20:34:36.000Z"
-  },
-  {
-    "id": "cluster-6ecc9163e407f505",
-    "slug": "zelenskiy-wall-street-executives-hold-talks-on-ukraine-s-rec",
-    "title": "Ukraine og EU: forhandlinger",
-    "summary": "2 kilder dækker denne historie: Reuters, Kyiv Independent. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-48fb11ad7811",
-      "kyivindependent-220453c20666"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "kyivindependent"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.76,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "diplomacy",
-      "eu"
-    ],
-    "updatedAt": "2026-09-24T19:53:20.000Z"
-  },
-  {
     "id": "cluster-a20e044c7c94b298",
     "slug": "us-senate-rejects-resolution-curbing-trump-s-iran-war-powers",
     "title": "Rusland og Iran: krig",
@@ -1638,6 +2307,34 @@
       "diplomacy"
     ],
     "updatedAt": "2026-09-24T18:51:47.000Z"
+  },
+  {
+    "id": "cluster-2ba7f452ec4e3b0e",
+    "slug": "suspected-russian-drones-crash-in-romania-moldova-kyivindepe",
+    "title": "Rusland og Zelensky: droneangreb",
+    "summary": "4 kilder dækker denne historie: Kyiv Independent, Reuters, BBC, AP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "kyivindependent-d455348aaf81",
+      "reuters-a5bbea9fee0c",
+      "bbc-d88ace1b8754",
+      "ap-8dcbeb3ef2f9"
+    ],
+    "sourceKeys": [
+      "kyivindependent",
+      "reuters",
+      "bbc",
+      "ap"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.78,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "energy",
+      "sanctions"
+    ],
+    "updatedAt": "2026-09-24T10:15:04.000Z"
   },
   {
     "id": "cluster-e7d875d6ca6eee78",
@@ -1671,33 +2368,6 @@
     "updatedAt": "2026-09-24T10:00:33.000Z"
   },
   {
-    "id": "cluster-0342079df8edfeae",
-    "slug": "serbia-s-russian-owned-nis-oil-firm-seeks-new-us-sanctions-w",
-    "title": "Rusland og EU: sanktioner",
-    "summary": "3 kilder dækker denne historie: Reuters, Kyiv Independent, BBC. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-a5bbea9fee0c",
-      "kyivindependent-07bdcd96ac72",
-      "bbc-804cbed7a85c"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "kyivindependent",
-      "bbc"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.78,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "energy",
-      "sanctions",
-      "eu"
-    ],
-    "updatedAt": "2026-09-24T08:26:09.000Z"
-  },
-  {
     "id": "cluster-c66a044b2b2ab18d",
     "slug": "turkey-s-erdogan-tells-ukraine-s-zelenskiy-that-black-sea-at",
     "title": "Ukraine og Indien: angreb",
@@ -1724,31 +2394,30 @@
     "updatedAt": "2026-09-24T04:45:00.000Z"
   },
   {
-    "id": "cluster-6b0662fe0b42988c",
-    "slug": "eating-garden-weeds-to-survive-in-russian-occupied-city-cut-",
-    "title": "Ukraine og Rusland: droneangreb",
-    "summary": "4 kilder dækker denne historie: BBC, Reuters, Kyiv Independent, AP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-1e4b9fd66cc3ff3a",
+    "slug": "oil-prices-settle-up-about-3-as-houthi-attack-on-saudi-arabi",
+    "title": "Rusland og EU: angreb",
+    "summary": "2 kilder dækker denne historie: Reuters, BBC. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "bbc-d88ace1b8754",
-      "reuters-b6e41b4542ce",
-      "kyivindependent-f9c310941f91",
-      "ap-8dcbeb3ef2f9"
+      "reuters-354194240b7b",
+      "bbc-804cbed7a85c"
     ],
     "sourceKeys": [
-      "bbc",
       "reuters",
-      "kyivindependent",
-      "ap"
+      "bbc"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.74,
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
+      "conflict",
+      "energy",
       "ukraine-russia",
-      "conflict"
+      "sanctions",
+      "eu"
     ],
-    "updatedAt": "2026-09-23T23:58:50.000Z"
+    "updatedAt": "2026-09-24T01:17:00.000Z"
   },
   {
     "id": "cluster-9f77b5143a7afbb8",
@@ -1776,14 +2445,42 @@
     "updatedAt": "2026-09-23T23:30:00.000Z"
   },
   {
-    "id": "cluster-c2d3aa72eeb9b445",
+    "id": "cluster-41f05bcfd74203d9",
+    "slug": "russian-strikes-kill-eight-in-ukraine-damage-maternity-clini",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "4 kilder dækker denne historie: Reuters, Al Jazeera, Kyiv Independent, BBC. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-b6e41b4542ce",
+      "aljazeera-83622fec3a85",
+      "kyivindependent-05e344db30b6",
+      "bbc-ed4e427f243c"
+    ],
+    "sourceKeys": [
+      "reuters",
+      "aljazeera",
+      "kyivindependent",
+      "bbc"
+    ],
+    "coverageCount": 4,
+    "divergenceScore": 0.74,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "diplomacy"
+    ],
+    "updatedAt": "2026-09-23T22:51:00.000Z"
+  },
+  {
+    "id": "cluster-668bea530ec95afb",
     "slug": "exclusive-us-drafted-memo-condemning-uk-over-west-bank-sanct",
-    "title": "Ukraine og Israel: sanktioner",
+    "title": "Rusland og Israel: sanktioner",
     "summary": "3 kilder dækker denne historie: Reuters, BBC, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "reuters-fe6f3e431eb5",
       "bbc-12394257c23c",
-      "kyivindependent-7133d29fd9c8"
+      "kyivindependent-07bdcd96ac72"
     ],
     "sourceKeys": [
       "reuters",
@@ -1791,7 +2488,7 @@
       "kyivindependent"
     ],
     "coverageCount": 3,
-    "divergenceScore": 0.78,
+    "divergenceScore": 0.79,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
@@ -1803,21 +2500,21 @@
     "updatedAt": "2026-09-23T18:53:00.000Z"
   },
   {
-    "id": "cluster-4cbdc8f484a6ba71",
+    "id": "cluster-5a0c0e650bb90241",
     "slug": "more-than-57-000-women-serve-as-military-personnel-in-ukrain",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "4 kilder dækker denne historie: Kyiv Independent, AP, BBC, Reuters. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Iran: krig",
+    "summary": "4 kilder dækker denne historie: Kyiv Independent, AP, Reuters, BBC. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "kyivindependent-e468db45d08f",
       "ap-419f82a916b7",
-      "bbc-ed4e427f243c",
-      "reuters-18b47464f2d7"
+      "reuters-18b47464f2d7",
+      "bbc-03e83a2be475"
     ],
     "sourceKeys": [
       "kyivindependent",
       "ap",
-      "bbc",
-      "reuters"
+      "reuters",
+      "bbc"
     ],
     "coverageCount": 4,
     "divergenceScore": 0.9,
@@ -1834,24 +2531,26 @@
     "updatedAt": "2026-09-23T17:37:54.000Z"
   },
   {
-    "id": "cluster-1713647646b4641e",
+    "id": "cluster-36cf4a3ad15dd938",
     "slug": "eriksen-leaves-wolfsburg-by-mutual-consent",
-    "title": "Ukraine",
+    "title": "Ukraine og EU: sanktioner",
     "summary": "2 kilder dækker denne historie: BBC, Kyiv Independent. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "bbc-f6c28e96c9ec",
-      "kyivindependent-5aa72993fe15"
+      "kyivindependent-7133d29fd9c8"
     ],
     "sourceKeys": [
       "bbc",
       "kyivindependent"
     ],
     "coverageCount": 2,
-    "divergenceScore": 0.65,
+    "divergenceScore": 0.75,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia"
+      "ukraine-russia",
+      "sanctions",
+      "eu"
     ],
     "updatedAt": "2026-09-23T16:47:34.000Z"
   },
@@ -1883,6 +2582,30 @@
     "updatedAt": "2026-09-23T16:25:37.000Z"
   },
   {
+    "id": "cluster-a2ffe26117f78840",
+    "slug": "polish-foreign-minister-holds-rare-meeting-with-belarusian-c",
+    "title": "Ukraine og Rusland: krig",
+    "summary": "2 kilder dækker denne historie: Kyiv Independent, AP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "kyivindependent-5aa72993fe15",
+      "ap-5cccc7344d05"
+    ],
+    "sourceKeys": [
+      "kyivindependent",
+      "ap"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.75,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "usa"
+    ],
+    "updatedAt": "2026-09-23T14:45:40.000Z"
+  },
+  {
     "id": "cluster-7b311d39a6b0852d",
     "slug": "iran-s-pezeshkian-accuses-trump-of-bullying-mentality-vows-n",
     "title": "Iran, Trump",
@@ -1906,59 +2629,6 @@
       "conflict"
     ],
     "updatedAt": "2026-09-23T14:38:00.000Z"
-  },
-  {
-    "id": "cluster-dfeeb0fb2f0e8f65",
-    "slug": "trump-threatens-to-annihilate-iran-as-diplomats-push-for-dea",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "2 kilder dækker denne historie: Reuters, AP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-2a96f15e2122",
-      "ap-5cccc7344d05"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "ap"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.8,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "diplomacy",
-      "middle-east",
-      "iran",
-      "usa",
-      "ukraine-russia",
-      "conflict"
-    ],
-    "updatedAt": "2026-09-23T12:23:13.000Z"
-  },
-  {
-    "id": "cluster-9da90b5f6a4e6b80",
-    "slug": "as-russia-adapts-to-ukraine-s-middle-strikes-elite-drone-uni",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "3 kilder dækker denne historie: Kyiv Independent, Reuters, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "kyivindependent-05e344db30b6",
-      "reuters-1d7936340f65",
-      "aljazeera-83622fec3a85"
-    ],
-    "sourceKeys": [
-      "kyivindependent",
-      "reuters",
-      "aljazeera"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.72,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
-      "diplomacy"
-    ],
-    "updatedAt": "2026-09-23T09:21:39.000Z"
   },
   {
     "id": "cluster-b8703d622ed05094",
@@ -1988,28 +2658,28 @@
     "updatedAt": "2026-09-23T02:29:10.000Z"
   },
   {
-    "id": "cluster-806db4b8919e582d",
+    "id": "cluster-5d3bf48e154ba0bb",
     "slug": "trump-says-talks-with-iran-continue-and-he-thinks-settlement",
     "title": "Ukraine og Kina: krig",
-    "summary": "6 kilder dækker denne historie: Reuters, TASS, Al Jazeera, Kyiv Independent, BBC, SCMP. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
+    "summary": "6 kilder dækker denne historie: Reuters, TASS, Al Jazeera, BBC, Kyiv Independent, SCMP. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "reuters-8d767bdb66ac",
       "tass-bc3fb12e9e43",
       "aljazeera-f3d6b4afe572",
-      "kyivindependent-adfc0d851a29",
       "bbc-007b74de84db",
+      "kyivindependent-d59ea367af8e",
       "scmp-4a581b508772"
     ],
     "sourceKeys": [
       "reuters",
       "tass",
       "aljazeera",
-      "kyivindependent",
       "bbc",
+      "kyivindependent",
       "scmp"
     ],
     "coverageCount": 6,
-    "divergenceScore": 0.96,
+    "divergenceScore": 0.97,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
@@ -2023,63 +2693,26 @@
     "updatedAt": "2026-09-22T17:09:43.000Z"
   },
   {
-    "id": "cluster-439d42c01de386e0",
-    "slug": "sbu-says-it-foiled-fsb-linked-plot-to-assassinate-k-1-kickbo",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "7 kilder dækker denne historie: Kyiv Independent, TASS, AP, Reuters, Al Jazeera, BBC, SCMP. Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "kyivindependent-d59ea367af8e",
-      "tass-5336b37116a0",
-      "ap-4a11f58168b2",
-      "reuters-e39f4e38364b",
-      "aljazeera-d32fa831df2f",
-      "bbc-90aa4cbf62f6",
-      "scmp-15c5329f825f"
-    ],
-    "sourceKeys": [
-      "kyivindependent",
-      "tass",
-      "ap",
-      "reuters",
-      "aljazeera",
-      "bbc",
-      "scmp"
-    ],
-    "coverageCount": 7,
-    "divergenceScore": 0.86,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 7 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "energy",
-      "conflict",
-      "sanctions",
-      "middle-east",
-      "defense"
-    ],
-    "updatedAt": "2026-09-22T13:37:48.000Z"
-  },
-  {
-    "id": "cluster-4d1d1552bdf948c4",
+    "id": "cluster-a5b46eba40d00cae",
     "slug": "iran-ready-to-reopen-strait-of-hormuz-if-us-eases-military-p",
     "title": "Rusland og Kina: angreb",
-    "summary": "5 kilder dækker denne historie: Reuters, Al Jazeera, TASS, BBC, SCMP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "5 kilder dækker denne historie: Reuters, Al Jazeera, BBC, SCMP, TASS. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "reuters-3214989a44f6",
       "aljazeera-d28694f7eeab",
-      "tass-4c989e146472",
       "bbc-1fb27fe8888f",
-      "scmp-dda37f107a38"
+      "scmp-dda37f107a38",
+      "tass-148ac766be5d"
     ],
     "sourceKeys": [
       "reuters",
       "aljazeera",
-      "tass",
       "bbc",
-      "scmp"
+      "scmp",
+      "tass"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.98,
+    "divergenceScore": 0.96,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
@@ -2088,150 +2721,159 @@
       "iran",
       "defense",
       "south-asia",
-      "russia"
+      "ukraine-russia"
     ],
     "updatedAt": "2026-09-22T10:29:43.000Z"
   },
   {
-    "id": "cluster-064ea89ee9ca45c8",
-    "slug": "putin-slams-ai-spread-in-infocommunications-as-serious-chall",
-    "title": "Rusland og Kina: angreb",
-    "summary": "4 kilder dækker denne historie: TASS, SCMP, Kyiv Independent, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-1d5eefc82274df1a",
+    "slug": "french-president-macron-meets-ukraine-s-zelenskyy-in-new-yor",
+    "title": "Ukraine, Rusland, Kina",
+    "summary": "5 kilder dækker denne historie: AP, TASS, Reuters, Kyiv Independent, SCMP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "tass-148ac766be5d",
-      "scmp-4c55ff7f26fd",
-      "kyivindependent-25040a3755c3",
-      "aljazeera-ca5508078aa1"
+      "ap-4a11f58168b2",
+      "tass-60a7a9673335",
+      "reuters-5dc141175883",
+      "kyivindependent-66c7c44033c9",
+      "scmp-4c55ff7f26fd"
     ],
     "sourceKeys": [
-      "tass",
-      "scmp",
-      "kyivindependent",
-      "aljazeera"
-    ],
-    "coverageCount": 4,
-    "divergenceScore": 0.87,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "china",
-      "conflict",
-      "middle-east",
-      "iran",
-      "geopolitics"
-    ],
-    "updatedAt": "2026-09-22T08:49:07.000Z"
-  },
-  {
-    "id": "cluster-8382ca83aa6c56af",
-    "slug": "russia-s-svr-warns-eu-against-attempts-to-confiscate-soverei",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "5 kilder dækker denne historie: TASS, Reuters, SCMP, AP, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-c5d36352a3b6",
-      "reuters-19c42d52052d",
-      "scmp-7362c75a7da4",
-      "ap-e45eab6770a7",
-      "aljazeera-93f8df6b708d"
-    ],
-    "sourceKeys": [
+      "ap",
       "tass",
       "reuters",
-      "scmp",
-      "ap",
-      "aljazeera"
+      "kyivindependent",
+      "scmp"
     ],
     "coverageCount": 5,
-    "divergenceScore": 0.86,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
+      "energy",
+      "usa",
+      "china"
+    ],
+    "updatedAt": "2026-09-22T09:03:00.000Z"
+  },
+  {
+    "id": "cluster-fedccd9243b22b39",
+    "slug": "uk-to-help-refuel-saudi-jets-countering-houthi-attacks",
+    "title": "Rusland og EU: angreb",
+    "summary": "6 kilder dækker denne historie: BBC, Al Jazeera, TASS, SCMP, Kyiv Independent, Reuters. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "bbc-90aa4cbf62f6",
+      "aljazeera-6d2167fb1a08",
+      "tass-c5d36352a3b6",
+      "scmp-7362c75a7da4",
+      "kyivindependent-b422f9abe855",
+      "reuters-a5b8b25025f3"
+    ],
+    "sourceKeys": [
+      "bbc",
+      "aljazeera",
+      "tass",
+      "scmp",
+      "kyivindependent",
+      "reuters"
+    ],
+    "coverageCount": 6,
+    "divergenceScore": 0.82,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
       "conflict",
+      "ukraine-russia",
       "eu",
       "energy",
       "usa"
     ],
-    "updatedAt": "2026-09-22T08:40:58.000Z"
+    "updatedAt": "2026-09-22T08:53:03.000Z"
   },
   {
-    "id": "cluster-030bcbde23c1c75c",
+    "id": "cluster-a388805abc4163be",
     "slug": "damaged-civilian-facilities-in-samara-region-297-downed-uavs",
     "title": "Rusland og Kina: angreb",
-    "summary": "5 kilder dækker denne historie: TASS, SCMP, Kyiv Independent, Reuters, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "summary": "4 kilder dækker denne historie: TASS, Reuters, SCMP, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-53a5fa1a267f",
+      "reuters-e39f4e38364b",
       "scmp-4b8537bcd832",
-      "kyivindependent-93713a7e9302",
-      "reuters-a5b8b25025f3",
-      "aljazeera-813d0a6e20e5"
+      "aljazeera-ca5508078aa1"
     ],
     "sourceKeys": [
       "tass",
-      "scmp",
-      "kyivindependent",
       "reuters",
+      "scmp",
       "aljazeera"
     ],
-    "coverageCount": 5,
-    "divergenceScore": 0.96,
+    "coverageCount": 4,
+    "divergenceScore": 0.93,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "conflict",
       "civilian-impact",
       "defense",
-      "china",
-      "energy"
+      "sanctions",
+      "china"
     ],
     "updatedAt": "2026-09-22T08:15:09.000Z"
   },
   {
-    "id": "cluster-d2ff1d1a6b0ad00c",
+    "id": "cluster-77c815d50ed2bb18",
     "slug": "russian-stock-market-climbs-at-open",
-    "title": "Rusland, Kina",
-    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland, Kina, Israel",
+    "summary": "3 kilder dækker denne historie: TASS, SCMP, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-a3f9c8c72036",
-      "scmp-ebaddf948e1a"
+      "scmp-ebaddf948e1a",
+      "aljazeera-d32fa831df2f"
     ],
     "sourceKeys": [
       "tass",
-      "scmp"
+      "scmp",
+      "aljazeera"
     ],
-    "coverageCount": 2,
-    "divergenceScore": 0.7,
+    "coverageCount": 3,
+    "divergenceScore": 0.84,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
-      "china"
+      "china",
+      "middle-east",
+      "defense",
+      "civilian-impact"
     ],
     "updatedAt": "2026-09-22T08:05:23.000Z"
   },
   {
-    "id": "cluster-71c92332a2e03a67",
+    "id": "cluster-05a93e59b3c067d2",
     "slug": "russia-has-to-achieve-goals-by-force-no-hope-for-dialogue-wi",
-    "title": "Ukraine og Rusland: valg",
-    "summary": "4 kilder dækker denne historie: TASS, Reuters, Kyiv Independent, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "title": "Ukraine og Rusland: angreb",
+    "summary": "6 kilder dækker denne historie: TASS, Reuters, Al Jazeera, AP, Kyiv Independent, SCMP. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-f9f0d8cb85d9",
       "reuters-b9f707ad9293",
-      "kyivindependent-b422f9abe855",
+      "aljazeera-93f8df6b708d",
+      "ap-e45eab6770a7",
+      "kyivindependent-9e08d87c0300",
       "scmp-864ce4a8cbe7"
     ],
     "sourceKeys": [
       "tass",
       "reuters",
+      "aljazeera",
+      "ap",
       "kyivindependent",
       "scmp"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.89,
+    "coverageCount": 6,
+    "divergenceScore": 0.87,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
       "conflict",
@@ -2243,50 +2885,79 @@
     "updatedAt": "2026-09-22T07:42:50.000Z"
   },
   {
-    "id": "cluster-f0ede995fdd685ae",
+    "id": "cluster-44a733ed36875b11",
     "slug": "palestinians-turn-to-communal-ovens-to-bake-bread-in-gaza",
-    "title": "Ukraine og Gaza: fredsforhandlinger",
+    "title": "Gaza: krise",
     "summary": "2 kilder dækker denne historie: Al Jazeera, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "aljazeera-51278a6b4bb6",
-      "tass-6bf508f8c876"
+      "tass-5336b37116a0"
     ],
     "sourceKeys": [
       "aljazeera",
       "tass"
     ],
     "coverageCount": 2,
-    "divergenceScore": 0.84,
+    "divergenceScore": 0.69,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "middle-east",
-      "ukraine-russia",
-      "conflict",
-      "diplomacy",
-      "usa"
+      "conflict"
     ],
     "updatedAt": "2026-09-22T07:26:16.000Z"
   },
   {
-    "id": "cluster-47c6be88117a9c2a",
+    "id": "cluster-e75b9109f21826a2",
+    "slug": "us-could-push-ukraine-toward-peace-but-it-lacks-will-to-do-s",
+    "title": "Ukraine og Rusland: droneangreb",
+    "summary": "3 kilder dækker denne historie: TASS, Reuters, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "tass-6bf508f8c876",
+      "reuters-1d7936340f65",
+      "scmp-15c5329f825f"
+    ],
+    "sourceKeys": [
+      "tass",
+      "reuters",
+      "scmp"
+    ],
+    "coverageCount": 3,
+    "divergenceScore": 0.85,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "conflict",
+      "diplomacy",
+      "usa",
+      "energy"
+    ],
+    "updatedAt": "2026-09-22T06:31:20.000Z"
+  },
+  {
+    "id": "cluster-ae3f4b90a5d1502d",
     "slug": "moscow-to-host-dialogue-about-fakes-4-0-forum",
-    "title": "Kina: missilangreb",
-    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "title": "Kina og Indien: missilangreb",
+    "summary": "3 kilder dækker denne historie: TASS, Al Jazeera, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-d0b0afb36887",
+      "aljazeera-813d0a6e20e5",
       "scmp-c2a066fc2e32"
     ],
     "sourceKeys": [
       "tass",
+      "aljazeera",
       "scmp"
     ],
-    "coverageCount": 2,
-    "divergenceScore": 0.83,
+    "coverageCount": 3,
+    "divergenceScore": 0.88,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "ukraine-russia",
+      "india",
+      "south-asia",
       "conflict",
       "energy",
       "china"
@@ -2294,277 +2965,140 @@
     "updatedAt": "2026-09-22T06:20:39.000Z"
   },
   {
-    "id": "cluster-aa6329900c8c9aef",
+    "id": "cluster-e2f7760a142b8ca1",
     "slug": "oil-production-on-russian-shelf-to-reach-23-mln-tons-this-ye",
-    "title": "Ukraine og Rusland: forhandlinger",
-    "summary": "3 kilder dækker denne historie: TASS, Reuters, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "title": "Rusland og Iran: forhandlinger",
+    "summary": "2 kilder dækker denne historie: TASS, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "tass-3804065006ad",
-      "reuters-baa521a4a1ed",
-      "kyivindependent-122148efa592"
+      "reuters-baa521a4a1ed"
     ],
     "sourceKeys": [
       "tass",
+      "reuters"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "energy",
+      "diplomacy",
+      "middle-east",
+      "iran"
+    ],
+    "updatedAt": "2026-09-22T05:29:12.000Z"
+  },
+  {
+    "id": "cluster-141722e0a976ab9b",
+    "slug": "exclusive-lithuania-plans-key-substation-near-russia-fortifi",
+    "title": "Rusland og EU: droneangreb",
+    "summary": "2 kilder dækker denne historie: Reuters, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "reuters-19c42d52052d",
+      "tass-90594915fd16"
+    ],
+    "sourceKeys": [
       "reuters",
-      "kyivindependent"
+      "tass"
+    ],
+    "coverageCount": 2,
+    "divergenceScore": 0.77,
+    "divergenceLevel": "high",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
+    "topicTags": [
+      "ukraine-russia",
+      "diplomacy",
+      "sanctions"
+    ],
+    "updatedAt": "2026-09-22T05:08:00.000Z"
+  },
+  {
+    "id": "cluster-0bf5e3de1e113892",
+    "slug": "rare-earths-friction-threatens-to-stall-trade-truce-extensio",
+    "title": "Kina og Iran: krig",
+    "summary": "3 kilder dækker denne historie: SCMP, Reuters, TASS. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
+    "articleIds": [
+      "scmp-526863793af2",
+      "reuters-93957b127d7b",
+      "tass-cf6bbdd94866"
+    ],
+    "sourceKeys": [
+      "scmp",
+      "reuters",
+      "tass"
     ],
     "coverageCount": 3,
     "divergenceScore": 0.87,
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia",
-      "energy",
       "diplomacy",
-      "middle-east",
-      "iran",
-      "conflict"
+      "china",
+      "usa",
+      "trade",
+      "conflict",
+      "middle-east"
     ],
-    "updatedAt": "2026-09-22T05:29:12.000Z"
+    "updatedAt": "2026-09-22T02:59:29.000Z"
   },
   {
-    "id": "cluster-0014f9e79398af8d",
-    "slug": "un-general-assembly-high-level-week-opening-in-new-york",
-    "title": "Ukraine og Rusland: handel",
-    "summary": "4 kilder dækker denne historie: TASS, Kyiv Independent, Reuters, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "id": "cluster-e0a2951bc269d44b",
+    "slug": "g7-foreign-ministers-call-on-iran-to-stop-arming-houthis-reu",
+    "title": "Iran, Zelensky, Houthi",
+    "summary": "2 kilder dækker denne historie: Reuters, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "tass-60a7a9673335",
-      "kyivindependent-9e08d87c0300",
       "reuters-150900bacfef",
-      "scmp-526863793af2"
+      "tass-e15f149934f5"
     ],
     "sourceKeys": [
-      "tass",
-      "kyivindependent",
       "reuters",
-      "scmp"
+      "tass"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.94,
+    "coverageCount": 2,
+    "divergenceScore": 0.83,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia",
       "middle-east",
       "iran",
       "geopolitics",
-      "diplomacy",
-      "china"
+      "ukraine-russia"
     ],
-    "updatedAt": "2026-09-22T04:25:13.000Z"
+    "updatedAt": "2026-09-22T02:45:00.000Z"
   },
   {
-    "id": "cluster-0eb91937cc2c7463",
-    "slug": "south-korea-s-lee-urges-us-to-ease-north-korea-sanctions-to-",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "4 kilder dækker denne historie: Reuters, TASS, Kyiv Independent, Al Jazeera. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-c6dbdfcd1cde",
-      "tass-90594915fd16",
-      "kyivindependent-66c7c44033c9",
-      "aljazeera-6d2167fb1a08"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "kyivindependent",
-      "aljazeera"
-    ],
-    "coverageCount": 4,
-    "divergenceScore": 0.9,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "energy",
-      "sanctions",
-      "north-korea",
-      "nuclear",
-      "ukraine-russia",
-      "diplomacy"
-    ],
-    "updatedAt": "2026-09-22T02:25:00.000Z"
-  },
-  {
-    "id": "cluster-49d470e8a1c7a156",
-    "slug": "binance-under-us-scrutiny-over-possible-iran-sanctions-viola",
-    "title": "Rusland og Iran: krig",
-    "summary": "3 kilder dækker denne historie: Reuters, TASS, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-53b2ab8fdc2e",
-      "tass-e15f149934f5",
-      "kyivindependent-646215c5857e"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "kyivindependent"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "sanctions",
-      "middle-east",
-      "iran",
-      "ukraine-russia",
-      "conflict",
-      "eu"
-    ],
-    "updatedAt": "2026-09-22T02:04:00.000Z"
-  },
-  {
-    "id": "cluster-0d3e85053e37645d",
+    "id": "cluster-5b5a4333fcd0a8ad",
     "slug": "how-hong-kong-can-keep-the-talking-going-when-us-china-offic",
     "title": "Ukraine og Rusland: forhandlinger",
-    "summary": "4 kilder dækker denne historie: SCMP, TASS, BBC, AP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "summary": "2 kilder dækker denne historie: SCMP, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
       "scmp-640eb22f7297",
-      "tass-624bfb0bad46",
-      "bbc-e035c621630b",
-      "ap-dd4733528c91"
+      "tass-624bfb0bad46"
     ],
     "sourceKeys": [
       "scmp",
-      "tass",
-      "bbc",
-      "ap"
+      "tass"
     ],
-    "coverageCount": 4,
-    "divergenceScore": 0.81,
+    "coverageCount": 2,
+    "divergenceScore": 0.71,
     "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
+    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
       "china",
-      "ukraine-russia",
-      "geopolitics",
-      "conflict"
+      "ukraine-russia"
     ],
     "updatedAt": "2026-09-22T01:30:08.000Z"
   },
   {
-    "id": "cluster-26beca1eae386a3c",
-    "slug": "dprk-successfully-tests-new-type-weapon-agency",
-    "title": "DPRK successfully tests new-type weapon — agency",
-    "summary": "2 kilder dækker denne historie: TASS, BBC. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-ce2b79057cfc",
-      "bbc-bc09a6f0c345"
-    ],
-    "sourceKeys": [
-      "tass",
-      "bbc"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.76,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "defense",
-      "geopolitics",
-      "africa"
-    ],
-    "updatedAt": "2026-09-22T01:00:00.000Z"
-  },
-  {
-    "id": "cluster-6d73112a3652fcf9",
-    "slug": "macron-says-he-discussed-ukraine-russia-energy-truce-ideas-w",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "5 kilder dækker denne historie: Reuters, Kyiv Independent, TASS, AP, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-5dc141175883",
-      "kyivindependent-dcba1b00a820",
-      "tass-127692ac4e56",
-      "ap-8cb83f669810",
-      "aljazeera-8ac656ac3aac"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "kyivindependent",
-      "tass",
-      "ap",
-      "aljazeera"
-    ],
-    "coverageCount": 5,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "energy",
-      "usa",
-      "conflict",
-      "defense"
-    ],
-    "updatedAt": "2026-09-22T00:36:00.000Z"
-  },
-  {
-    "id": "cluster-c43ab511c03ef919",
-    "slug": "ukrainian-conflict-has-been-toughest-to-solve-vance",
-    "title": "Iran og Zelensky: krig",
-    "summary": "2 kilder dækker denne historie: TASS, Reuters. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-cf6bbdd94866",
-      "reuters-93957b127d7b"
-    ],
-    "sourceKeys": [
-      "tass",
-      "reuters"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.82,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
-      "usa",
-      "middle-east",
-      "iran"
-    ],
-    "updatedAt": "2026-09-22T00:10:00.000Z"
-  },
-  {
-    "id": "cluster-6480b517f98e4b6c",
-    "slug": "eu-continues-talks-on-deal-to-lift-sanctions-on-russia-linke",
-    "title": "Rusland og Kina: krig",
-    "summary": "5 kilder dækker denne historie: Reuters, Al Jazeera, AP, BBC, TASS. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-5a899d3c2a48",
-      "aljazeera-946eb77f1550",
-      "ap-d703d689d27b",
-      "bbc-c8e7aa74cf62",
-      "tass-41e7fa7bf472"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "aljazeera",
-      "ap",
-      "bbc",
-      "tass"
-    ],
-    "coverageCount": 5,
-    "divergenceScore": 0.92,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "diplomacy",
-      "sanctions",
-      "eu",
-      "usa",
-      "conflict"
-    ],
-    "updatedAt": "2026-09-21T21:02:25.000Z"
-  },
-  {
-    "id": "cluster-c569a0f05751007a",
-    "slug": "eu-continues-talks-on-renewal-of-russia-sanctions-diplomats-",
-    "title": "Rusland og EU: forhandlinger",
+    "id": "cluster-fdd411e05380d6db",
+    "slug": "southern-co-unit-signs-deal-with-google-to-add-nuclear-capac",
+    "title": "Rusland: angreb",
     "summary": "2 kilder dækker denne historie: Reuters, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "articleIds": [
-      "reuters-923d0db0e488",
-      "tass-7ccc767578ae"
+      "reuters-01073fb4fae0",
+      "tass-127692ac4e56"
     ],
     "sourceKeys": [
       "reuters",
@@ -2575,539 +3109,12 @@
     "divergenceLevel": "high",
     "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
     "topicTags": [
-      "ukraine-russia",
-      "diplomacy",
-      "sanctions",
-      "eu",
-      "trade"
-    ],
-    "updatedAt": "2026-09-21T20:50:39.000Z"
-  },
-  {
-    "id": "cluster-6481fe73a1bbbda3",
-    "slug": "exclusive-russia-adapts-fertilizer-coal-terminals-in-baltic-",
-    "title": "Ukraine og Rusland: angreb",
-    "summary": "2 kilder dækker denne historie: Reuters, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-0dc7d8f4deaf",
-      "tass-5b47105880b3"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.82,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "trade",
-      "conflict",
-      "defense"
-    ],
-    "updatedAt": "2026-09-21T17:54:35.000Z"
-  },
-  {
-    "id": "cluster-36823c3def317217",
-    "slug": "moscow-oil-refinery-output-halted-after-sunday-drone-attack-",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "3 kilder dækker denne historie: Reuters, Kyiv Independent, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-153cbee6e507",
-      "kyivindependent-58e6ffa26fc5",
-      "scmp-86fff9319fc3"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "kyivindependent",
-      "scmp"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
       "energy",
-      "middle-east",
-      "china",
-      "iran"
-    ],
-    "updatedAt": "2026-09-21T15:22:09.000Z"
-  },
-  {
-    "id": "cluster-3d57460fd708b77e",
-    "slug": "campaign-for-putin-be-a-star-in-washington-the-kyiv-independ",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "5 kilder dækker denne historie: Kyiv Independent, Reuters, TASS, SCMP, AP. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "kyivindependent-bde9b9fea990",
-      "reuters-cb2521a923fb",
-      "tass-928b0bc5145b",
-      "scmp-d65faa46e8c9",
-      "ap-cfc9feb92141"
-    ],
-    "sourceKeys": [
-      "kyivindependent",
-      "reuters",
-      "tass",
-      "scmp",
-      "ap"
-    ],
-    "coverageCount": 5,
-    "divergenceScore": 0.83,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "usa",
-      "conflict",
-      "china"
-    ],
-    "updatedAt": "2026-09-21T14:50:40.000Z"
-  },
-  {
-    "id": "cluster-ef20df81dca34bfc",
-    "slug": "seven-ethiopian-armed-groups-announce-anti-government-allian",
-    "title": "EU: krig",
-    "summary": "3 kilder dækker denne historie: Reuters, Al Jazeera, BBC. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-257dc64f0306",
-      "aljazeera-e42e818caa0b",
-      "bbc-56646a55041d"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "aljazeera",
-      "bbc"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.77,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "geopolitics",
-      "africa",
-      "conflict",
-      "eu"
-    ],
-    "updatedAt": "2026-09-21T13:57:43.000Z"
-  },
-  {
-    "id": "cluster-2971f3d9a0b57143",
-    "slug": "explainer-how-us-sanctions-would-undermine-global-war-crimes",
-    "title": "Kina og Trump: krig",
-    "summary": "3 kilder dækker denne historie: Reuters, TASS, SCMP. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-a2292bec21f2",
-      "tass-418fa4e2fd31",
-      "scmp-aabf2f25533f"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "scmp"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.88,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "sanctions",
-      "diplomacy",
-      "china",
-      "trade",
-      "usa"
-    ],
-    "updatedAt": "2026-09-21T13:06:03.000Z"
-  },
-  {
-    "id": "cluster-1b03358022b95865",
-    "slug": "investigation-western-machinery-at-the-heart-of-russian-arms",
-    "title": "Rusland og Kina: valg",
-    "summary": "4 kilder dækker denne historie: Kyiv Independent, TASS, BBC, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "kyivindependent-49446e3c4947",
-      "tass-a97818c5a472",
-      "bbc-ef3433f590e5",
-      "scmp-46c5559fbbfa"
-    ],
-    "sourceKeys": [
-      "kyivindependent",
-      "tass",
-      "bbc",
-      "scmp"
-    ],
-    "coverageCount": 4,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "defense",
-      "conflict",
-      "china",
-      "usa"
-    ],
-    "updatedAt": "2026-09-21T12:53:43.000Z"
-  },
-  {
-    "id": "cluster-8d1f7f24a4726e5f",
-    "slug": "russia-boosted-diesel-exports-to-central-asia-in-august-trad",
-    "title": "Ukraine og Rusland: droneangreb",
-    "summary": "3 kilder dækker denne historie: Reuters, TASS, Kyiv Independent. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-1dc7384970b8",
-      "tass-9265ef038229",
-      "kyivindependent-2b6dd3e5a97f"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "kyivindependent"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.71,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "trade"
-    ],
-    "updatedAt": "2026-09-21T12:41:19.000Z"
-  },
-  {
-    "id": "cluster-37cd7e18d7448f2d",
-    "slug": "houthis-push-for-control-of-yemen-highlands-as-trump-is-said",
-    "title": "Rusland og Kina: droneangreb",
-    "summary": "6 kilder dækker denne historie: Reuters, Al Jazeera, Kyiv Independent, SCMP, TASS, BBC. Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-80c72cf2c4d2",
-      "aljazeera-2cc2a5ace121",
-      "kyivindependent-6b323a0cccb1",
-      "scmp-3b016cc00c81",
-      "tass-679d4c168df7",
-      "bbc-b7dee4be8463"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass",
-      "bbc"
-    ],
-    "coverageCount": 6,
-    "divergenceScore": 0.94,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 6 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "usa",
-      "diplomacy",
-      "middle-east",
-      "iran",
-      "defense"
-    ],
-    "updatedAt": "2026-09-21T11:06:00.000Z"
-  },
-  {
-    "id": "cluster-59f37d437f54d111",
-    "slug": "lng-buyers-and-sellers-seek-greater-supply-diversity-amid-ir",
-    "title": "Iran: krig",
-    "summary": "4 kilder dækker denne historie: Reuters, TASS, Al Jazeera, SCMP. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-3459dd430c95",
-      "tass-b1ae95cc4cb2",
-      "aljazeera-0796fb109232",
-      "scmp-8a8006b43026"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "aljazeera",
-      "scmp"
-    ],
-    "coverageCount": 4,
-    "divergenceScore": 0.82,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "energy",
-      "middle-east",
-      "iran",
-      "defense"
-    ],
-    "updatedAt": "2026-09-21T10:36:04.000Z"
-  },
-  {
-    "id": "cluster-7a51a38aa6119c30",
-    "slug": "kremlin-rejects-le-pen-bardella-rebuke-says-russia-is-no-thr",
-    "title": "Ukraine og Rusland: krig",
-    "summary": "5 kilder dækker denne historie: Reuters, TASS, AP, BBC, Al Jazeera. Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-8717d73f56f2",
-      "tass-777f27a804bb",
-      "ap-a03d9dfe9429",
-      "bbc-467ae2284464",
-      "aljazeera-e8e24de362ec"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "tass",
-      "ap",
-      "bbc",
-      "aljazeera"
-    ],
-    "coverageCount": 5,
-    "divergenceScore": 0.78,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 5 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
+      "nuclear",
       "ukraine-russia",
       "conflict",
       "defense"
     ],
-    "updatedAt": "2026-09-21T10:33:43.000Z"
-  },
-  {
-    "id": "cluster-9666d860ad86f86d",
-    "slug": "malaysia-s-negeri-sembilan-royal-crisis-escalates-as-chief-m",
-    "title": "Ukraine og Rusland: valg",
-    "summary": "4 kilder dækker denne historie: SCMP, TASS, Reuters, Kyiv Independent. Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-391822b50582",
-      "tass-475ad37f05b6",
-      "reuters-1f63d315f7ca",
-      "kyivindependent-3b57596064c0"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "tass",
-      "reuters",
-      "kyivindependent"
-    ],
-    "coverageCount": 4,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 4 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "china",
-      "geopolitics",
-      "ukraine-russia",
-      "conflict",
-      "diplomacy"
-    ],
-    "updatedAt": "2026-09-21T09:40:26.000Z"
-  },
-  {
-    "id": "cluster-63623daf26a162de",
-    "slug": "chinese-regulator-drafts-rules-to-protect-teenagers-from-int",
-    "title": "Ukraine og Rusland: valg",
-    "summary": "3 kilder dækker denne historie: SCMP, TASS, Reuters. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-69256b50ab90",
-      "tass-c242163441ea",
-      "reuters-d497e10c6b75"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "tass",
-      "reuters"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.8,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "energy",
-      "sanctions",
-      "china",
-      "ukraine-russia"
-    ],
-    "updatedAt": "2026-09-21T09:30:21.000Z"
-  },
-  {
-    "id": "cluster-224823d1ba492703",
-    "slug": "us-china-agree-ai-dialogue-ahead-of-trump-xi-summit",
-    "title": "Rusland og Kina: handel",
-    "summary": "2 kilder dækker denne historie: SCMP, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-1537a48a461d",
-      "tass-c1218d0f2de4"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "tass"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "diplomacy",
-      "china",
-      "usa",
-      "trade",
-      "ukraine-russia",
-      "conflict"
-    ],
-    "updatedAt": "2026-09-21T09:01:49.000Z"
-  },
-  {
-    "id": "cluster-70b348a2ab906a1e",
-    "slug": "some-of-china-s-11-000-mega-bridges-could-be-at-risk-from-sm",
-    "title": "Kina: angreb",
-    "summary": "2 kilder dækker denne historie: SCMP, TASS. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-831db197054f",
-      "tass-16bb89ca0ac4"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "tass"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.83,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
-      "china",
-      "diplomacy",
-      "sanctions"
-    ],
-    "updatedAt": "2026-09-21T08:00:05.000Z"
-  },
-  {
-    "id": "cluster-42e364033f3702fd",
-    "slug": "easy-access-to-family-guns-fuels-philippine-school-shootings",
-    "title": "Syrien: våben",
-    "summary": "2 kilder dækker denne historie: SCMP, Al Jazeera. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "scmp-4290a4a9d7b0",
-      "aljazeera-b578fc587cf5"
-    ],
-    "sourceKeys": [
-      "scmp",
-      "aljazeera"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.77,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "sanctions",
-      "defense",
-      "middle-east"
-    ],
-    "updatedAt": "2026-09-21T06:34:06.000Z"
-  },
-  {
-    "id": "cluster-f36a962f61c712ef",
-    "slug": "russia-us-plan-to-hold-meetings-on-irritants-in-bilateral-ti",
-    "title": "Rusland, Kina",
-    "summary": "2 kilder dækker denne historie: TASS, SCMP. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-11aa8ad0e6f3",
-      "scmp-b1ee377bbc9a"
-    ],
-    "sourceKeys": [
-      "tass",
-      "scmp"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.76,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "energy",
-      "china"
-    ],
-    "updatedAt": "2026-09-21T04:50:33.000Z"
-  },
-  {
-    "id": "cluster-575aefb8fae625f8",
-    "slug": "oana-media-forum-to-discuss-steps-toward-sustainable-media-c",
-    "title": "Rusland og Syrien: valg",
-    "summary": "3 kilder dækker denne historie: TASS, Kyiv Independent, Al Jazeera. Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "tass-3f1ca64f03fb",
-      "kyivindependent-6535888b3be5",
-      "aljazeera-6a485b64441f"
-    ],
-    "sourceKeys": [
-      "tass",
-      "kyivindependent",
-      "aljazeera"
-    ],
-    "coverageCount": 3,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 3 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "conflict",
-      "energy",
-      "middle-east",
-      "civilian-impact"
-    ],
-    "updatedAt": "2026-09-21T03:38:58.000Z"
-  },
-  {
-    "id": "cluster-d9b02c3ec59ab4f0",
-    "slug": "merz-decries-disaster-as-far-right-afd-party-set-for-big-win",
-    "title": "Iran: valg",
-    "summary": "2 kilder dækker denne historie: Kyiv Independent, Al Jazeera. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "kyivindependent-4f416d2ee781",
-      "aljazeera-75f2025d9da0"
-    ],
-    "sourceKeys": [
-      "kyivindependent",
-      "aljazeera"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.84,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "ukraine-russia",
-      "diplomacy",
-      "middle-east",
-      "iran"
-    ],
-    "updatedAt": "2026-09-21T01:04:08.000Z"
-  },
-  {
-    "id": "cluster-67d5a36a6fd4ede4",
-    "slug": "oil-prices-slide-on-hopes-of-diplomacy-in-iran-war-reuters",
-    "title": "Iran: krig",
-    "summary": "2 kilder dækker denne historie: Reuters, Al Jazeera. Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "articleIds": [
-      "reuters-01fbf1921d65",
-      "aljazeera-68b3146e8d91"
-    ],
-    "sourceKeys": [
-      "reuters",
-      "aljazeera"
-    ],
-    "coverageCount": 2,
-    "divergenceScore": 0.83,
-    "divergenceLevel": "high",
-    "divergenceLabel": "Markant divergens: 2 kilder framer historien væsentligt forskelligt.",
-    "topicTags": [
-      "conflict",
-      "energy",
-      "middle-east",
-      "iran"
-    ],
-    "updatedAt": "2026-09-20T22:10:00.000Z"
+    "updatedAt": "2026-09-21T21:39:43.000Z"
   }
 ]
