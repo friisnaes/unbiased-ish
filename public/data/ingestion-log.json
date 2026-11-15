@@ -1,5 +1,29 @@
 [
   {
+    "timestamp": "2026-11-15T11:47:15.169Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 97,
+    "errors": []
+  },
+  {
     "timestamp": "2026-11-14T11:14:39.315Z",
     "sourcesAttempted": [
       "reuters",
@@ -1173,30 +1197,6 @@
       "tass"
     ],
     "articlesIngested": 120,
-    "errors": []
-  },
-  {
-    "timestamp": "2026-09-09T08:43:42.104Z",
-    "sourcesAttempted": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass",
-      "wion"
-    ],
-    "sourcesSucceeded": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass"
-    ],
-    "articlesIngested": 115,
     "errors": []
   }
 ]
