@@ -1,5 +1,30 @@
 [
   {
+    "timestamp": "2026-11-18T12:42:41.413Z",
+    "sourcesAttempted": [
+      "reuters",
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass",
+      "wion"
+    ],
+    "sourcesSucceeded": [
+      "ap",
+      "bbc",
+      "aljazeera",
+      "kyivindependent",
+      "scmp",
+      "tass"
+    ],
+    "articlesIngested": 104,
+    "errors": [
+      "reuters: Fetch failed on https://news.google.com/rss/search?q=site:reuters.com+ukrain — Status code 429"
+    ]
+  },
+  {
     "timestamp": "2026-11-17T12:49:27.800Z",
     "sourcesAttempted": [
       "reuters",
@@ -1153,30 +1178,6 @@
   },
   {
     "timestamp": "2026-09-16T09:07:46.959Z",
-    "sourcesAttempted": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass",
-      "wion"
-    ],
-    "sourcesSucceeded": [
-      "reuters",
-      "ap",
-      "bbc",
-      "aljazeera",
-      "kyivindependent",
-      "scmp",
-      "tass"
-    ],
-    "articlesIngested": 139,
-    "errors": []
-  },
-  {
-    "timestamp": "2026-09-14T09:38:05.788Z",
     "sourcesAttempted": [
       "reuters",
       "ap",
